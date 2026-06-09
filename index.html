@@ -883,7 +883,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
       <div class="h-eyebrow">
         <div class="h-eyebrow-line"></div>
         <span class="h-eyebrow-text" data-i18n="hero_eyebrow">Alternance KIA Cavallari · Jusqu'à Août 2026</span>
-        <span class="rt-chip" id="rt-chip" style="margin-left:1.2rem;">⏱ <span id="rt-min">3</span> min de lecture</span>
+        <span class="rt-chip" id="rt-chip" style="margin-left:1.2rem;">⏱ <span id="rt-min">3</span> <span data-i18n="rt_read">min de lecture</span></span>
       </div>
 
       <h1 class="h-name">LUCAS<br><em>Beau</em></h1>
@@ -901,11 +901,11 @@ nav.s .nav-links a.active { color: var(--gold2); }
 
       <div class="h-stats">
         <div>
-          <div class="stat-n"><span id="cnt-age">22</span><sup>ans</sup></div>
+          <div class="stat-n"><span id="cnt-age">22</span><sup data-i18n="stat_yrs">ans</sup></div>
           <div class="stat-l" data-i18n="stat_age">Âge</div>
         </div>
         <div>
-          <div class="stat-n"><span id="cnt-alt">4</span><sup>ans</sup></div>
+          <div class="stat-n"><span id="cnt-alt">4</span><sup data-i18n="stat_yrs">ans</sup></div>
           <div class="stat-l" data-i18n="stat_alt">Alternance</div>
         </div>
         <div>
@@ -925,12 +925,12 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="hft1-l">Côte d'Azur</div>
       </div>
       <div class="hf-tag2">
-        <div class="hft2-l">Formation</div>
+        <div class="hft2-l" data-i18n="hero_tag_formation">Formation</div>
         <div class="hft2-v">IUT de Nice — BUT TC</div>
       </div>
       <div class="hf-tag3">
-        <div class="hft3-l">Disponibilité</div>
-        <div class="hft3-v">Août 2026</div>
+        <div class="hft3-l" data-i18n="hero_tag_dispo">Disponibilité</div>
+        <div class="hft3-v" data-i18n="hero_tag_dispo_v">Août 2026</div>
       </div>
     </div>
 
@@ -976,21 +976,21 @@ nav.s .nav-links a.active { color: var(--gold2); }
         </div>
 
         <div class="about-infos">
-          <div class="ai"><div class="ai-k" data-i18n="info_age">Âge</div><div class="ai-v">22 ans</div></div>
+          <div class="ai"><div class="ai-k" data-i18n="info_age">Âge</div><div class="ai-v" data-i18n="info_age_v">22 ans</div></div>
           <div class="ai"><div class="ai-k" data-i18n="info_loc">Localisation</div><div class="ai-v">Nice (06)</div></div>
           <div class="ai"><div class="ai-k" data-i18n="info_formation">Formation</div><div class="ai-v">BUT TC BDMRC</div></div>
           <div class="ai"><div class="ai-k" data-i18n="info_alt">Alternances</div><div class="ai-v">Renault groupe · KIA</div></div>
           <div class="ai"><div class="ai-k">Email</div><div class="ai-v">lucasbeau42@gmail.com</div></div>
-          <div class="ai"><div class="ai-k" data-i18n="info_end">Fin d'alternance</div><div class="ai-v">Août 2026</div></div>
+          <div class="ai"><div class="ai-k" data-i18n="info_end">Fin d'alternance</div><div class="ai-v" data-i18n="info_end_v">Août 2026</div></div>
         </div>
 
         <div class="about-tags">
-          <span class="atag at-gold">Automobile</span>
+          <span class="atag at-gold" data-i18n="tag_auto">Automobile</span>
           <span class="atag at-gold">Football</span>
-          <span class="atag at-gold">Ambitieux</span>
-          <span class="atag at-dark">Fort relationnel</span>
-          <span class="atag at-dark">Orienté résultats</span>
-          <span class="atag at-dark">Adaptable</span>
+          <span class="atag at-gold" data-i18n="tag_ambi">Ambitieux</span>
+          <span class="atag at-dark" data-i18n="tag_rel">Fort relationnel</span>
+          <span class="atag at-dark" data-i18n="tag_result">Orienté résultats</span>
+          <span class="atag at-dark" data-i18n="tag_adapt">Adaptable</span>
           <span class="atag at-gold">BDMRC</span>
         </div>
       </div>
@@ -1011,19 +1011,19 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="fsl-track" id="fsl-track">
           <div class="fsl-slide" onclick="openModal('foot-trophee.jpg','Premier trophée — les débuts')">
             <img src="foot-trophee.jpg" alt="Premier trophée" class="contain-img">
-            <div class="fsl-caption"><span>🏆 Premier trophée</span><em>Les débuts</em></div>
+            <div class="fsl-caption"><span data-i18n="fsl1_s">🏆 Premier trophée</span><em data-i18n="fsl1_e">Les débuts</em></div>
           </div>
           <div class="fsl-slide" onclick="openModal('foot-entrainement.jpg','Entraînement — Ekinsport')">
             <img src="foot-entrainement.jpg" alt="Entraînement Ekinsport" style="object-position: center 25%;">
-            <div class="fsl-caption"><span>👕 Ekinsport</span><em>En équipe</em></div>
+            <div class="fsl-caption"><span>👕 Ekinsport</span><em data-i18n="fsl2_e">En équipe</em></div>
           </div>
           <div class="fsl-slide" onclick="openModal('foot-match.jpg','Sur le terrain — intensité max')">
             <img src="foot-match.jpg" alt="Match" style="object-position: center 40%;">
-            <div class="fsl-caption"><span>⚽ Sur le terrain</span><em>Intensité max</em></div>
+            <div class="fsl-caption"><span data-i18n="fsl3_s">⚽ Sur le terrain</span><em data-i18n="fsl3_e">Intensité max</em></div>
           </div>
           <div class="fsl-slide" onclick="openModal('foot-stade.jpg','Vélodrome — la passion du foot vivant')">
             <img src="foot-stade.jpg" alt="Vélodrome" class="contain-img">
-            <div class="fsl-caption"><span>🔥 Vélodrome</span><em>La passion du foot vivant</em></div>
+            <div class="fsl-caption"><span>🔥 Vélodrome</span><em data-i18n="fsl4_e">La passion du foot vivant</em></div>
           </div>
         </div>
         <button class="fsl-arr fsl-prev" id="fsl-prev">&#8249;</button>
@@ -1215,7 +1215,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
       <!-- KIA -->
       <div class="exp-item">
         <div class="ei-left">
-          <div class="ei-period">Sept. 2024 — Août 2026</div>
+          <div class="ei-period" data-i18n="ei_p_kia">Sept. 2024 — Août 2026</div>
           <div class="ei-monogram">
             <img src="logo-kia.png" alt="KIA">
           </div>
@@ -1242,7 +1242,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
       <!-- RENAULT RENT -->
       <div class="exp-item">
         <div class="ei-left">
-          <div class="ei-period">Sept. 2022 — Août 2024</div>
+          <div class="ei-period" data-i18n="ei_p_ren">Sept. 2022 — Août 2024</div>
           <div class="ei-monogram">
             <img src="logo-renault.png" alt="Renault">
           </div>
@@ -1269,7 +1269,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
       <!-- SERVEUR -->
       <div class="exp-item">
         <div class="ei-left">
-          <div class="ei-period">Juin — Août 2023</div>
+          <div class="ei-period" data-i18n="ei_p_le24">Juin — Août 2023</div>
           <div class="ei-monogram">
             <img src="logo-le24.png" alt="Le 24">
           </div>
@@ -1293,7 +1293,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
       <!-- AQUALAND -->
       <div class="exp-item">
         <div class="ei-left">
-          <div class="ei-period">Étés 2021 — 2022</div>
+          <div class="ei-period" data-i18n="ei_p_aql">Étés 2021 — 2022</div>
           <div class="ei-monogram">
             <img src="logo-aqualand.jpg" alt="Aqualand">
           </div>
@@ -1397,18 +1397,18 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="edu-status es-a" data-i18n="edu_cand">En candidature</div>
         <div class="edu-yr">2025 — 2027</div>
         <div class="edu-deg">Master — Commerce &amp; Management</div>
-        <div class="edu-school">Programmes visés · Région PACA</div>
+        <div class="edu-school" data-i18n="edu1_school">Programmes visés · Région PACA</div>
         <div class="edu-desc" data-i18n="edu1_desc">Dossiers actifs pour plusieurs Masters. BUT BDMRC et deux alternances constituent un profil solide pour intégrer les meilleures formations.</div>
-        <div class="edu-chips"><span class="ech">Management</span><span class="ech">Patrimoine</span><span class="ech">Entrepreneuriat</span><span class="ech">Communication</span></div>
+        <div class="edu-chips"><span class="ech" data-i18n="ech_mgmt">Management</span><span class="ech" data-i18n="ech_patri">Patrimoine</span><span class="ech" data-i18n="ech_entre">Entrepreneuriat</span><span class="ech">Communication</span></div>
       </div>
       <div class="edu-c ef2 rv d2 tilt">
         <div class="edu-status es-c" data-i18n="edu_ongoing">En cours</div>
         <img src="logo-iut.png" alt="IUT Nice Côte d'Azur" style="height:40px;width:auto;object-fit:contain;margin-bottom:.8rem;display:block;">
         <div class="edu-yr">2022 — 2026</div>
         <div class="edu-deg">BUT Techniques de Commercialisation</div>
-        <div class="edu-school">Parcours BDMRC · IUT de Nice · Côte d'Azur Université</div>
+        <div class="edu-school" data-i18n="edu2_school">Parcours BDMRC · IUT de Nice · Côte d'Azur Université</div>
         <div class="edu-desc" data-i18n="edu2_desc">Formation de 3 ans en alternance (4 ans d'alternance au total) couvrant vente, marketing digital, développement commercial et gestion de la relation client (CRM).</div>
-        <div class="edu-chips"><span class="ech">BDMRC</span><span class="ech">Alternance</span><span class="ech">Marketing</span><span class="ech">Vente</span><span class="ech">IUT Nice</span></div>
+        <div class="edu-chips"><span class="ech">BDMRC</span><span class="ech" data-i18n="ech_ws">Alternance</span><span class="ech">Marketing</span><span class="ech" data-i18n="ech_sales">Vente</span><span class="ech">IUT Nice</span></div>
       </div>
       <div class="edu-c ef4 rv d3 tilt">
         <div class="edu-status es-d" data-i18n="edu_done">Obtenu</div>
@@ -1416,7 +1416,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="edu-deg">Licence 1 Économie et Gestion</div>
         <div class="edu-school">Université Aix-Marseille · Marseille</div>
         <div class="edu-desc" data-i18n="edu3_desc">Première année universitaire à Aix-Marseille, bases solides en économie, gestion et analyse. Réorientation vers le BUT TC pour un parcours plus professionnel.</div>
-        <div class="edu-chips"><span class="ech">Économie</span><span class="ech">Gestion</span><span class="ech">Analyse</span></div>
+        <div class="edu-chips"><span class="ech" data-i18n="ech_eco">Économie</span><span class="ech" data-i18n="ech_mgmt2">Gestion</span><span class="ech" data-i18n="ech_anal">Analyse</span></div>
       </div>
       <div class="edu-c ef3 rv d4 tilt">
         <div class="edu-status es-d" data-i18n="edu_done">Obtenu</div>
@@ -1424,7 +1424,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="edu-deg">Baccalauréat Général</div>
         <div class="edu-school">Lycée Thomas Edison · Lorgues (83)</div>
         <div class="edu-desc" data-i18n="edu4_desc">Mention très bien. Spécialités à dominante économique et sociale. Première étape vers une orientation résolue dans le commerce et la gestion.</div>
-        <div class="edu-chips"><span class="ech">Mention très bien</span><span class="ech">Sciences Éco.</span><span class="ech">Lorgues</span></div>
+        <div class="edu-chips"><span class="ech" data-i18n="ech_honours">Mention très bien</span><span class="ech" data-i18n="ech_eco2">Sciences Éco.</span><span class="ech">Lorgues</span></div>
       </div>
     </div>
 
@@ -1493,7 +1493,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
           </div>
           <div>
             <div style="font-size:.9rem;font-weight:600;color:#EDEAE2;letter-spacing:.02em;">Michaël Devaye</div>
-            <div style="font-size:.75rem;color:rgba(200,200,216,.4);margin-top:.2rem;">Directeur Commercial · KIA Cavallari · Nice</div>
+            <div style="font-size:.75rem;color:rgba(200,200,216,.4);margin-top:.2rem;" data-i18n="reco_author_role">Directeur Commercial · KIA Cavallari · Nice</div>
           </div>
           <div style="margin-left:auto;">
             <a href="lettre-reco-md.pdf" target="_blank" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(154,122,50,.25);padding:.6rem 1.2rem;transition:all .3s;" onmouseover="this.style.borderColor='rgba(196,162,74,.5)';this.style.color='#C4A24A'" onmouseout="this.style.borderColor='rgba(154,122,50,.25)';this.style.color='#9A7A32'">
@@ -1539,7 +1539,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div style="margin:1.2rem 0;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.06);cursor:pointer;" onclick="openModal('olympus-screenshot.jpg','Dashboard Olympus — Agents IA en temps réel')">
           <img src="olympus-screenshot.jpg" alt="Dashboard Olympus" style="width:100%;display:block;transition:transform .4s cubic-bezier(.22,1,.36,1);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
         </div>
-        <div class="pj-tags"><span class="pjtag">Intelligence Artificielle</span><span class="pjtag">Python</span><span class="pjtag">E-commerce</span><span class="pjtag">Trading</span><span class="pjtag">Dashboard</span></div>
+        <div class="pj-tags"><span class="pjtag" data-i18n="ptag_ia">Intelligence Artificielle</span><span class="pjtag">Python</span><span class="pjtag">E-commerce</span><span class="pjtag">Trading</span><span class="pjtag">Dashboard</span></div>
         <div style="display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1.2rem;">
           <span style="display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;padding:.35rem .8rem;background:rgba(154,122,50,.08);border:1px solid rgba(154,122,50,.18);color:var(--gold2);letter-spacing:.06em;">
             <svg viewBox="0 0 8 8" fill="currentColor" width="6" height="6"><circle cx="4" cy="4" r="4"/></svg>
@@ -1556,7 +1556,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-cat" data-i18n="pj2_cat">Veille stratégique · IUT de Nice — BUT TC</div>
         <div class="pj-t" data-i18n="pj2_t">Veille &amp; Insight marché</div>
         <div class="pj-d" data-i18n="pj2_d">Mise en place d'un dispositif de veille concurrentielle et sectorielle : collecte, analyse et synthèse d'informations stratégiques pour dégager des insights actionnables et orienter la prise de décision commerciale.</div>
-        <div class="pj-tags"><span class="pjtag">Veille concurrentielle</span><span class="pjtag">Analyse sectorielle</span><span class="pjtag">Insights</span><span class="pjtag">Rapport</span></div>
+        <div class="pj-tags"><span class="pjtag" data-i18n="ptag_veille">Veille concurrentielle</span><span class="pjtag" data-i18n="ptag_analyse">Analyse sectorielle</span><span class="pjtag">Insights</span><span class="pjtag" data-i18n="ptag_rapport">Rapport</span></div>
         <a href="Veille et insight.pdf" target="_blank" class="pj-link"><span data-i18n="pj_report">Voir le rapport</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
       </div>
       <div class="pj rv d3">
@@ -1575,7 +1575,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-cat" data-i18n="pj4_cat">Commercial · KIA Cavallari</div>
         <div class="pj-t" data-i18n="pj4_t">Plan de relance d'un portefeuille clients</div>
         <div class="pj-d" data-i18n="pj4_d">Identification des clients inactifs depuis plus de 6 mois dans le CRM, rédaction de scripts de relance téléphonique ciblés, planification des rendez-vous et suivi des résultats via tableau de bord.</div>
-        <div class="pj-tags"><span class="pjtag">CRM</span><span class="pjtag">Relance</span><span class="pjtag">Fidélisation</span><span class="pjtag">Reporting</span></div>
+        <div class="pj-tags"><span class="pjtag">CRM</span><span class="pjtag" data-i18n="ptag_relance">Relance</span><span class="pjtag" data-i18n="ptag_fidel">Fidélisation</span><span class="pjtag">Reporting</span></div>
         <a href="#contact" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
       </div>
       <div class="pj rv d2">
@@ -1583,7 +1583,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-cat" data-i18n="pj5_cat">Commercial · Renault groupe</div>
         <div class="pj-t" data-i18n="pj5_t">Campagne de prospection BtoB</div>
         <div class="pj-d" data-i18n="pj5_d">Identification et démarchage d'une cible d'entreprises locales pour la location longue durée (LLD). Mise en place d'un fichier de prospection, d'un argumentaire adapté et suivi des relances jusqu'à la signature.</div>
-        <div class="pj-tags"><span class="pjtag">Prospection</span><span class="pjtag">BtoB</span><span class="pjtag">LLD</span><span class="pjtag">Négociation</span></div>
+        <div class="pj-tags"><span class="pjtag" data-i18n="ptag_prosp2">Prospection</span><span class="pjtag">BtoB</span><span class="pjtag">LLD</span><span class="pjtag" data-i18n="ptag_nego">Négociation</span></div>
         <a href="#contact" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
       </div>
       <div class="pj rv d3">
@@ -1591,7 +1591,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-cat" data-i18n="pj6_cat">Marketing · KIA Cavallari</div>
         <div class="pj-t" data-i18n="pj6_t">Book commercial gamme KIA</div>
         <div class="pj-d" data-i18n="pj6_d">Création d'un support de vente synthétisant la gamme KIA : fiches produits, argumentaires, comparatifs concurrents et grilles de financement. Utilisé en rendez-vous client pour structurer le discours commercial.</div>
-        <div class="pj-tags"><span class="pjtag">Support commercial</span><span class="pjtag">Rédaction</span><span class="pjtag">Argumentation</span></div>
+        <div class="pj-tags"><span class="pjtag" data-i18n="ptag_support">Support commercial</span><span class="pjtag" data-i18n="ptag_redac">Rédaction</span><span class="pjtag" data-i18n="ptag_argu">Argumentation</span></div>
         <a href="#contact" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
       </div>
     </div>
@@ -1671,11 +1671,11 @@ nav.s .nav-links a.active { color: var(--gold2); }
         </div>
         <div class="ct-row">
           <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-1 13.99L5 13.47V17l6 3.27L17 17v-3.53L11 16.99z"/></svg></div>
-          <div><div class="ct-lbl">Formation</div><div class="ct-val">BUT TC BDMRC · IUT de Nice</div></div>
+          <div><div class="ct-lbl" data-i18n="ct_edu_lbl">Formation</div><div class="ct-val">BUT TC BDMRC · IUT de Nice</div></div>
         </div>
         <div class="ct-row">
           <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/></svg></div>
-          <div><div class="ct-lbl" data-i18n="ct_last_alt">Dernière alternance</div><div class="ct-val">KIA Cavallari · Assistant Commercial</div></div>
+          <div><div class="ct-lbl" data-i18n="ct_last_alt">Dernière alternance</div><div class="ct-val" data-i18n="ct_last_alt_v">KIA Cavallari · Assistant Commercial</div></div>
         </div>
       </div>
     </div>
@@ -1684,7 +1684,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
 
 <footer>
   <div class="fl">Lucas<span>.</span>Beau</div>
-  <div class="fm">BUT TC BDMRC · Renault groupe · KIA Cavallari · Nice · <span id="footer-year">2026</span></div>
+  <div class="fm" data-i18n-html="footer_sub">BUT TC BDMRC · Renault groupe · KIA Cavallari · Nice · <span id="footer-year">2026</span></div>
   <div class="fr" data-i18n="footer_r">Portfolio professionnel</div>
 </footer>
 
@@ -2307,7 +2307,33 @@ const i18n = {
     pj6_t:'Book commercial gamme KIA',
     pj6_d:"Création d'un support de vente synthétisant la gamme KIA : fiches produits, argumentaires, comparatifs concurrents et grilles de financement. Utilisé en rendez-vous client pour structurer le discours commercial.",
     pj_report:'Voir le rapport', pj_more:'En savoir plus',
+    stat_yrs:'ans',
+    hero_tag_formation:'Formation', hero_tag_dispo:'Disponibilité', hero_tag_dispo_v:'Août 2026',
+    info_age_v:'22 ans', info_end_v:'Août 2026',
+    tag_auto:'Automobile', tag_ambi:'Ambitieux', tag_rel:'Fort relationnel',
+    tag_result:'Orienté résultats', tag_adapt:'Adaptable',
+    fsl1_s:'🏆 Premier trophée', fsl1_e:'Les débuts',
+    fsl2_e:'En équipe',
+    fsl3_s:'⚽ Sur le terrain', fsl3_e:'Intensité max',
+    fsl4_e:'La passion du foot vivant',
+    ech_mgmt:'Management', ech_patri:'Patrimoine', ech_entre:'Entrepreneuriat',
+    ech_ws:'Alternance', ech_sales:'Vente',
+    ech_eco:'Économie', ech_mgmt2:'Gestion', ech_anal:'Analyse',
+    ech_honours:'Mention très bien', ech_eco2:'Sciences Éco.',
+    ptag_relance:'Relance', ptag_fidel:'Fidélisation',
+    ptag_support:'Support commercial', ptag_redac:'Rédaction', ptag_argu:'Argumentation',
+    ct_edu_lbl:'Formation', ct_last_alt_v:'KIA Cavallari · Assistant Commercial',
+    footer_sub:'BUT TC BDMRC · Renault groupe · KIA Cavallari · Nice · <span id="footer-year">2026</span>',
     footer_r:'Portfolio professionnel',
+    rt_read:'min de lecture',
+    ei_p_kia:'Sept. 2024 — Août 2026', ei_p_ren:'Sept. 2022 — Août 2024',
+    ei_p_le24:'Juin — Août 2023', ei_p_aql:'Étés 2021 — 2022',
+    reco_author_role:'Directeur Commercial · KIA Cavallari · Nice',
+    ptag_ia:'Intelligence Artificielle',
+    ptag_veille:'Veille concurrentielle', ptag_analyse:'Analyse sectorielle', ptag_rapport:'Rapport',
+    ptag_prosp2:'Prospection', ptag_nego:'Négociation',
+    edu1_school:'Programmes visés · Région PACA',
+    edu2_school:'Parcours BDMRC · IUT de Nice · Côte d\'Azur Université',
   },
   en: {
     nav_about:'Profile', nav_exp:'Experience', nav_skills:'Skills',
@@ -2447,7 +2473,33 @@ const i18n = {
     pj6_t:'KIA Range Sales Booklet',
     pj6_d:'Creation of a sales support document summarising the KIA range: product sheets, pitches, competitor comparisons and financing grids. Used in client meetings to structure the commercial pitch.',
     pj_report:'View report', pj_more:'Learn more',
+    stat_yrs:'yrs',
+    hero_tag_formation:'Education', hero_tag_dispo:'Availability', hero_tag_dispo_v:'August 2026',
+    info_age_v:'22 yrs', info_end_v:'August 2026',
+    tag_auto:'Automotive', tag_ambi:'Ambitious', tag_rel:'Strong people skills',
+    tag_result:'Results-driven', tag_adapt:'Adaptable',
+    fsl1_s:'🏆 First trophy', fsl1_e:'The beginnings',
+    fsl2_e:'As a team',
+    fsl3_s:'⚽ On the pitch', fsl3_e:'Full intensity',
+    fsl4_e:'The passion of football',
+    ech_mgmt:'Management', ech_patri:'Wealth management', ech_entre:'Entrepreneurship',
+    ech_ws:'Work-study', ech_sales:'Sales',
+    ech_eco:'Economics', ech_mgmt2:'Management', ech_anal:'Analysis',
+    ech_honours:'High honours', ech_eco2:'Economics',
+    ptag_relance:'Follow-up', ptag_fidel:'Client retention',
+    ptag_support:'Sales support', ptag_redac:'Writing', ptag_argu:'Argumentation',
+    ct_edu_lbl:'Education', ct_last_alt_v:'KIA Cavallari · Sales Assistant',
+    footer_sub:'BUT TC BDMRC · Renault groupe · KIA Cavallari · Nice · <span id="footer-year">2026</span>',
     footer_r:'Professional portfolio',
+    rt_read:'min read',
+    ei_p_kia:'Sept. 2024 — Aug. 2026', ei_p_ren:'Sept. 2022 — Aug. 2024',
+    ei_p_le24:'June — Aug. 2023', ei_p_aql:'Summers 2021 — 2022',
+    reco_author_role:'Sales Director · KIA Cavallari · Nice',
+    ptag_ia:'Artificial Intelligence',
+    ptag_veille:'Competitive monitoring', ptag_analyse:'Sector analysis', ptag_rapport:'Report',
+    ptag_prosp2:'Prospecting', ptag_nego:'Negotiation',
+    edu1_school:'Target programmes · PACA region',
+    edu2_school:'BDMRC track · IUT de Nice · Côte d\'Azur University',
   }
 };
 
