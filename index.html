@@ -1,0 +1,2166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Beau — Commercial & Futur Manager · Nice</title>
+<meta name="description" content="Portfolio de Lucas Beau, 22 ans — Commercial & Futur Manager, Nice. BUT TC BDMRC IUT de Nice, alternant KIA Cavallari. En recherche d'alternance Master 2026.">
+<meta property="og:title" content="Lucas Beau — Commercial & Futur Manager">
+<meta property="og:description" content="BUT TC BDMRC · Renault groupe · KIA Cavallari · Nice · Recherche Master alternance 2026">
+<meta property="og:image" content="photo-lucas.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lucas Beau — Portfolio Commercial">
+<meta name="twitter:image" content="photo-lucas.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0F1C'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='600' fill='%23C4A24A'%3ELB%3C/text%3E%3C/svg%3E">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ivory:  #F7F5F0;
+  --ivory2: #F0EDE6;
+  --white:  #FFFFFF;
+  --cream:  #EAE7DF;
+  --dark:   #0D0F1C;
+  --dark2:  #171A2D;
+  --navy:   #1C2035;
+  --gold:   #9A7A32;
+  --gold2:  #C4A24A;
+  --gold3:  rgba(154,122,50,.15);
+  --gray:   #6E6E85;
+  --gray2:  #9A9AB0;
+  --gray3:  #C8C8D8;
+  --border: rgba(13,15,28,.09);
+  --border2: rgba(13,15,28,.06);
+  --display: 'Cormorant Garamond', Georgia, serif;
+  --sans:    'Outfit', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--ivory); color: var(--dark); line-height: 1.7; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--gold2); border-radius: 2px; }
+
+/* ── CURSOR ── */
+a, button, .vi, .pj, .soft-c, .exp-item, .edu-c, .nav-cta, .btn-gold, .btn-out, .mh-cta { cursor: pointer; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  padding: 1.1rem 5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(13,15,28,.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  transition: all .5s;
+}
+nav.s {
+  background: rgba(247,245,240,.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+nav.s .nav-logo { color: var(--dark); }
+nav.s .nav-links a { color: var(--gray); }
+nav.s .nav-cta { border-color: var(--gold); color: var(--gold); }
+nav.s .nav-cta:hover { background: var(--gold); color: var(--white); }
+.nav-logo { font-family: var(--display); font-size: 1.25rem; font-weight: 500; color: #EDEAE2; text-decoration: none; letter-spacing: .04em; transition: color .5s; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-size: .72rem; font-weight: 500; color: rgba(200,200,216,.7);
+  text-decoration: none; letter-spacing: .14em; text-transform: uppercase;
+  transition: color .3s; position: relative;
+}
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .3s; }
+.nav-links a:hover { color: var(--dark); }
+.nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-cta {
+  font-size: .7rem; font-weight: 600; padding: .58rem 1.6rem;
+  border: 1px solid var(--gold); color: var(--gold);
+  text-decoration: none; letter-spacing: .12em; text-transform: uppercase;
+  transition: all .3s; cursor: none;
+}
+.nav-cta:hover { background: var(--gold); color: var(--white); box-shadow: 0 4px 20px rgba(154,122,50,.25); }
+
+/* ═══════════════════════
+   HERO — dark
+═══════════════════════ */
+#hero {
+  min-height: 100vh;
+  background: var(--dark);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+}
+#hero-canvas { position: absolute; inset: 0; z-index: 0; }
+
+.hero-inner {
+  position: relative; z-index: 2;
+  max-width: 1300px; margin: 0 auto;
+  padding: 0 5rem; width: 100%;
+  display: grid; grid-template-columns: 1fr 380px;
+  gap: 6rem; align-items: center;
+}
+
+.h-eyebrow {
+  display: flex; align-items: center; gap: 1.2rem;
+  margin-bottom: 2.8rem;
+  opacity: 0; animation: fu .8s ease .3s forwards;
+}
+.h-eyebrow-line { width: 32px; height: 1px; background: rgba(154,122,50,.5); }
+.h-eyebrow-text { font-size: .65rem; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--gold2); }
+
+h1.h-name {
+  font-family: var(--display);
+  font-size: clamp(5.5rem, 11vw, 10.5rem);
+  font-weight: 300; line-height: .86; letter-spacing: -.03em;
+  color: #EDEAE2;
+  opacity: 0; animation: fu .9s ease .5s forwards;
+}
+h1.h-name em {
+  font-style: italic; display: block;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 45%, var(--gold) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  background-size: 200% auto; animation: shimmer 5s linear infinite;
+}
+@keyframes shimmer { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+
+.h-role {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-weight: 300; font-style: italic;
+  color: rgba(200,200,216,.6);
+  margin: 1.2rem 0 2.8rem;
+  opacity: 0; animation: fu .8s ease .7s forwards;
+}
+.h-role span { color: rgba(196,162,74,.8); font-style: normal; }
+
+.h-desc {
+  font-size: .96rem; color: rgba(200,200,216,.55);
+  line-height: 2.1; max-width: 520px;
+  margin-bottom: 3.2rem; font-weight: 300;
+  opacity: 0; animation: fu .8s ease .9s forwards;
+}
+.h-desc strong { color: rgba(200,200,216,.85); font-weight: 500; }
+
+.h-actions {
+  display: flex; gap: 1rem; margin-bottom: 5rem;
+  opacity: 0; animation: fu .8s ease 1.1s forwards;
+}
+.btn-gold {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: 1rem 2.4rem; background: var(--gold); color: var(--white);
+  font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  text-decoration: none; border: none; cursor: none;
+  transition: all .3s; box-shadow: 0 0 40px rgba(154,122,50,.2);
+}
+.btn-gold:hover { background: var(--gold2); box-shadow: 0 4px 50px rgba(154,122,50,.35); transform: translateY(-2px); }
+.btn-out {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: 1rem 2.4rem; background: transparent; color: rgba(200,200,216,.6);
+  font-size: .78rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  text-decoration: none; border: 1px solid rgba(255,255,255,.12);
+  cursor: none; transition: all .3s;
+}
+.btn-out:hover { border-color: rgba(154,122,50,.4); color: var(--gold2); }
+
+.h-stats {
+  display: flex; gap: 3.5rem;
+  padding-top: 3.5rem; border-top: 1px solid rgba(255,255,255,.06);
+  opacity: 0; animation: fu .8s ease 1.3s forwards;
+}
+.stat-n { font-family: var(--display); font-size: 2.8rem; font-weight: 500; color: #EDEAE2; line-height: 1; letter-spacing: -.04em; }
+.stat-n sup { font-size: 1.1rem; color: var(--gold2); font-weight: 400; }
+.stat-l { font-size: .6rem; color: rgba(200,200,216,.4); letter-spacing: .22em; text-transform: uppercase; margin-top: .4rem; }
+
+/* Hero photo */
+.h-photo {
+  position: relative;
+  opacity: 0; animation: fu .9s ease 1s forwards;
+}
+.h-photo-frame {
+  width: 100%; aspect-ratio: 3/4;
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,.08);
+  overflow: hidden; position: relative;
+  transform: perspective(1000px) rotateY(-8deg) rotateX(2deg);
+  box-shadow: 40px 40px 100px rgba(0,0,0,.6), -4px -4px 20px rgba(154,122,50,.06);
+  transition: transform .7s cubic-bezier(.23,1,.32,1);
+}
+.h-photo-frame:hover { transform: perspective(1000px) rotateY(0deg) rotateX(0deg); }
+.h-photo-frame::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold2), transparent); z-index: 2; }
+.h-photo-frame::after  { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,15,28,.5) 0%, transparent 40%); z-index: 1; }
+.photo-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
+.photo-placeholder img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pp-icon { width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; }
+.pp-icon svg { width: 28px; height: 28px; opacity: .2; fill: var(--gray3); }
+.pp-text { font-size: .65rem; color: rgba(200,200,216,.25); letter-spacing: .14em; text-transform: uppercase; }
+
+/* Floating tags */
+.hf-tag1 { position: absolute; bottom: -1.2rem; left: -2rem; background: var(--gold); padding: 1rem 1.5rem; z-index: 3; box-shadow: 0 16px 40px rgba(154,122,50,.3); }
+.hft1-n { font-family: var(--display); font-size: 1.8rem; font-weight: 600; color: var(--white); line-height: 1; }
+.hft1-l { font-size: .58rem; font-weight: 600; color: rgba(255,255,255,.5); letter-spacing: .12em; text-transform: uppercase; margin-top: .15rem; }
+.hf-tag2 { position: absolute; top: 2rem; right: -2.4rem; background: rgba(13,15,28,.92); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(16px); padding: .85rem 1.3rem; z-index: 3; white-space: nowrap; }
+.hft2-l { font-size: .58rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold2); margin-bottom: .2rem; }
+.hft2-v { font-size: .82rem; font-weight: 500; color: rgba(200,200,216,.8); }
+.hf-tag3 { position: absolute; top: 40%; right: -2.8rem; background: rgba(13,15,28,.92); border: 1px solid rgba(62,214,138,.18); backdrop-filter: blur(16px); padding: .85rem 1.3rem; z-index: 3; white-space: nowrap; }
+.hft3-l { font-size: .58rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(62,214,138,.7); margin-bottom: .2rem; }
+.hft3-v { font-size: .82rem; font-weight: 500; color: #86EFAC; }
+
+/* Scroll */
+.scroll-cue { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: .6rem; opacity: 0; animation: fi 1s ease 2.4s forwards; }
+.sc-text { font-size: .58rem; letter-spacing: .3em; text-transform: uppercase; color: rgba(200,200,216,.3); }
+.sc-bar { width: 1px; height: 48px; background: linear-gradient(rgba(154,122,50,.5), transparent); animation: scb 2s ease infinite; }
+@keyframes scb { 0%{transform:scaleY(0);transform-origin:top;} 50%{transform:scaleY(1);transform-origin:top;} 51%{transform-origin:bottom;} 100%{transform:scaleY(0);transform-origin:bottom;} }
+@keyframes fu  { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fi  { from { opacity:0; } to { opacity:1; } }
+
+/* ═══════════════════════
+   GLOBAL SECTION STYLES
+═══════════════════════ */
+.divider { width: 100%; height: 1px; background: var(--border); }
+.s-inner { max-width: 1300px; margin: 0 auto; padding: 0 5rem; }
+.s-pad   { padding: 11rem 0; }
+
+.s-eyebrow { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.8rem; }
+.se-num  { font-size: .65rem; font-weight: 600; color: var(--gray3); letter-spacing: .2em; }
+.se-line { width: 36px; height: 1px; background: var(--cream); }
+.se-tag  { font-size: .62rem; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+
+h2.sec-title { font-family: var(--display); font-size: clamp(2.5rem,4.5vw,4rem); font-weight: 300; line-height: 1.05; letter-spacing: -.025em; color: var(--dark); }
+h2.sec-title em { font-style: italic; color: var(--gold); }
+.sec-sub { font-size: .96rem; color: var(--gray); line-height: 2; margin-top: 1rem; font-weight: 300; max-width: 480px; }
+
+/* REVEAL */
+.rv { opacity: 1; transform: translateY(0); transition: opacity .85s ease, transform .85s ease; }
+.rv.pre { opacity: 0; transform: translateY(36px); }
+.rv.pre.on { opacity: 1; transform: translateY(0); }
+.d1{transition-delay:.09s;} .d2{transition-delay:.18s;} .d3{transition-delay:.27s;} .d4{transition-delay:.36s;}
+
+/* ═══════════════════════
+   ABOUT — white
+═══════════════════════ */
+#about { background: var(--white); }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 8rem; align-items: start; margin-top: 6rem; }
+
+/* Photo column */
+.photos-col { display: flex; flex-direction: column; gap: 1.4rem; }
+
+.photo-main {
+  aspect-ratio: 4/5;
+  background: var(--ivory2);
+  border: 1px solid var(--border);
+  overflow: hidden; position: relative;
+  transform: perspective(900px) rotateY(4deg);
+  box-shadow: 16px 16px 60px rgba(13,15,28,.1);
+  transition: transform .7s cubic-bezier(.23,1,.32,1);
+}
+.photo-main:hover { transform: perspective(900px) rotateY(0deg); }
+.photo-main::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(247,245,240,.4) 0%, transparent 40%); z-index: 1; }
+.photo-main::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold2), transparent); z-index: 2; }
+
+.photo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.photo-sm {
+  aspect-ratio: 1;
+  background: var(--ivory2);
+  border: 1px solid var(--border);
+  overflow: hidden; position: relative;
+  transition: transform .4s ease, box-shadow .4s;
+}
+.photo-sm:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(13,15,28,.1); }
+
+.photo-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .9rem; }
+.photo-inner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pi-icon { width: 40px; height: 40px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+.pi-icon svg { width: 20px; height: 20px; opacity: .18; fill: var(--gray); }
+.pi-label { font-size: .62rem; color: var(--gray3); letter-spacing: .14em; text-transform: uppercase; background: rgba(247,245,240,.9); padding: .35rem .8rem; border: 1px solid var(--border); }
+
+/* Gold badge on main photo */
+.ab-badge { position: absolute; bottom: 1rem; left: 1rem; z-index: 3; background: var(--gold); padding: .9rem 1.3rem; box-shadow: 0 8px 24px rgba(154,122,50,.25); }
+.abb-n { font-family: var(--display); font-size: 1.5rem; font-weight: 600; color: var(--white); line-height: 1; }
+.abb-l { font-size: .58rem; font-weight: 600; color: rgba(255,255,255,.55); letter-spacing: .1em; text-transform: uppercase; margin-top: .15rem; }
+
+/* Text column */
+.about-text p { font-size: .96rem; color: var(--gray); line-height: 2.1; margin-bottom: 1.6rem; font-weight: 300; }
+.about-text p strong { color: var(--dark); font-weight: 500; }
+
+.about-infos { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 2.5rem 0; }
+.ai { padding: 1rem 1.2rem; background: var(--ivory); border: 1px solid var(--border2); }
+.ai-k { font-size: .58rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: .35rem; }
+.ai-v { font-size: .88rem; font-weight: 500; color: var(--dark); }
+
+.about-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.8rem; }
+.atag { padding: .35rem .95rem; font-size: .72rem; font-weight: 500; border: 1px solid; letter-spacing: .02em; }
+.at-gold { background: rgba(154,122,50,.08); border-color: rgba(154,122,50,.2); color: var(--gold); }
+.at-dark { background: rgba(13,15,28,.04); border-color: var(--border); color: var(--gray); }
+
+/* ── SLIDER FOOTBALL ── */
+.foot-gallery-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold2); font-weight: 600; }
+.foot-slider-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.4rem; }
+.fsl-dots { display: flex; gap: .5rem; }
+.fsl-dot { width: 24px; height: 3px; border-radius: 2px; background: rgba(154,122,50,.2); border: none; cursor: pointer; padding: 0; transition: background .3s, width .3s; }
+.fsl-dot.active { background: var(--gold2); width: 36px; }
+.foot-slider { position: relative; overflow: hidden; border-radius: 6px; }
+.fsl-track { display: flex; transition: transform .7s cubic-bezier(.77,0,.18,1); will-change: transform; }
+.fsl-slide { min-width: 100%; position: relative; cursor: pointer; aspect-ratio: 16/9; overflow: hidden; background: #0D0F1C; }
+.fsl-slide img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 6s ease; transform-origin: center; }
+.fsl-slide.active img { transform: scale(1.04); }
+.fsl-slide img.contain-img { object-fit: contain; position: relative; z-index: 1; }
+.fsl-slide-blur-bg { position: absolute; inset: -30px; background-size: cover; background-position: center; filter: blur(22px) brightness(.4) saturate(1.3); z-index: 0; transform: scale(1.12); }
+.fsl-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem 2rem 1.6rem; background: linear-gradient(to top, rgba(13,15,28,.85) 0%, transparent 100%); display: flex; align-items: flex-end; justify-content: space-between; }
+.fsl-caption span { font-family: var(--display); font-size: 1.4rem; font-weight: 400; color: #fff; letter-spacing: .01em; }
+.fsl-caption em { font-size: .68rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--gold2); font-style: normal; }
+.fsl-arr { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(13,15,28,.55); border: 1px solid rgba(255,255,255,.12); color: #fff; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem; transition: background .25s, transform .25s; backdrop-filter: blur(4px); z-index: 2; }
+.fsl-arr:hover { background: rgba(154,122,50,.5); transform: translateY(-50%) scale(1.08); }
+.fsl-prev { left: 1rem; }
+.fsl-next { right: 1rem; }
+/* Barre de progression auto */
+.fsl-progress { position: absolute; bottom: 0; left: 0; height: 2px; background: var(--gold2); width: 0%; transition: width linear; z-index: 3; opacity: .7; }
+@media(max-width:768px){ .fsl-slide { aspect-ratio: 4/3; } .fsl-caption span { font-size: 1rem; } }
+
+/* ═══════════════════════
+   VALUES — ivory
+═══════════════════════ */
+#values { background: var(--ivory); }
+
+.val-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border: 1px solid var(--border); margin-top: 6rem; }
+.vi { padding: 2.8rem 2.2rem; border-right: 1px solid var(--border); transition: background .35s; position: relative; overflow: hidden; }
+.vi:last-child { border-right: none; }
+.vi::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .45s ease; }
+.vi:hover { background: var(--white); }
+.vi:hover::before { transform: scaleX(1); }
+.vi-num { font-family: var(--display); font-size: 2.5rem; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 1.5rem; letter-spacing: -.04em; }
+.vi-t { font-family: var(--display); font-size: 1.15rem; font-weight: 500; color: var(--dark); margin-bottom: .9rem; letter-spacing: -.01em; }
+.vi-d { font-size: .82rem; color: var(--gray); line-height: 1.9; font-weight: 300; }
+
+/* ═══════════════════════
+   EXPERIENCE — white
+═══════════════════════ */
+#exp { background: var(--white); }
+
+.exp-list { display: flex; flex-direction: column; gap: 0; margin-top: 6rem; border: 1px solid var(--border); }
+
+.exp-item {
+  display: grid; grid-template-columns: 220px 1fr;
+  padding: 3.5rem; gap: 4rem;
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+  transition: background .3s;
+}
+.exp-item:last-child { border-bottom: none; }
+.exp-item:hover { background: var(--ivory); }
+.exp-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--gold); transform: scaleY(0); transform-origin: top; transition: transform .45s ease; }
+.exp-item:hover::before { transform: scaleY(1); }
+
+.ei-left {}
+.ei-period { font-size: .68rem; font-weight: 600; color: var(--gold); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1.2rem; }
+
+/* Company monogram */
+.ei-monogram {
+  width: 56px; height: 56px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.2rem; overflow: hidden; position: relative;
+  background: var(--ivory2);
+}
+.ei-monogram img { width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0; padding: .5rem; }
+.ei-mono-letters { font-family: var(--display); font-size: 1rem; font-weight: 500; color: var(--gray2); letter-spacing: .06em; }
+
+.ei-type { display: inline-block; font-size: .58rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; padding: .22rem .75rem; border: 1px solid var(--border); color: var(--gray); background: var(--ivory2); }
+
+.ei-right {}
+.ei-company { font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+.ei-role { font-family: var(--display); font-size: 2rem; font-weight: 300; color: var(--dark); line-height: 1.1; margin-bottom: .5rem; letter-spacing: -.025em; }
+.ei-sup { font-size: .82rem; color: var(--gray2); margin-bottom: 1.8rem; }
+.ei-pts { list-style: none; }
+.ei-pts li { font-size: .9rem; color: var(--gray); line-height: 2; padding: .25rem 0 .25rem 1.4rem; position: relative; font-weight: 300; border-bottom: 1px solid rgba(13,15,28,.04); }
+.ei-pts li:last-child { border-bottom: none; }
+.ei-pts li::before { content: ''; position: absolute; left: 0; top: 50%; width: 7px; height: 1px; background: var(--gold2); transform: translateY(-50%); }
+.ei-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.6rem; }
+.etag { font-size: .63rem; font-weight: 500; padding: .22rem .75rem; border: 1px solid var(--border); color: var(--gray2); background: var(--ivory2); letter-spacing: .04em; }
+
+/* ═══════════════════════
+   SKILLS — ivory
+═══════════════════════ */
+#skills { background: var(--ivory); }
+.sk-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; margin-top: 6rem; }
+
+.sg { margin-bottom: 3.2rem; }
+.sg-title { font-size: .62rem; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.8rem; display: flex; align-items: center; gap: .9rem; }
+.sg-title::after { content: ''; flex: 1; height: 1px; background: var(--cream); }
+
+.sb { margin-bottom: 1.6rem; }
+.sb-head { display: flex; justify-content: space-between; margin-bottom: .7rem; align-items: center; }
+.sb-n { font-size: .86rem; color: var(--dark); font-weight: 400; }
+.sb-p { font-size: .72rem; font-weight: 700; color: var(--gold2); letter-spacing: .04em; transition: color .3s; }
+.sb-track { height: 4px; background: var(--cream); border-radius: 4px; position: relative; overflow: visible; }
+.sb-fill {
+  position: absolute; top: 0; left: 0; height: 4px; width: 0;
+  background: linear-gradient(90deg, var(--gold), var(--gold2), #E8C96A);
+  border-radius: 4px;
+  transition: width 1.6s cubic-bezier(.22,1,.36,1);
+  box-shadow: 0 0 8px rgba(196,162,74,.45);
+}
+.sb-fill::after {
+  content: '';
+  position: absolute; top: 0; right: 0; bottom: 0; width: 60px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
+  animation: shimmer-bar 2.2s ease-in-out infinite;
+  border-radius: 4px;
+}
+@keyframes shimmer-bar {
+  0%   { opacity: 0; transform: translateX(-30px); }
+  40%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(20px); }
+}
+.sb-dot {
+  position: absolute; top: 50%; width: 10px; height: 10px;
+  background: var(--white); border: 2px solid var(--gold2);
+  border-radius: 50%; transform: translate(-50%, -50%);
+  transition: left 1.6s cubic-bezier(.22,1,.36,1); left: 0;
+  box-shadow: 0 0 0 3px rgba(196,162,74,.18), 0 0 12px rgba(196,162,74,.35);
+  z-index: 2;
+}
+
+.soft-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-bottom: 2.2rem; }
+.soft-c { padding: 1.4rem 1.4rem; background: var(--white); border: 1px solid var(--border); transition: all .3s; transform-style: preserve-3d; }
+.soft-c:hover { border-color: rgba(154,122,50,.25); background: var(--white); box-shadow: 0 8px 30px rgba(13,15,28,.07); }
+.sc-num { font-family: var(--display); font-size: .65rem; font-weight: 500; color: var(--gold); letter-spacing: .1em; margin-bottom: .6rem; display: block; }
+.sc-t { font-size: .86rem; font-weight: 600; color: var(--dark); margin-bottom: .3rem; }
+.sc-d { font-size: .75rem; color: var(--gray); line-height: 1.7; font-weight: 300; }
+
+.lang-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .9rem; }
+.lc { padding: 1.4rem 1rem; background: var(--white); border: 1px solid var(--border); text-align: center; transition: border-color .3s; }
+.lc:hover { border-color: rgba(154,122,50,.3); }
+.lc-flag { font-size: .65rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: .5rem; }
+.lc-name { font-size: .88rem; font-weight: 600; color: var(--dark); }
+.lc-lvl  { font-size: .7rem; color: var(--gray); margin-top: .2rem; font-weight: 300; }
+
+/* ═══════════════════════
+   FORMATION — white
+═══════════════════════ */
+#formation { background: var(--white); }
+
+.edu-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 6rem; }
+.ef4::after { background: linear-gradient(90deg, #6B8CDA, rgba(107,140,218,.3)); }
+.edu-c {
+  background: var(--ivory); border: 1px solid var(--border);
+  padding: 2.8rem 2.2rem; position: relative; overflow: hidden;
+  transition: all .45s; transform-style: preserve-3d;
+}
+.edu-c:hover { border-color: rgba(154,122,50,.25); transform: translateY(-6px) perspective(800px) rotateX(1.5deg); box-shadow: 0 30px 60px rgba(13,15,28,.1); background: var(--white); }
+.edu-c::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+.ef1::after { background: linear-gradient(90deg, var(--gold), var(--gold2)); }
+.ef2::after { background: linear-gradient(90deg, #3ED68A, rgba(62,214,138,.3)); }
+.ef3::after { background: var(--cream); }
+
+.edu-status { position: absolute; top: 1.5rem; right: 1.5rem; font-size: .58rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .24rem .72rem; }
+.es-a { background: rgba(154,122,50,.1); color: var(--gold); border: 1px solid rgba(154,122,50,.22); }
+.es-c { background: rgba(62,214,138,.08); color: #2DB874; border: 1px solid rgba(62,214,138,.18); }
+.es-d { background: var(--ivory2); color: var(--gray2); border: 1px solid var(--border); }
+
+.edu-yr  { font-size: .62rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: .8rem; }
+.edu-deg { font-family: var(--display); font-size: 1.2rem; font-weight: 500; color: var(--dark); line-height: 1.25; margin-bottom: .45rem; letter-spacing: -.01em; }
+.edu-school { font-size: .8rem; color: var(--gray); margin-bottom: 1rem; }
+.edu-desc { font-size: .79rem; color: var(--gray2); line-height: 1.9; font-weight: 300; }
+.edu-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: 1.3rem; }
+.ech { font-size: .62rem; font-weight: 500; padding: .2rem .6rem; background: var(--white); border: 1px solid var(--border); color: var(--gray2); }
+
+.master-hl {
+  margin-top: 2.5rem; padding: 3.5rem;
+  background: var(--dark); position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 160px; gap: 5rem; align-items: center;
+}
+.master-hl::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(154,122,50,.08), transparent 65%); pointer-events: none; }
+.mh-t { font-family: var(--display); font-size: 1.9rem; font-weight: 300; color: #EDEAE2; letter-spacing: -.025em; margin-bottom: .8rem; }
+.mh-t em { font-style: italic; color: var(--gold2); }
+.mh-sub { font-size: .9rem; color: rgba(200,200,216,.5); line-height: 2; margin-bottom: 1.6rem; font-weight: 300; }
+.mh-list { display: flex; flex-direction: column; gap: .6rem; }
+.mh-item { display: flex; align-items: center; gap: .9rem; font-size: .87rem; color: rgba(200,200,216,.7); font-weight: 300; }
+.mh-arr { color: var(--gold2); font-size: .8rem; }
+.mh-right { text-align: center; }
+.mh-yr { font-family: var(--display); font-size: 5.5rem; font-weight: 300; background: linear-gradient(135deg, var(--gold), var(--gold2)); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; letter-spacing: -.04em; }
+.mh-yrl { font-size: .6rem; color: rgba(200,200,216,.35); letter-spacing: .22em; text-transform: uppercase; margin-top: .3rem; }
+.mh-cta { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.6rem; padding: .85rem 1.8rem; background: var(--gold); color: var(--white); font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; transition: all .3s; cursor: none; }
+.mh-cta:hover { background: var(--gold2); box-shadow: 0 8px 24px rgba(154,122,50,.3); }
+
+/* ═══════════════════════
+   PROJECTS — ivory
+═══════════════════════ */
+#projets { background: var(--ivory); }
+
+.proj-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border: 1px solid var(--border); margin-top: 6rem; }
+.pj { padding: 2.8rem 2.2rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background .3s; position: relative; cursor: default; }
+.pj:nth-child(3), .pj:nth-child(6) { border-right: none; }
+.pj:nth-child(4), .pj:nth-child(5), .pj:nth-child(6) { border-bottom: none; }
+.pj:hover { background: var(--white); }
+.pj::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .45s ease; }
+.pj:hover::before { transform: scaleX(1); }
+.pj-num { font-family: var(--display); font-size: 3rem; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 1.2rem; letter-spacing: -.04em; }
+.pj-cat { font-size: .6rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: .6rem; }
+.pj-t { font-family: var(--display); font-size: 1.15rem; font-weight: 500; color: var(--dark); line-height: 1.25; margin-bottom: .9rem; letter-spacing: -.01em; }
+.pj-d { font-size: .81rem; color: var(--gray); line-height: 1.9; font-weight: 300; }
+.pj-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: 1.3rem; }
+.pjtag { font-size: .62rem; font-weight: 500; padding: .2rem .65rem; background: var(--ivory2); border: 1px solid var(--border); color: var(--gray2); }
+
+/* ═══════════════════════
+   QUI JE SUIS — dark
+═══════════════════════ */
+#univers { background: var(--dark); }
+.univ-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; margin-top: 6rem; align-items: start; }
+.passion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.passion-card {
+  padding: 1.6rem 1.5rem; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06);
+  transition: background .3s, border-color .3s, transform .3s;
+}
+.passion-card:hover { background: rgba(255,255,255,.055); border-color: rgba(196,162,74,.2); transform: translateY(-3px); }
+.passion-icon { font-size: 1.6rem; margin-bottom: .8rem; display: block; }
+.passion-title { font-size: .82rem; font-weight: 600; color: #EDEAE2; margin-bottom: .3rem; }
+.passion-desc { font-size: .74rem; color: rgba(200,200,216,.45); line-height: 1.7; font-weight: 300; }
+
+.vision-block { padding: 2.5rem; background: rgba(154,122,50,.06); border: 1px solid rgba(154,122,50,.15); margin-top: 2rem; }
+.vision-label { font-size: .58rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--gold2); margin-bottom: 1rem; }
+.vision-text { font-family: var(--display); font-size: 1.15rem; font-weight: 300; color: #EDEAE2; line-height: 1.7; letter-spacing: -.015em; }
+.vision-text strong { color: var(--gold2); font-weight: 500; font-style: italic; }
+.ambition-pills { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
+.amp { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .35rem .9rem; border-radius: 2px; }
+.amp-gold { background: rgba(196,162,74,.12); color: var(--gold2); border: 1px solid rgba(196,162,74,.25); }
+.amp-dark { background: rgba(255,255,255,.05); color: rgba(200,200,216,.5); border: 1px solid rgba(255,255,255,.07); }
+
+.parcours-line { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 1.8rem; }
+.parcours-line::before { content:''; position:absolute; left:.4rem; top:.5rem; bottom:.5rem; width:1px; background: linear-gradient(180deg, var(--gold), rgba(154,122,50,.1)); }
+.pl-step { position: relative; padding-bottom: 1.6rem; }
+.pl-step:last-child { padding-bottom: 0; }
+.pl-dot { position:absolute; left:-1.55rem; top:.35rem; width:9px; height:9px; border-radius:50%; background:var(--gold2); border:2px solid var(--dark); box-shadow:0 0 0 2px rgba(196,162,74,.3); }
+.pl-yr { font-size:.58rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:.25rem; }
+.pl-title { font-size:.86rem; font-weight:600; color:#EDEAE2; margin-bottom:.15rem; }
+.pl-sub { font-size:.75rem; color:rgba(200,200,216,.4); font-weight:300; }
+
+@media(max-width:900px){ .univ-layout,.passion-grid { grid-template-columns:1fr; } }
+
+/* ── CAROUSEL PLT ── */
+.plt-carousel { position: relative; }
+.plt-slides { display: flex; overflow: hidden; border-radius: 4px; }
+.plt-slide { min-width: 100%; transition: transform .4s cubic-bezier(.22,1,.36,1); }
+.plt-slide img { width: 100%; display: block; border-radius: 4px; }
+.plt-nav { display: flex; justify-content: center; gap: .5rem; margin-top: .9rem; }
+.plt-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; padding: 0; transition: background .2s, transform .2s; }
+.plt-dot.active { background: var(--gold2); transform: scale(1.2); }
+.plt-arr { position:absolute; top:50%; transform:translateY(-50%); background:rgba(13,15,28,.6); border:1px solid rgba(255,255,255,.1); color:#fff; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:.8rem; transition:background .2s; z-index:2; }
+.plt-arr:hover { background:rgba(196,162,74,.4); }
+.plt-arr.prev { left:8px; }
+.plt-arr.next { right:8px; }
+
+/* ── FLOATING ANIMATION ── */
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes float2 { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-14px) rotate(1deg)} }
+@keyframes glow-pulse { 0%,100%{box-shadow:0 0 8px rgba(196,162,74,.3)} 50%{box-shadow:0 0 22px rgba(196,162,74,.65),0 0 40px rgba(196,162,74,.2)} }
+@keyframes slide-in-left { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
+@keyframes scale-in { from{opacity:0;transform:scale(.88)} to{opacity:1;transform:scale(1)} }
+@keyframes text-reveal { from{clip-path:inset(0 100% 0 0)} to{clip-path:inset(0 0% 0 0)} }
+@keyframes count-up-flash { 0%{color:var(--gold2)} 50%{color:#fff} 100%{color:var(--gold)} }
+
+/* ── HERO FLOAT TAGS ── */
+.hf-tag1 { animation: float 4.5s ease-in-out infinite; }
+.hf-tag2 { animation: float2 5.2s ease-in-out infinite .6s; }
+.hf-tag3 { animation: float 4.8s ease-in-out infinite 1.1s; }
+
+/* ── ENHANCED CARD HOVER ── */
+.exp-item { transition: box-shadow .4s ease, transform .4s cubic-bezier(.23,1,.32,1); }
+.exp-item:hover { box-shadow: 0 20px 60px rgba(13,15,28,.12), 0 4px 16px rgba(154,122,50,.08); }
+.pj { transition: background .3s, box-shadow .4s, transform .35s cubic-bezier(.23,1,.32,1); }
+.pj:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(13,15,28,.1); }
+
+/* ── GLOW PULSE ON SKILL DOT ── */
+.sb-dot.active { animation: glow-pulse 1.8s ease-in-out infinite; }
+
+/* ── MAGNETIC BUTTON BASE ── */
+.btn-gold, .btn-out, .nav-cta, .mh-cta { will-change: transform; }
+
+/* ── SECTION PARALLAX NUMBERS ── */
+.se-num { will-change: transform; }
+
+/* ── STAGGER REVEAL CHILDREN ── */
+.proj-grid .pj:nth-child(1){transition-delay:.05s}
+.proj-grid .pj:nth-child(2){transition-delay:.12s}
+.proj-grid .pj:nth-child(3){transition-delay:.19s}
+.proj-grid .pj:nth-child(4){transition-delay:.26s}
+.proj-grid .pj:nth-child(5){transition-delay:.33s}
+.proj-grid .pj:nth-child(6){transition-delay:.4s}
+
+/* ── GLOWING LINE UNDER SECTION TITLE ── */
+.sec-title { position: relative; display: inline-block; }
+.sec-title::after { content:''; position:absolute; bottom:-8px; left:0; width:0; height:2px; background:linear-gradient(90deg,var(--gold),var(--gold2),transparent); transition:width 1.2s cubic-bezier(.22,1,.36,1) .4s; border-radius:2px; }
+.sec-title.line-on::after { width:60%; }
+
+/* ── MODAL SCREENSHOT ── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,.88); backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .35s ease;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-box {
+  position: relative; max-width: 90vw; max-height: 88vh;
+  transform: scale(.92) translateY(20px); transition: transform .4s cubic-bezier(.22,1,.36,1);
+}
+.modal-overlay.open .modal-box { transform: scale(1) translateY(0); }
+.modal-box img { display: block; max-width: 100%; max-height: 85vh; border-radius: 4px; box-shadow: 0 40px 100px rgba(0,0,0,.6); }
+.modal-close {
+  position: absolute; top: -14px; right: -14px; width: 36px; height: 36px;
+  background: var(--gold); border-radius: 50%; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+  font-size: 1.1rem; font-weight: 300; transition: background .2s, transform .2s;
+}
+.modal-close:hover { background: var(--gold2); transform: scale(1.1); }
+.modal-caption {
+  text-align: center; margin-top: 1rem;
+  font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.3);
+}
+/* btn screenshot inside pj card */
+.pj-screenshot-btn {
+  display: inline-flex; align-items: center; gap: .45rem; margin-top: .6rem;
+  font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gray2); background: var(--ivory2); border: 1px solid var(--border);
+  padding: .38rem .9rem; cursor: pointer; transition: all .25s;
+}
+.pj-screenshot-btn:hover { background: var(--white); color: var(--gold); border-color: rgba(154,122,50,.3); }
+.pj-screenshot-btn svg { width: 11px; height: 11px; }
+
+/* PROJECT LINKS */
+.pj-link { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.4rem; font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(154,122,50,.25); padding-bottom: .15rem; transition: color .25s, border-color .25s; }
+.pj-link:hover { color: var(--gold2); border-color: var(--gold2); }
+.pj-link svg { width: 10px; height: 10px; transition: transform .25s; }
+.pj-link:hover svg { transform: translate(2px,-2px); }
+
+/* ═══════════════════════
+   CONTACT — dark
+═══════════════════════ */
+#contact { background: var(--dark); }
+
+.ct-layout { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 4rem; align-items: start; margin-top: 6rem; }
+.ct-desc { font-size: .96rem; color: rgba(200,200,216,.5); line-height: 2.1; font-weight: 300; margin: 1.5rem 0 2.5rem; }
+.avail { display: inline-flex; align-items: center; gap: .75rem; padding: .65rem 1.3rem; background: rgba(62,214,138,.07); border: 1px solid rgba(62,214,138,.15); margin-bottom: 2.5rem; }
+.av-dot { width: 7px; height: 7px; border-radius: 50%; background: #3ED68A; box-shadow: 0 0 10px #3ED68A; animation: puls 2s infinite; }
+@keyframes puls { 0%,100%{box-shadow:0 0 6px #3ED68A;} 50%{box-shadow:0 0 18px #3ED68A,0 0 26px rgba(62,214,138,.2);} }
+.av-text { font-size: .74rem; font-weight: 600; color: #3ED68A; letter-spacing: .07em; }
+.ct-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-out-light { display: inline-flex; align-items: center; gap: .6rem; padding: 1rem 2.4rem; background: transparent; color: rgba(200,200,216,.6); font-size: .78rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,.12); cursor: none; transition: all .3s; }
+.btn-out-light:hover { border-color: rgba(154,122,50,.4); color: var(--gold2); }
+
+.ct-card { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); overflow: hidden; }
+.ct-head { padding: 1.6rem 2rem; border-bottom: 1px solid rgba(255,255,255,.05); font-family: var(--display); font-size: 1rem; font-weight: 500; color: #EDEAE2; letter-spacing: .02em; }
+.ct-row { display: flex; align-items: center; gap: 1.2rem; padding: 1.2rem 2rem; border-bottom: 1px solid rgba(255,255,255,.04); transition: background .2s; }
+.ct-row:last-child { border-bottom: none; }
+.ct-row:hover { background: rgba(255,255,255,.025); }
+.ct-ic { width: 36px; height: 36px; border: 1px solid rgba(154,122,50,.2); background: rgba(154,122,50,.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ct-ic svg { width: 14px; height: 14px; fill: var(--gold2); opacity: .8; }
+.ct-lbl { font-size: .58rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(154,122,50,.5); margin-bottom: .2rem; }
+.ct-val { font-size: .88rem; font-weight: 500; color: rgba(200,200,216,.8); }
+.ct-val a { color: rgba(200,200,216,.8); text-decoration: none; transition: color .2s; }
+.ct-val a:hover { color: var(--gold2); }
+
+/* contact section titles in dark */
+#contact .s-eyebrow .se-num  { color: rgba(255,255,255,.15); }
+#contact .s-eyebrow .se-line { background: rgba(255,255,255,.1); }
+#contact .sec-title { color: #EDEAE2; }
+#contact .sec-title em { color: var(--gold2); }
+
+/* FOOTER */
+footer { background: var(--dark2); border-top: 1px solid rgba(255,255,255,.04); padding: 2.2rem 5rem; display: flex; justify-content: space-between; align-items: center; }
+.fl { font-family: var(--display); font-size: 1.1rem; font-weight: 500; color: #EDEAE2; letter-spacing: .04em; }
+.fl span { color: var(--gold2); }
+.fm { font-size: .68rem; color: rgba(200,200,216,.3); letter-spacing: .08em; }
+.fr { font-size: .68rem; color: rgba(200,200,216,.3); }
+
+/* ══ DARK MODE ══ */
+body.dark-mode {
+  --ivory: #0D0F1C; --ivory2: #0D0F1C; --white: #EDEAE2; --cream: rgba(255,255,255,.07);
+  --dark: #F7F5F0; --dark2: #0A0C17; --navy: #111322;
+  --border: rgba(255,255,255,.07); --border2: rgba(255,255,255,.04);
+  --gray: #9A9AB0; --gray2: #C8C8D8; --gray3: rgba(200,200,216,.4);
+  background: #0D0F1C; color: #EDEAE2;
+}
+body.dark-mode nav { background: rgba(10,12,23,.92); border-bottom-color: rgba(255,255,255,.04); }
+body.dark-mode nav.s { background: rgba(10,12,23,.97); }
+body.dark-mode .nav-links a { color: rgba(200,200,216,.55); }
+body.dark-mode .nav-links a:hover { color: #EDEAE2; }
+body.dark-mode .sec-title { color: #EDEAE2; }
+body.dark-mode .pj,.body.dark-mode .edu-c,.body.dark-mode .soft-c { border-color: rgba(255,255,255,.06); }
+body.dark-mode .divider { background: rgba(255,255,255,.06); }
+#dm-toggle {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--dark); border: 1px solid rgba(154,122,50,.25);
+  color: var(--gold2); font-size: 1.1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,.18); transition: transform .3s, box-shadow .3s;
+}
+#dm-toggle:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(154,122,50,.25); }
+
+/* ══ BURGER MENU ══ */
+.nav-burger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
+.nav-burger span { display: block; width: 22px; height: 2px; background: var(--dark); transition: transform .3s, opacity .3s; border-radius: 2px; }
+nav.s .nav-burger span { background: #EDEAE2; }
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-mobile {
+  display: none; position: fixed; inset: 0; background: rgba(13,15,28,.97);
+  z-index: 998; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2.2rem; opacity: 0; transition: opacity .3s;
+}
+.nav-mobile.open { display: flex; opacity: 1; }
+.nav-mobile a { font-size: 1.5rem; font-family: var(--display); font-weight: 300; color: rgba(200,200,216,.6); text-decoration: none; letter-spacing: .08em; transition: color .2s; }
+.nav-mobile a:hover { color: var(--gold2); }
+.nav-mobile .nm-close { position: absolute; top: 2rem; right: 2rem; font-size: 1.4rem; background: none; border: none; color: rgba(200,200,216,.4); cursor: pointer; transition: color .2s; }
+.nav-mobile .nm-close:hover { color: var(--gold2); }
+.nav-mobile .nm-cv { display: inline-block; margin-top: 1rem; padding: .7rem 2rem; border: 1px solid rgba(154,122,50,.3); color: var(--gold2); font-family: var(--sans); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; transition: background .2s; }
+.nav-mobile .nm-cv:hover { background: rgba(154,122,50,.12); }
+
+/* ══ NAV ACTIVE LINK ══ */
+.nav-links a.active { color: var(--dark); }
+.nav-links a.active::after { transform: scaleX(1); }
+nav.s .nav-links a.active { color: var(--gold2); }
+
+/* ══ READING TIME ══ */
+#reading-time { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: rgba(154,122,50,.15); z-index: 9999; }
+#reading-time-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--gold2)); transition: width .1s linear; }
+.rt-chip { display: inline-flex; align-items: center; gap: .4rem; font-size: .64rem; color: rgba(154,122,50,.65); letter-spacing: .1em; }
+
+/* ══ FORM CONTACT ══ */
+.ct-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.6rem; }
+.ct-field { display: flex; flex-direction: column; gap: .4rem; }
+.ct-field label { font-size: .6rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(154,122,50,.6); }
+.ct-field input, .ct-field textarea, .ct-field select {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  color: rgba(200,200,216,.85); font-family: var(--sans); font-size: .86rem;
+  padding: .75rem 1rem; border-radius: 2px; outline: none;
+  transition: border-color .25s, background .25s;
+}
+.ct-field input:focus, .ct-field textarea:focus { border-color: rgba(154,122,50,.45); background: rgba(255,255,255,.06); }
+.ct-field textarea { resize: vertical; min-height: 100px; }
+.ct-field input::placeholder, .ct-field textarea::placeholder { color: rgba(200,200,216,.25); }
+.ct-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.ct-submit {
+  padding: .85rem 2rem; background: var(--gold); color: #fff; border: none;
+  font-family: var(--sans); font-size: .74rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; cursor: pointer; transition: background .3s, transform .2s;
+  display: flex; align-items: center; gap: .6rem; justify-content: center;
+}
+.ct-submit:hover { background: var(--gold2); transform: translateY(-1px); }
+.ct-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.ct-msg { font-size: .8rem; padding: .7rem 1rem; border-radius: 2px; display: none; }
+.ct-msg.ok { background: rgba(62,214,138,.08); border: 1px solid rgba(62,214,138,.2); color: rgba(62,214,138,.9); display: block; }
+.ct-msg.err { background: rgba(255,80,80,.08); border: 1px solid rgba(255,80,80,.2); color: rgba(255,120,120,.9); display: block; }
+
+/* ══ COUNTER ANIMATION ══ */
+.stat-n { transition: transform .3s; }
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .hero-inner { grid-template-columns: 1fr; }
+  .h-photo { display: none; }
+  .about-grid,.ct-layout { grid-template-columns: 1fr; gap: 4rem; }
+  .val-grid { grid-template-columns: 1fr 1fr; }
+  .edu-grid,.proj-grid { grid-template-columns: 1fr 1fr; }
+  .sk-layout { grid-template-columns: 1fr; }
+  .master-hl { grid-template-columns: 1fr; }
+  .exp-item { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media(max-width:768px){
+  nav,nav.s { padding: 1rem 1.5rem; }
+  .nav-links,.nav-cta { display: none; }
+  .nav-burger { display: flex; }
+  .s-inner { padding: 0 1.5rem; }
+  .s-pad { padding: 6rem 0; }
+  .val-grid,.edu-grid,.proj-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: .8rem; text-align: center; padding: 2rem 1.5rem; }
+  .hero-inner { padding: 0 1.5rem; }
+  .ct-form-row { grid-template-columns: 1fr; }
+  #dm-toggle { bottom: 1.2rem; right: 1.2rem; }
+  .univ-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .passion-grid { grid-template-columns: 1fr 1fr; }
+  .foot-gallery-grid { grid-template-columns: repeat(2,1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- BARRE LECTURE -->
+<div id="reading-time"><div id="reading-time-bar"></div></div>
+
+<!-- DARK MODE TOGGLE -->
+<button id="dm-toggle" title="Changer le thème">🌙</button>
+
+<!-- MENU MOBILE -->
+<div class="nav-mobile" id="nav-mobile">
+  <button class="nm-close" id="nm-close">&#x2715;</button>
+  <a href="#about" class="nm-link">Profil</a>
+  <a href="#exp" class="nm-link">Expérience</a>
+  <a href="#skills" class="nm-link">Compétences</a>
+  <a href="#formation" class="nm-link">Formation</a>
+  <a href="#univers" class="nm-link">Qui je suis</a>
+  <a href="#recommandation" class="nm-link">Recommandation</a>
+  <a href="#projets" class="nm-link">Projets</a>
+  <a href="#contact" class="nm-link">Contact</a>
+  <a href="cv-lucas-beau.pdf" download class="nm-cv">↓ Télécharger le CV</a>
+</div>
+
+<!-- MODAL SCREENSHOT (simple) -->
+<div class="modal-overlay" id="screenshot-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn">&#x2715;</button>
+    <img id="modal-img" src="" alt="">
+    <div class="modal-caption" id="modal-caption"></div>
+  </div>
+</div>
+
+<!-- MODAL CAROUSEL PLT -->
+<div class="modal-overlay" id="carousel-modal">
+  <div class="modal-box" style="max-width:380px;width:90vw;">
+    <button class="modal-close" id="carousel-close-btn">&#x2715;</button>
+    <div class="plt-carousel" style="position:relative;">
+      <div class="plt-slides" id="plt-slides">
+        <div class="plt-slide"><img src="plt-screen-1.jpg" alt="PawLuxe Track — Accueil"></div>
+        <div class="plt-slide"><img src="plt-screen-2.jpg" alt="PawLuxe Track — Missions"></div>
+        <div class="plt-slide"><img src="plt-screen-3.jpg" alt="PawLuxe Track — GPS"></div>
+        <div class="plt-slide"><img src="plt-screen-4.jpg" alt="PawLuxe Track — Santé"></div>
+        <div class="plt-slide"><img src="plt-screen-5.jpg" alt="PawLuxe Track — Premium"></div>
+        <div class="plt-slide"><img src="plt-screen-6.jpg" alt="PawLuxe Track — Shop 3D"></div>
+      </div>
+      <button class="plt-arr prev" id="plt-prev">&#8249;</button>
+      <button class="plt-arr next" id="plt-next">&#8250;</button>
+    </div>
+    <div class="plt-nav" id="plt-nav">
+      <button class="plt-dot active" data-i="0"></button>
+      <button class="plt-dot" data-i="1"></button>
+      <button class="plt-dot" data-i="2"></button>
+      <button class="plt-dot" data-i="3"></button>
+      <button class="plt-dot" data-i="4"></button>
+      <button class="plt-dot" data-i="5"></button>
+    </div>
+    <div class="modal-caption" id="carousel-caption">PawLuxe Track — Accueil</div>
+  </div>
+</div>
+
+<div id="scroll-prog" style="position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#9A7A32,#C4A24A);z-index:9999;transition:width .1s linear;pointer-events:none;"></div>
+
+<!-- ════ NAV ════ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Lucas<span>.</span>Beau</a>
+  <ul class="nav-links">
+    <li><a href="#about">Profil</a></li>
+    <li><a href="#exp">Expérience</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#formation">Formation</a></li>
+    <li><a href="#univers">Qui je suis</a></li>
+    <li><a href="#recommandation">Recommandation</a></li>
+    <li><a href="#projets">Projets</a></li>
+  </ul>
+  <a href="cv-lucas-beau.pdf" download class="nav-cta" style="margin-right:.8rem;background:transparent;border:1px solid var(--gold2);color:var(--gold2);">↓ CV</a>
+  <a href="#contact" class="nav-cta">Contact</a>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+
+    <div>
+      <div class="h-eyebrow">
+        <div class="h-eyebrow-line"></div>
+        <span class="h-eyebrow-text">Alternance KIA Cavallari · Jusqu'à Août 2026</span>
+        <span class="rt-chip" id="rt-chip" style="margin-left:1.2rem;">⏱ <span id="rt-min">3</span> min de lecture</span>
+      </div>
+
+      <h1 class="h-name">LUCAS<br><em>Beau</em></h1>
+
+      <p class="h-role">Commercial <span>&amp;</span> Futur Manager — Nice, Côte d'Azur</p>
+
+      <p class="h-desc">
+        22 ans. Étudiant en <strong>3ᵉ année de BUT Techniques de Commercialisation</strong>, parcours <strong>BDMRC</strong> à l'IUT de Nice. <strong>4 ans d'alternance</strong> au compteur — passé par <strong>Renault groupe</strong> puis <strong>KIA Cavallari</strong>, actuellement alternant commercial chez KIA jusqu'en août 2026.
+      </p>
+
+      <div class="h-actions">
+        <a href="#contact" class="btn-gold">Me contacter</a>
+        <a href="#exp" class="btn-out">Mon parcours</a>
+      </div>
+
+      <div class="h-stats">
+        <div>
+          <div class="stat-n"><span id="cnt-age">22</span><sup>ans</sup></div>
+          <div class="stat-l">Âge</div>
+        </div>
+        <div>
+          <div class="stat-n"><span id="cnt-alt">4</span><sup>ans</sup></div>
+          <div class="stat-l">Alternance</div>
+        </div>
+        <div>
+          <div class="stat-n">BUT<sup>TC</sup></div>
+          <div class="stat-l">BDMRC · IUT Nice</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo hero -->
+    <div class="h-photo">
+      <div class="h-photo-frame">
+        <img src="photo-lucas.jpg" alt="Lucas Beau" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="hf-tag1">
+        <div class="hft1-n">Nice</div>
+        <div class="hft1-l">Côte d'Azur</div>
+      </div>
+      <div class="hf-tag2">
+        <div class="hft2-l">Formation</div>
+        <div class="hft2-v">IUT de Nice — BUT TC</div>
+      </div>
+      <div class="hf-tag3">
+        <div class="hft3-l">Disponibilité</div>
+        <div class="hft3-v">Août 2026</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="scroll-cue">
+    <span class="sc-text">Défiler</span>
+    <div class="sc-bar"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ ABOUT ════ -->
+<section id="about" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num">01</span>
+      <div class="se-line"></div>
+      <span class="se-tag">Qui suis-je</span>
+    </div>
+    <h2 class="sec-title rv">Un profil commercial<br><em>qui se démarque</em></h2>
+
+    <div class="about-grid">
+
+      <div class="photos-col rv">
+        <!-- Photo principale -->
+        <div class="photo-main">
+          <div class="photo-inner">
+            <img src="photo-lucas.jpg" alt="Lucas Beau" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          </div>
+          <div class="ab-badge">
+            <div class="abb-n">Nice</div>
+            <div class="abb-l">Côte d'Azur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rv d1">
+        <div class="about-text">
+          <p>Bonjour, je suis <strong>Lucas Beau, 22 ans</strong>, étudiant en 3ᵉ année de BUT Techniques de Commercialisation, parcours <strong>BDMRC — Business Development, Marketing, Relation Client</strong> à l'IUT de Nice.</p>
+          <p><strong>4 ans d'alternance</strong> en continu m'ont forgé une vision commerciale que peu d'étudiants ont à 22 ans. Chez <strong>Renault groupe à Nice</strong> (2022-2024) d'abord, en location ; puis chez <strong>KIA Cavallari à Nice</strong> (2024-2026), en vente automobile. Deux univers, deux cultures d'entreprise, une seule constante : le goût du résultat et du contact humain.</p>
+          <p>Le <strong>football</strong>, c'est <strong>18 ans de ma vie</strong>. Trophées, entraînements, nuits de match au Vélodrome — ce sport m'a construit. Il m'a appris ce que aucune salle de cours ne peut enseigner : la résilience, l'esprit d'équipe, le dépassement de soi et la mentalité du compétiteur. Ce sont exactement ces valeurs que j'apporte chaque jour dans mon travail. Mon objectif est clair — <strong>intégrer un Master</strong> pour bâtir une carrière ambitieuse et solide.</p>
+        </div>
+
+        <div class="about-infos">
+          <div class="ai"><div class="ai-k">Âge</div><div class="ai-v">22 ans</div></div>
+          <div class="ai"><div class="ai-k">Localisation</div><div class="ai-v">Nice (06)</div></div>
+          <div class="ai"><div class="ai-k">Formation</div><div class="ai-v">BUT TC BDMRC</div></div>
+          <div class="ai"><div class="ai-k">Alternances</div><div class="ai-v">Renault groupe · KIA</div></div>
+          <div class="ai"><div class="ai-k">Email</div><div class="ai-v">lucasbeau42@gmail.com</div></div>
+          <div class="ai"><div class="ai-k">Fin d'alternance</div><div class="ai-v">Août 2026</div></div>
+        </div>
+
+        <div class="about-tags">
+          <span class="atag at-gold">Automobile</span>
+          <span class="atag at-gold">Football</span>
+          <span class="atag at-gold">Ambitieux</span>
+          <span class="atag at-dark">Fort relationnel</span>
+          <span class="atag at-dark">Orienté résultats</span>
+          <span class="atag at-dark">Adaptable</span>
+          <span class="atag at-gold">BDMRC</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDER FOOTBALL -->
+    <div class="foot-slider-wrap rv" style="margin-top:4rem;">
+      <div class="foot-slider-header">
+        <span class="foot-gallery-label">⚽ 18 ans de passion</span>
+        <div class="fsl-dots" id="fsl-dots">
+          <button class="fsl-dot active" data-i="0"></button>
+          <button class="fsl-dot" data-i="1"></button>
+          <button class="fsl-dot" data-i="2"></button>
+          <button class="fsl-dot" data-i="3"></button>
+        </div>
+      </div>
+      <div class="foot-slider" id="foot-slider">
+        <div class="fsl-track" id="fsl-track">
+          <div class="fsl-slide" onclick="openModal('foot-trophee.jpg','Premier trophée — les débuts')">
+            <img src="foot-trophee.jpg" alt="Premier trophée" class="contain-img">
+            <div class="fsl-caption"><span>🏆 Premier trophée</span><em>Les débuts</em></div>
+          </div>
+          <div class="fsl-slide" onclick="openModal('foot-entrainement.jpg','Entraînement — Ekinsport')">
+            <img src="foot-entrainement.jpg" alt="Entraînement Ekinsport" style="object-position: center 25%;">
+            <div class="fsl-caption"><span>👕 Ekinsport</span><em>En équipe</em></div>
+          </div>
+          <div class="fsl-slide" onclick="openModal('foot-match.jpg','Sur le terrain — intensité max')">
+            <img src="foot-match.jpg" alt="Match" style="object-position: center 40%;">
+            <div class="fsl-caption"><span>⚽ Sur le terrain</span><em>Intensité max</em></div>
+          </div>
+          <div class="fsl-slide" onclick="openModal('foot-stade.jpg','Vélodrome — la passion du foot vivant')">
+            <img src="foot-stade.jpg" alt="Vélodrome" class="contain-img">
+            <div class="fsl-caption"><span>🔥 Vélodrome</span><em>La passion du foot vivant</em></div>
+          </div>
+        </div>
+        <button class="fsl-arr fsl-prev" id="fsl-prev">&#8249;</button>
+        <button class="fsl-arr fsl-next" id="fsl-next">&#8250;</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ VALUES ════ -->
+<section id="values" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num">02</span>
+      <div class="se-line"></div>
+      <span class="se-tag">Mes atouts</span>
+    </div>
+    <h2 class="sec-title rv">Ce qui me rend <em>différent</em></h2>
+    <p class="sec-sub rv">Quatre qualités forgées par deux ans de terrain commercial intensif.</p>
+
+    <div class="val-grid">
+      <div class="vi rv d1">
+        <div class="vi-num">01</div>
+        <div class="vi-t">Orienté résultats</div>
+        <div class="vi-d">Je ne me contente jamais du minimum. Chaque objectif est une cible à atteindre et à dépasser. Mon alternance m'a appris que les chiffres se construisent sur le terrain.</div>
+      </div>
+      <div class="vi rv d2">
+        <div class="vi-num">02</div>
+        <div class="vi-t">Relationnel exceptionnel</div>
+        <div class="vi-d">Accueillir, écouter, comprendre et convaincre. De la location chez Renault à la vente automobile chez KIA, deux ans de contact client quotidien intensif.</div>
+      </div>
+      <div class="vi rv d3">
+        <div class="vi-num">03</div>
+        <div class="vi-t">Adaptabilité totale</div>
+        <div class="vi-d">Alterner cours intensifs et exigences professionnelles forge une capacité d'adaptation exceptionnelle. Je suis à l'aise dans n'importe quel environnement commercial.</div>
+      </div>
+      <div class="vi rv d4">
+        <div class="vi-num">04</div>
+        <div class="vi-t">Esprit d'initiative</div>
+        <div class="vi-d">J'ai développé un configurateur de véhicule interactif pour améliorer l'expérience client chez KIA, sans qu'on me le demande. L'initiative fait partie de mon ADN.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ QUI JE SUIS ════ -->
+<section id="univers" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num" style="color:rgba(255,255,255,.1);">03</span>
+      <div class="se-line" style="background:rgba(255,255,255,.08);"></div>
+      <span class="se-tag" style="color:var(--gold2);">Au-delà du CV</span>
+    </div>
+    <h2 class="sec-title rv" style="color:#EDEAE2;">Qui je <em>suis</em></h2>
+    <p class="sec-sub rv" style="color:rgba(200,200,216,.45);">Un profil commercial, une vision, une personnalité.</p>
+
+    <div class="univ-layout rv">
+
+      <!-- Colonne gauche : passions + parcours -->
+      <div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:1.5rem;">Mes passions</div>
+        <div class="passion-grid">
+          <div class="passion-card tilt">
+            <span class="passion-icon">⚽</span>
+            <div class="passion-title">Football</div>
+            <div class="passion-desc">Passionné depuis toujours. Le foot m'a appris la valeur du collectif, l'engagement et la mentalité de compétiteur.</div>
+          </div>
+          <div class="passion-card tilt">
+            <span class="passion-icon">🏋️</span>
+            <div class="passion-title">Sport &amp; Running</div>
+            <div class="passion-desc">Course à pied et salle de sport au quotidien. La discipline sportive irrigue directement ma façon de travailler.</div>
+          </div>
+          <div class="passion-card tilt">
+            <span class="passion-icon">✈️</span>
+            <div class="passion-title">Voyages</div>
+            <div class="passion-desc">Passionné par la découverte de nouvelles cultures. Le voyage nourrit l'ouverture d'esprit et la curiosité.</div>
+          </div>
+          <div class="passion-card tilt">
+            <span class="passion-icon">🎵</span>
+            <div class="passion-title">Musique</div>
+            <div class="passion-desc">La musique m'accompagne dans toutes les situations — un moteur de concentration et d'inspiration.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <div style="font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:1.5rem;">Mon parcours en bref</div>
+          <div class="parcours-line">
+            <div class="pl-step">
+              <div class="pl-dot"></div>
+              <div class="pl-yr">2021</div>
+              <div class="pl-title">Bac mention Très Bien</div>
+              <div class="pl-sub">Lycée Thomas Edison · Lorgues</div>
+            </div>
+            <div class="pl-step">
+              <div class="pl-dot"></div>
+              <div class="pl-yr">2021 — 2022</div>
+              <div class="pl-title">Licence 1 Économie &amp; Gestion</div>
+              <div class="pl-sub">Université Aix-Marseille</div>
+            </div>
+            <div class="pl-step">
+              <div class="pl-dot"></div>
+              <div class="pl-yr">2022 — 2024</div>
+              <div class="pl-title">Alternant Commercial · Renault groupe</div>
+              <div class="pl-sub">Location VD/LLD · Nice</div>
+            </div>
+            <div class="pl-step">
+              <div class="pl-dot"></div>
+              <div class="pl-yr">2024 — 2026</div>
+              <div class="pl-title">Alternant Commercial · KIA Cavallari</div>
+              <div class="pl-sub">Vente automobile · Nice</div>
+            </div>
+            <div class="pl-step">
+              <div class="pl-dot" style="background:var(--gold);box-shadow:0 0 0 3px rgba(196,162,74,.25),0 0 12px rgba(196,162,74,.4);"></div>
+              <div class="pl-yr" style="color:var(--gold2);">2026 →</div>
+              <div class="pl-title" style="color:var(--gold2);">Master en alternance</div>
+              <div class="pl-sub">En recherche active · Rentrée 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : vision & projets pro -->
+      <div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:1.5rem;">Ce qui me motive</div>
+
+        <div style="font-size:.9rem;color:rgba(200,200,216,.65);line-height:2;font-weight:300;margin-bottom:2rem;">
+          J'aime profondément <strong style="color:#EDEAE2;font-weight:500;">le contact humain</strong>. Convaincre, accompagner, créer une relation de confiance — c'est ce qui me fait me lever le matin. Chez Renault puis chez KIA, j'ai confirmé que je suis fait pour les métiers qui mettent l'humain au centre.
+        </div>
+
+        <div style="font-size:.9rem;color:rgba(200,200,216,.65);line-height:2;font-weight:300;margin-bottom:2rem;">
+          En parallèle, j'ai une fibre entrepreneuriale que je cultive activement — j'ai construit seul <strong style="color:#EDEAE2;font-weight:500;">Olympus</strong>, une plateforme d'agents IA, et <strong style="color:#EDEAE2;font-weight:500;">PawLuxe Track</strong>, une app mobile complète. Ces projets montrent ma capacité à aller au bout des idées, seul, de A à Z.
+        </div>
+
+        <div class="vision-block">
+          <div class="vision-label">Ma vision à terme</div>
+          <div class="vision-text">
+            À terme, deux ambitions me définissent : <strong>créer ma propre structure</strong> en tant que Business Developer — bâtir quelque chose qui me ressemble — ou devenir <strong>Directeur Commercial</strong> dans une entreprise dont je partage les valeurs et l'ambition.
+          </div>
+          <div class="ambition-pills" style="margin-top:1.4rem;">
+            <span class="amp amp-gold">Entrepreneuriat</span>
+            <span class="amp amp-gold">Business Developer</span>
+            <span class="amp amp-gold">Directeur Commercial</span>
+            <span class="amp amp-dark">Leadership</span>
+            <span class="amp amp-dark">Innovation</span>
+            <span class="amp amp-dark">Croissance</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;padding:1.5rem 2rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);">
+          <div style="font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,200,216,.3);margin-bottom:1rem;">Ce que le terrain m'a appris</div>
+          <div style="display:flex;flex-direction:column;gap:.7rem;">
+            <div style="font-size:.82rem;color:rgba(200,200,216,.6);font-weight:300;display:flex;gap:.8rem;align-items:flex-start;">
+              <span style="color:var(--gold2);flex-shrink:0;">—</span> Qu'un bon commercial écoute deux fois plus qu'il ne parle
+            </div>
+            <div style="font-size:.82rem;color:rgba(200,200,216,.6);font-weight:300;display:flex;gap:.8rem;align-items:flex-start;">
+              <span style="color:var(--gold2);flex-shrink:0;">—</span> Que la relation client se construit dans la durée, pas dans la transaction
+            </div>
+            <div style="font-size:.82rem;color:rgba(200,200,216,.6);font-weight:300;display:flex;gap:.8rem;align-items:flex-start;">
+              <span style="color:var(--gold2);flex-shrink:0;">—</span> Que la persévérance et l'adaptabilité valent plus que n'importe quel diplôme
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ EXPERIENCE ════ -->
+<section id="exp" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num">03</span>
+      <div class="se-line"></div>
+      <span class="se-tag">Expériences</span>
+    </div>
+    <h2 class="sec-title rv">Mon parcours <em>terrain</em></h2>
+    <p class="sec-sub rv">Des expériences complémentaires couvrant location, vente et relation client.</p>
+
+    <div class="exp-list rv">
+
+      <!-- KIA -->
+      <div class="exp-item">
+        <div class="ei-left">
+          <div class="ei-period">Sept. 2024 — Août 2026</div>
+          <div class="ei-monogram">
+            <img src="logo-kia.png" alt="KIA">
+          </div>
+          <div class="ei-type">Alternance</div>
+        </div>
+        <div class="ei-right">
+          <div class="ei-company">KIA Cavallari · Nice, Alpes-Maritimes</div>
+          <div class="ei-role">Assistant Commercial</div>
+          <div class="ei-sup">Sous la direction de Mickael Devaye, Directeur Commercial</div>
+          <ul class="ei-pts">
+            <li>Accueil, conseil et accompagnement des clients dans leur projet d'achat (véhicules neufs et occasion)</li>
+            <li>Gestion complète des dossiers commerciaux : devis, financement, assurance, livraison</li>
+            <li>Prospection téléphonique et relances pour maintenir un portefeuille client actif</li>
+            <li>Participation aux opérations promotionnelles et événements en concession</li>
+            <li>Développement d'un configurateur web interactif pour améliorer l'expérience d'achat</li>
+            <li>Reporting régulier à la direction : suivi des indicateurs de performance commerciale</li>
+          </ul>
+          <div class="ei-tags">
+            <span class="etag">Relation client</span><span class="etag">Vente automobile</span><span class="etag">Prospection</span><span class="etag">Négociation</span><span class="etag">CRM</span><span class="etag">Reporting</span><span class="etag">Financement</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RENAULT RENT -->
+      <div class="exp-item">
+        <div class="ei-left">
+          <div class="ei-period">Sept. 2022 — Août 2024</div>
+          <div class="ei-monogram">
+            <img src="logo-renault.png" alt="Renault">
+          </div>
+          <div class="ei-type">Alternance</div>
+        </div>
+        <div class="ei-right">
+          <div class="ei-company">Renault groupe · Nice</div>
+          <div class="ei-role">Alternant Commercial à la Location</div>
+          <div class="ei-sup">Location de véhicules courte, moyenne et longue durée</div>
+          <ul class="ei-pts">
+            <li>Accueil et conseil de clients particuliers et professionnels pour leurs besoins en location</li>
+            <li>Analyse des besoins et proposition de solutions adaptées selon la durée et l'usage</li>
+            <li>Établissement des contrats de location, gestion des états des lieux et restitutions</li>
+            <li>Suivi du parc véhicules : disponibilité, planification et coordination logistique</li>
+            <li>Prospection et développement d'un portefeuille clients professionnels (BtoB)</li>
+            <li>Atteinte des objectifs commerciaux mensuels fixés par la direction</li>
+          </ul>
+          <div class="ei-tags">
+            <span class="etag">Location VD / LLD</span><span class="etag">Contrats</span><span class="etag">Prospection BtoB</span><span class="etag">Gestion de parc</span><span class="etag">Relation client</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVEUR -->
+      <div class="exp-item">
+        <div class="ei-left">
+          <div class="ei-period">Juin — Août 2023</div>
+          <div class="ei-monogram">
+            <img src="logo-le24.png" alt="Le 24">
+          </div>
+          <div class="ei-type">Saisonnier</div>
+        </div>
+        <div class="ei-right">
+          <div class="ei-company">Le 24 · Cannes</div>
+          <div class="ei-role">Serveur</div>
+          <div class="ei-sup">Service en salle dans un établissement de restauration à Cannes</div>
+          <ul class="ei-pts">
+            <li>Accueil et conseil de la clientèle, prise de commandes et service en salle</li>
+            <li>Gestion simultanée de plusieurs tables en environnement à forte cadence</li>
+            <li>Développement du sens du service, de la rigueur et de la résistance au stress</li>
+          </ul>
+          <div class="ei-tags">
+            <span class="etag">Sens du service</span><span class="etag">Gestion du stress</span><span class="etag">Relation client</span><span class="etag">Rigueur</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AQUALAND -->
+      <div class="exp-item">
+        <div class="ei-left">
+          <div class="ei-period">Étés 2021 — 2022</div>
+          <div class="ei-monogram">
+            <img src="logo-aqualand.jpg" alt="Aqualand">
+          </div>
+          <div class="ei-type">Saisonnier</div>
+        </div>
+        <div class="ei-right">
+          <div class="ei-company">Aqualand · Fréjus</div>
+          <div class="ei-role">Agent d'entretien</div>
+          <div class="ei-sup">Emploi saisonnier estival au parc aquatique Aqualand de Fréjus</div>
+          <ul class="ei-pts">
+            <li>Entretien et maintenance des espaces du parc aquatique en conditions estivales</li>
+            <li>Travail en équipe dans un environnement dynamique et à fort flux de visiteurs</li>
+            <li>Sens des responsabilités, ponctualité et autonomie dans les missions assignées</li>
+          </ul>
+          <div class="ei-tags">
+            <span class="etag">Travail en équipe</span><span class="etag">Autonomie</span><span class="etag">Rigueur</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ SKILLS ════ -->
+<section id="skills" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num">04</span>
+      <div class="se-line"></div>
+      <span class="se-tag">Compétences</span>
+    </div>
+    <h2 class="sec-title rv">Ce que je <em>maîtrise</em></h2>
+
+    <div class="sk-layout">
+      <div class="rv">
+        <div class="sg">
+          <div class="sg-title">Commerce &amp; Vente</div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Négociation &amp; closing</span><span class="sb-p">87 %</span></div><div class="sb-track"><div class="sb-fill" data-w="87"></div><div class="sb-dot" data-w="87"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Présentation produit</span><span class="sb-p">90 %</span></div><div class="sb-track"><div class="sb-fill" data-w="90"></div><div class="sb-dot" data-w="90"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Prospection &amp; relance</span><span class="sb-p">82 %</span></div><div class="sb-track"><div class="sb-fill" data-w="82"></div><div class="sb-dot" data-w="82"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Gestion de portefeuille</span><span class="sb-p">78 %</span></div><div class="sb-track"><div class="sb-fill" data-w="78"></div><div class="sb-dot" data-w="78"></div></div></div>
+        </div>
+        <div class="sg">
+          <div class="sg-title">Relation Client</div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Accueil &amp; conseil</span><span class="sb-p">94 %</span></div><div class="sb-track"><div class="sb-fill" data-w="94"></div><div class="sb-dot" data-w="94"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Communication écrite &amp; orale</span><span class="sb-p">88 %</span></div><div class="sb-track"><div class="sb-fill" data-w="88"></div><div class="sb-dot" data-w="88"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Fidélisation client</span><span class="sb-p">83 %</span></div><div class="sb-track"><div class="sb-fill" data-w="83"></div><div class="sb-dot" data-w="83"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Gestion des objections</span><span class="sb-p">85 %</span></div><div class="sb-track"><div class="sb-fill" data-w="85"></div><div class="sb-dot" data-w="85"></div></div></div>
+        </div>
+        <div class="sg">
+          <div class="sg-title">Marketing &amp; BDMRC</div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Stratégie marketing digital</span><span class="sb-p">76 %</span></div><div class="sb-track"><div class="sb-fill" data-w="76"></div><div class="sb-dot" data-w="76"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Analyse de marché</span><span class="sb-p">80 %</span></div><div class="sb-track"><div class="sb-fill" data-w="80"></div><div class="sb-dot" data-w="80"></div></div></div>
+          <div class="sb"><div class="sb-head"><span class="sb-n">Pack Office &amp; CRM</span><span class="sb-p">84 %</span></div><div class="sb-track"><div class="sb-fill" data-w="84"></div><div class="sb-dot" data-w="84"></div></div></div>
+        </div>
+      </div>
+
+      <div class="rv d2">
+        <div class="sg">
+          <div class="sg-title">Qualités personnelles</div>
+          <div class="soft-grid">
+            <div class="soft-c tilt"><span class="sc-num">01</span><div class="sc-t">Sens du relationnel</div><div class="sc-d">Écoute active et sens du contact forgés au quotidien face aux clients.</div></div>
+            <div class="soft-c tilt"><span class="sc-num">02</span><div class="sc-t">Esprit d'équipe</div><div class="sc-d">Le football m'a appris la valeur du collectif et de l'engagement commun.</div></div>
+            <div class="soft-c tilt"><span class="sc-num">03</span><div class="sc-t">Gestion du stress</div><div class="sc-d">À l'aise sous pression, je garde le cap même dans les situations intenses.</div></div>
+            <div class="soft-c tilt"><span class="sc-num">04</span><div class="sc-t">Prise d'initiative</div><div class="sc-d">J'agis sans attendre. L'initiative fait partie de mon mode de fonctionnement.</div></div>
+            <div class="soft-c tilt"><span class="sc-num">05</span><div class="sc-t">Sens de l'analyse</div><div class="sc-d">Interprétation des données, lecture du marché et prise de décision éclairée.</div></div>
+            <div class="soft-c tilt"><span class="sc-num">06</span><div class="sc-t">Rigueur</div><div class="sc-d">Souci du détail et sérieux dans chaque mission, de la prospection au closing.</div></div>
+          </div>
+        </div>
+
+        <div class="sg">
+          <div class="sg-title">Langues</div>
+          <div class="lang-grid">
+            <div class="lc"><span class="lc-flag">Français</span><div class="lc-name">Français</div><div class="lc-lvl">Langue maternelle</div></div>
+            <div class="lc"><span class="lc-flag">Anglais</span><div class="lc-name">Anglais</div><div class="lc-lvl">Niveau B2</div></div>
+            <div class="lc"><span class="lc-flag">Espagnol</span><div class="lc-name">Espagnol</div><div class="lc-lvl">Niveau B1</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ FORMATION ════ -->
+<section id="formation" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num">05</span>
+      <div class="se-line"></div>
+      <span class="se-tag">Formation</span>
+    </div>
+    <h2 class="sec-title rv">Parcours <em>académique</em></h2>
+
+    <div class="edu-grid">
+      <div class="edu-c ef1 rv d1 tilt">
+        <div class="edu-status es-a">En candidature</div>
+        <div class="edu-yr">2025 — 2027</div>
+        <div class="edu-deg">Master — Commerce &amp; Management</div>
+        <div class="edu-school">Programmes visés · Région PACA</div>
+        <div class="edu-desc">Dossiers actifs pour plusieurs Masters. BUT BDMRC et deux alternances constituent un profil solide pour intégrer les meilleures formations.</div>
+        <div class="edu-chips"><span class="ech">Management</span><span class="ech">Patrimoine</span><span class="ech">Entrepreneuriat</span><span class="ech">Communication</span></div>
+      </div>
+      <div class="edu-c ef2 rv d2 tilt">
+        <div class="edu-status es-c">En cours</div>
+        <img src="logo-iut.png" alt="IUT Nice Côte d'Azur" style="height:40px;width:auto;object-fit:contain;margin-bottom:.8rem;display:block;">
+        <div class="edu-yr">2022 — 2026</div>
+        <div class="edu-deg">BUT Techniques de Commercialisation</div>
+        <div class="edu-school">Parcours BDMRC · IUT de Nice · Côte d'Azur Université</div>
+        <div class="edu-desc">Formation de 3 ans en alternance (4 ans d'alternance au total) couvrant vente, marketing digital, développement commercial et gestion de la relation client (CRM).</div>
+        <div class="edu-chips"><span class="ech">BDMRC</span><span class="ech">Alternance</span><span class="ech">Marketing</span><span class="ech">Vente</span><span class="ech">IUT Nice</span></div>
+      </div>
+      <div class="edu-c ef4 rv d3 tilt">
+        <div class="edu-status es-d">Obtenu</div>
+        <div class="edu-yr">2021 — 2022</div>
+        <div class="edu-deg">Licence 1 Économie et Gestion</div>
+        <div class="edu-school">Université Aix-Marseille · Marseille</div>
+        <div class="edu-desc">Première année universitaire à Aix-Marseille, bases solides en économie, gestion et analyse. Réorientation vers le BUT TC pour un parcours plus professionnel.</div>
+        <div class="edu-chips"><span class="ech">Économie</span><span class="ech">Gestion</span><span class="ech">Analyse</span></div>
+      </div>
+      <div class="edu-c ef3 rv d4 tilt">
+        <div class="edu-status es-d">Obtenu</div>
+        <div class="edu-yr">2021</div>
+        <div class="edu-deg">Baccalauréat Général</div>
+        <div class="edu-school">Lycée Thomas Edison · Lorgues (83)</div>
+        <div class="edu-desc">Mention très bien. Spécialités à dominante économique et sociale. Première étape vers une orientation résolue dans le commerce et la gestion.</div>
+        <div class="edu-chips"><span class="ech">Mention très bien</span><span class="ech">Sciences Éco.</span><span class="ech">Lorgues</span></div>
+      </div>
+    </div>
+
+    <div class="master-hl rv">
+      <div>
+        <div class="mh-t">Objectif : <em>Master en alternance</em> — Rentrée 2026</div>
+        <div class="mh-sub">Mon BUT TC BDMRC et mes deux alternances (Renault groupe + KIA Cavallari) font de moi un candidat solide pour les programmes suivants :</div>
+        <div class="mh-list">
+          <div class="mh-item"><span class="mh-arr">&#8594;</span> Master Management de Projet Innovant</div>
+          <div class="mh-item"><span class="mh-arr">&#8594;</span> Master Gestion de Patrimoine &amp; Finance</div>
+          <div class="mh-item"><span class="mh-arr">&#8594;</span> Master Communication d'Entreprise</div>
+          <div class="mh-item"><span class="mh-arr">&#8594;</span> Master Entrepreneuriat &amp; Innovation</div>
+        </div>
+      </div>
+      <div class="mh-right">
+        <div class="mh-yr">2026</div>
+        <div class="mh-yrl">Rentrée visée</div>
+        <a href="#contact" class="mh-cta">Me recruter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ RECOMMANDATION ════ -->
+<section id="recommandation" class="s-pad" style="background:var(--dark2);">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num" style="color:rgba(255,255,255,.1);">06</span>
+      <div class="se-line" style="background:rgba(255,255,255,.08);"></div>
+      <span class="se-tag" style="color:var(--gold2);">Recommandation</span>
+    </div>
+    <h2 class="sec-title rv" style="color:#EDEAE2;">Ce qu'on dit de <em>moi</em></h2>
+
+    <div class="rv" style="margin-top:5rem;">
+      <div style="max-width:860px;margin:0 auto;position:relative;">
+        <!-- Guillemets déco -->
+        <div style="font-family:var(--display);font-size:9rem;line-height:.7;color:rgba(196,162,74,.12);position:absolute;top:-2rem;left:-1rem;pointer-events:none;user-select:none;">&ldquo;</div>
+
+        <!-- Citation principale -->
+        <blockquote style="font-family:var(--display);font-size:1.65rem;font-weight:300;color:#EDEAE2;line-height:1.65;letter-spacing:-.02em;font-style:italic;padding:0 0 0 1.5rem;border-left:2px solid var(--gold);margin:0 0 2.5rem;">
+          Ce qui me frappe particulièrement chez Lucas, c'est sa capacité à analyser les situations commerciales avec recul et à proposer des solutions pertinentes. Il fait preuve d'une grande curiosité intellectuelle, d'un esprit de synthèse développé, et d'une excellente aisance relationnelle.
+        </blockquote>
+
+        <!-- Points clés -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem;">
+          <div style="padding:1.2rem 1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);">
+            <div style="font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.5rem;">Qualité</div>
+            <div style="font-size:.88rem;color:rgba(200,200,216,.75);font-weight:300;">Rigueur &amp; autonomie dans l'exécution des missions commerciales</div>
+          </div>
+          <div style="padding:1.2rem 1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);">
+            <div style="font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.5rem;">Aptitude</div>
+            <div style="font-size:.88rem;color:rgba(200,200,216,.75);font-weight:300;">Sens aigu du service client et de la relation commerciale</div>
+          </div>
+          <div style="padding:1.2rem 1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);">
+            <div style="font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.5rem;">Verdict</div>
+            <div style="font-size:.88rem;color:rgba(200,200,216,.75);font-weight:300;">Recommandé sans la moindre réserve pour un Master</div>
+          </div>
+        </div>
+
+        <!-- Auteur -->
+        <div style="display:flex;align-items:center;gap:1.5rem;">
+          <div style="width:48px;height:48px;border-radius:50%;overflow:hidden;border:1px solid rgba(196,162,74,.3);flex-shrink:0;background:rgba(196,162,74,.07);display:flex;align-items:center;justify-content:center;">
+            <img src="logo-kia.png" alt="KIA" style="width:75%;height:75%;object-fit:contain;filter:invert(1);opacity:.5;">
+          </div>
+          <div>
+            <div style="font-size:.9rem;font-weight:600;color:#EDEAE2;letter-spacing:.02em;">Michaël Devaye</div>
+            <div style="font-size:.75rem;color:rgba(200,200,216,.4);margin-top:.2rem;">Directeur Commercial · KIA Cavallari · Nice</div>
+          </div>
+          <div style="margin-left:auto;">
+            <a href="lettre-reco-md.pdf" target="_blank" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(154,122,50,.25);padding:.6rem 1.2rem;transition:all .3s;" onmouseover="this.style.borderColor='rgba(196,162,74,.5)';this.style.color='#C4A24A'" onmouseout="this.style.borderColor='rgba(154,122,50,.25)';this.style.color='#9A7A32'">
+              Voir la lettre complète
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════ PROJECTS ════ -->
+<section id="projets" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num">06</span>
+      <div class="se-line"></div>
+      <span class="se-tag">Réalisations</span>
+    </div>
+    <h2 class="sec-title rv">Mes <em>projets</em></h2>
+    <p class="sec-sub rv">Des réalisations concrètes qui illustrent ma capacité d'initiative et de rigueur.</p>
+
+    <!-- Bannière recherche alternance -->
+    <div style="margin-top:4rem;padding:2rem 2.5rem;background:var(--dark);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.5rem;">Objectif 2026</div>
+        <div style="font-family:var(--display);font-size:1.5rem;font-weight:300;color:#EDEAE2;letter-spacing:-.02em;">En recherche d'alternance pour un <em style="font-style:italic;color:var(--gold2);">Master</em> — Rentrée 2026</div>
+      </div>
+      <a href="#contact" style="display:inline-flex;align-items:center;padding:.9rem 2rem;background:var(--gold);color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s;" onmouseover="this.style.background='#C4A24A'" onmouseout="this.style.background='#9A7A32'">Me contacter</a>
+    </div>
+
+    <div class="proj-grid" style="margin-top:1.5rem;">
+      <div class="pj rv d1">
+        <div class="pj-num">01</div>
+        <div class="pj-cat">Projet personnel · Intelligence Artificielle</div>
+        <div class="pj-t">Olympus — Plateforme d'agents IA</div>
+        <div class="pj-d">Conception et développement d'une plateforme complète orchestrant des agents IA autonomes pour l'e-commerce et le trading. Dashboard temps réel, 11 agents actifs (Triton, Zeus, Athéna…), gestion Shopify automatisée et surveillance des marchés financiers.</div>
+        <!-- Aperçu screenshot -->
+        <div style="margin:1.2rem 0;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.06);cursor:pointer;" onclick="openModal('olympus-screenshot.jpg','Dashboard Olympus — Agents IA en temps réel')">
+          <img src="olympus-screenshot.jpg" alt="Dashboard Olympus" style="width:100%;display:block;transition:transform .4s cubic-bezier(.22,1,.36,1);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div class="pj-tags"><span class="pjtag">Intelligence Artificielle</span><span class="pjtag">Python</span><span class="pjtag">E-commerce</span><span class="pjtag">Trading</span><span class="pjtag">Dashboard</span></div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1.2rem;">
+          <span style="display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;padding:.35rem .8rem;background:rgba(154,122,50,.08);border:1px solid rgba(154,122,50,.18);color:var(--gold2);letter-spacing:.06em;">
+            <svg viewBox="0 0 8 8" fill="currentColor" width="6" height="6"><circle cx="4" cy="4" r="4"/></svg>
+            Déployé en local — accès privé
+          </span>
+          <button class="pj-screenshot-btn" style="margin-top:0;" onclick="openModal('olympus-screenshot.jpg','Dashboard Olympus — Agents IA en temps réel')">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="2" width="10" height="8" rx="1"/><circle cx="4" cy="5.5" r="1"/><path d="M1 9l3-3 2 2 2-2.5 3 3.5"/></svg>
+            Voir en grand
+          </button>
+        </div>
+      </div>
+      <div class="pj rv d2">
+        <div class="pj-num">02</div>
+        <div class="pj-cat">Veille stratégique · IUT de Nice — BUT TC</div>
+        <div class="pj-t">Veille &amp; Insight marché</div>
+        <div class="pj-d">Mise en place d'un dispositif de veille concurrentielle et sectorielle : collecte, analyse et synthèse d'informations stratégiques pour dégager des insights actionnables et orienter la prise de décision commerciale.</div>
+        <div class="pj-tags"><span class="pjtag">Veille concurrentielle</span><span class="pjtag">Analyse sectorielle</span><span class="pjtag">Insights</span><span class="pjtag">Rapport</span></div>
+        <a href="Veille et insight.pdf" target="_blank" class="pj-link">Voir le rapport <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
+      </div>
+      <div class="pj rv d3">
+        <div class="pj-num">03</div>
+        <div class="pj-cat">Projet personnel · Application mobile</div>
+        <div class="pj-t">PawLuxe Track — Application mobile</div>
+        <div class="pj-d">Développement d'une application mobile React Native (Expo) dédiée aux propriétaires de chiens : suivi de santé, carte interactive, vétérinaire virtuel DrPaw, planning, mémoires et SOS. Interface soignée avec onboarding animé.</div>
+        <div class="pj-tags"><span class="pjtag">React Native</span><span class="pjtag">Expo</span><span class="pjtag">Mobile</span><span class="pjtag">UX/UI</span><span class="pjtag">TypeScript</span></div>
+        <button class="pj-screenshot-btn" style="margin-top:1.4rem;" onclick="openCarousel()">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="2" width="10" height="8" rx="1"/><circle cx="4" cy="5.5" r="1"/><path d="M1 9l3-3 2 2 2-2.5 3 3.5"/></svg>
+          Voir les screenshots (5 écrans)
+        </button>
+      </div>
+      <div class="pj rv d1">
+        <div class="pj-num">04</div>
+        <div class="pj-cat">Commercial · KIA Cavallari</div>
+        <div class="pj-t">Plan de relance d'un portefeuille clients</div>
+        <div class="pj-d">Identification des clients inactifs depuis plus de 6 mois dans le CRM, rédaction de scripts de relance téléphonique ciblés, planification des rendez-vous et suivi des résultats via tableau de bord.</div>
+        <div class="pj-tags"><span class="pjtag">CRM</span><span class="pjtag">Relance</span><span class="pjtag">Fidélisation</span><span class="pjtag">Reporting</span></div>
+        <a href="#contact" class="pj-link">En savoir plus <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
+      </div>
+      <div class="pj rv d2">
+        <div class="pj-num">05</div>
+        <div class="pj-cat">Commercial · Renault groupe</div>
+        <div class="pj-t">Campagne de prospection BtoB</div>
+        <div class="pj-d">Identification et démarchage d'une cible d'entreprises locales pour la location longue durée (LLD). Mise en place d'un fichier de prospection, d'un argumentaire adapté et suivi des relances jusqu'à la signature.</div>
+        <div class="pj-tags"><span class="pjtag">Prospection</span><span class="pjtag">BtoB</span><span class="pjtag">LLD</span><span class="pjtag">Négociation</span></div>
+        <a href="#contact" class="pj-link">En savoir plus <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
+      </div>
+      <div class="pj rv d3">
+        <div class="pj-num">06</div>
+        <div class="pj-cat">Marketing · KIA Cavallari</div>
+        <div class="pj-t">Book commercial gamme KIA</div>
+        <div class="pj-d">Création d'un support de vente synthétisant la gamme KIA : fiches produits, argumentaires, comparatifs concurrents et grilles de financement. Utilisé en rendez-vous client pour structurer le discours commercial.</div>
+        <div class="pj-tags"><span class="pjtag">Support commercial</span><span class="pjtag">Rédaction</span><span class="pjtag">Argumentation</span></div>
+        <a href="#contact" class="pj-link">En savoir plus <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTACT ════ -->
+<section id="contact" class="s-pad">
+  <div class="s-inner">
+    <div class="s-eyebrow rv">
+      <span class="se-num">07</span>
+      <div class="se-line"></div>
+      <span class="se-tag">Contact</span>
+    </div>
+
+    <div class="ct-layout">
+      <div class="rv">
+        <h2 class="sec-title">Travaillons<br><em>ensemble</em></h2>
+        <p class="ct-desc">Vous recrutez pour un Master en alternance à partir de la rentrée 2026 ? Lucas Beau, BUT TC BDMRC — Renault groupe et KIA Cavallari · Nice. Actuellement en alternance chez KIA jusqu'en août 2026.</p>
+        <div class="avail">
+          <div class="av-dot"></div>
+          <span class="av-text">En alternance KIA · Disponible Août 2026</span>
+        </div>
+        <div class="ct-btns">
+          <a href="mailto:lucasbeau42@gmail.com" class="btn-gold">Me contacter</a>
+          <a href="https://linkedin.com/in/lucas-beau" class="btn-out-light">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="rv d1" style="margin-top:0;">
+        <div class="ct-head" style="color:rgba(200,200,216,.5);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;">Envoyer un message</div>
+        <form class="ct-form" id="contact-form">
+          <div class="ct-form-row">
+            <div class="ct-field">
+              <label for="cf-name">Nom / Entreprise</label>
+              <input type="text" id="cf-name" name="from_name" placeholder="Jean Dupont — Groupe ABC" required>
+            </div>
+            <div class="ct-field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="from_email" placeholder="contact@entreprise.fr" required>
+            </div>
+          </div>
+          <div class="ct-field">
+            <label for="cf-subject">Objet</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="Proposition d'alternance Master 2026" required>
+          </div>
+          <div class="ct-field">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" name="message" placeholder="Bonjour Lucas, je vous contacte au sujet…" required></textarea>
+          </div>
+          <button type="submit" class="ct-submit" id="cf-btn">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M14 2L1 8l5 2 2 5 6-13z"/></svg>
+            Envoyer le message
+          </button>
+          <div class="ct-msg" id="cf-ok">✓ Message envoyé ! Je vous réponds dans les 24h.</div>
+          <div class="ct-msg" id="cf-err">✗ Une erreur s'est produite. Écrivez-moi directement à lucasbeau42@gmail.com</div>
+        </form>
+      </div>
+
+      <div class="ct-card rv d2">
+        <div class="ct-head">Coordonnées</div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div><div class="ct-lbl">Email</div><div class="ct-val"><a href="mailto:lucasbeau42@gmail.com">lucasbeau42@gmail.com</a></div></div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+          <div><div class="ct-lbl">Téléphone</div><div class="ct-val"><a href="tel:+33667863803">06 67 86 38 03</a></div></div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg></div>
+          <div><div class="ct-lbl">Localisation</div><div class="ct-val">Nice, Alpes-Maritimes (06)</div></div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6.5v-7H9v7zm-1.25-8.3c-.8 0-1.45-.65-1.45-1.45S6.95 5.8 7.75 5.8s1.45.65 1.45 1.45-.65 1.45-1.45 1.45zM18 17h-2.5v-3.4c0-.85-.3-1.4-1.05-1.4-.55 0-.9.4-1.05.75-.05.15-.06.35-.06.55V17H10.8s.03-7 0-7h2.5v.98c.35-.52.87-1.28 2.1-1.28 1.5 0 2.6 1 2.6 3.1V17z"/></svg></div>
+          <div><div class="ct-lbl">LinkedIn</div><div class="ct-val"><a href="https://linkedin.com/in/lucas-beau" target="_blank">linkedin.com/in/lucas-beau</a></div></div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-1 13.99L5 13.47V17l6 3.27L17 17v-3.53L11 16.99z"/></svg></div>
+          <div><div class="ct-lbl">Formation</div><div class="ct-val">BUT TC BDMRC · IUT de Nice</div></div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/></svg></div>
+          <div><div class="ct-lbl">Dernière alternance</div><div class="ct-val">KIA Cavallari · Assistant Commercial</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Lucas<span>.</span>Beau</div>
+  <div class="fm">BUT TC BDMRC · Renault groupe · KIA Cavallari · Nice · <span id="footer-year">2026</span></div>
+  <div class="fr">Portfolio professionnel</div>
+</footer>
+
+<script>
+/* ════ THREE.JS HERO ════ */
+(function(){
+  const canvas = document.getElementById('hero-canvas');
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(innerWidth, innerHeight);
+
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 1200);
+  cam.position.z = 400;
+
+  /* Particles */
+  const N = 150;
+  const pos = new Float32Array(N*3);
+  const vel = [];
+  for(let i=0;i<N;i++){
+    pos[i*3]   = (Math.random()-.5)*1000;
+    pos[i*3+1] = (Math.random()-.5)*600;
+    pos[i*3+2] = (Math.random()-.5)*300;
+    vel.push({x:(Math.random()-.5)*.28, y:(Math.random()-.5)*.18, z:(Math.random()-.5)*.1});
+  }
+  const pGeo = new THREE.BufferGeometry();
+  pGeo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  const pMat = new THREE.PointsMaterial({color:0xC4A24A, size:2.2, transparent:true, opacity:.45});
+  scene.add(new THREE.Points(pGeo, pMat));
+
+  /* Lines */
+  const lMat = new THREE.LineBasicMaterial({color:0xC4A24A, transparent:true, opacity:.07});
+  let lines = null;
+  function rebuildLines(){
+    if(lines){scene.remove(lines);lines.geometry.dispose();}
+    const lp=[];
+    const D2=115*115;
+    for(let i=0;i<N;i++) for(let j=i+1;j<N;j++){
+      const dx=pos[i*3]-pos[j*3],dy=pos[i*3+1]-pos[j*3+1],dz=pos[i*3+2]-pos[j*3+2];
+      if(dx*dx+dy*dy+dz*dz<D2){
+        lp.push(pos[i*3],pos[i*3+1],pos[i*3+2],pos[j*3],pos[j*3+1],pos[j*3+2]);
+      }
+    }
+    const lg=new THREE.BufferGeometry();
+    lg.setAttribute('position',new THREE.BufferAttribute(new Float32Array(lp),3));
+    lines=new THREE.LineSegments(lg,lMat);
+    scene.add(lines);
+  }
+
+  /* Wireframe shapes */
+  const wMat = new THREE.MeshBasicMaterial({color:0xC4A24A, wireframe:true, transparent:true, opacity:.05});
+  const shapes=[];
+  [
+    [new THREE.IcosahedronGeometry(34,0),  280,  60,-80],
+    [new THREE.OctahedronGeometry(22,0),  -220, -70, 50],
+    [new THREE.IcosahedronGeometry(20,0),   60, 150,-130],
+    [new THREE.TetrahedronGeometry(28,0), -350,-100,   0],
+    [new THREE.OctahedronGeometry(17,0),   370,  -50,-70],
+    [new THREE.IcosahedronGeometry(14,0),  -80,-160,  30],
+  ].forEach(function(item){
+    var g=item[0],x=item[1],y=item[2],z=item[3];
+    var m=new THREE.Mesh(g,wMat.clone());
+    m.position.set(x,y,z);
+    m.userData.r={x:(Math.random()-.5)*.004,y:(Math.random()-.5)*.005};
+    scene.add(m); shapes.push(m);
+  });
+
+  /* Torus ring */
+  const tGeo=new THREE.TorusGeometry(80,0.8,4,80);
+  const tMat=new THREE.MeshBasicMaterial({color:0xC4A24A,transparent:true,opacity:.04});
+  const torus=new THREE.Mesh(tGeo,tMat);
+  torus.rotation.x=Math.PI*.3; torus.rotation.z=Math.PI*.1;
+  torus.position.set(-80,0,-150);
+  scene.add(torus);
+
+  let mouseX=0,mouseY=0,frame=0;
+  document.addEventListener('mousemove',e=>{mouseX=(e.clientX/innerWidth-.5)*55;mouseY=(e.clientY/innerHeight-.5)*35;});
+
+  (function tick(){
+    requestAnimationFrame(tick); frame++;
+    for(let i=0;i<N;i++){
+      pos[i*3]+=vel[i].x; pos[i*3+1]+=vel[i].y; pos[i*3+2]+=vel[i].z;
+      if(pos[i*3]>500)pos[i*3]=-500; if(pos[i*3]<-500)pos[i*3]=500;
+      if(pos[i*3+1]>310)pos[i*3+1]=-310; if(pos[i*3+1]<-310)pos[i*3+1]=310;
+    }
+    pGeo.attributes.position.needsUpdate=true;
+    if(frame%3===0) rebuildLines();
+    shapes.forEach(s=>{s.rotation.x+=s.userData.r.x;s.rotation.y+=s.userData.r.y;});
+    torus.rotation.z+=.001; torus.rotation.y+=.0005;
+    cam.position.x+=(mouseX-cam.position.x)*.022;
+    cam.position.y+=(-mouseY-cam.position.y)*.022;
+    cam.lookAt(scene.position);
+    renderer.render(scene,cam);
+  })();
+
+  window.addEventListener('resize',()=>{
+    cam.aspect=innerWidth/innerHeight;
+    cam.updateProjectionMatrix();
+    renderer.setSize(innerWidth,innerHeight);
+  });
+})();
+
+
+/* ════ INIT ════ */
+window.addEventListener('load', function() {
+
+  /* NAV + PROGRESS */
+  var navEl = document.getElementById('nav');
+  var progEl = document.getElementById('scroll-prog');
+  window.addEventListener('scroll', function(){
+    navEl.classList.toggle('s', window.scrollY > 60);
+    var prog = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progEl.style.width = prog + '%';
+  }, {passive:true});
+
+  /* ANCHOR SCROLL */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+
+  /* REVEAL + SECTION TITLE LINE */
+  var revealObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('on');
+        var title = entry.target.querySelector('.sec-title');
+        if(title) setTimeout(function(){ title.classList.add('line-on'); }, 300);
+      }
+    });
+  }, {threshold: 0.07});
+  document.querySelectorAll('.rv').forEach(function(el){ revealObs.observe(el); });
+  /* also trigger line-on for direct sec-title parents */
+  var titleObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('line-on'); });
+  }, {threshold: 0.2});
+  document.querySelectorAll('.sec-title').forEach(function(t){ titleObs.observe(t); });
+
+  /* ── SKILL BARS with simultaneous % counter ── */
+  var barsAnimated = false;
+  function easeOutQuart(t){ return 1 - Math.pow(1-t, 4); }
+
+  function animateBar(fill, dot, pctEl, target, delay){
+    setTimeout(function(){
+      fill.style.width = target + '%';
+      dot.style.left   = target + '%';
+      dot.classList.add('active');
+      /* count up the % label */
+      var dur = 1500; var t0 = null;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min((ts-t0)/dur, 1);
+        pctEl.textContent = Math.round(easeOutQuart(p) * target) + ' %';
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }, delay);
+  }
+
+  function animateBars(){
+    if(barsAnimated) return;
+    barsAnimated = true;
+    document.querySelectorAll('.sb').forEach(function(sb, i){
+      var fill  = sb.querySelector('.sb-fill');
+      var dot   = sb.querySelector('.sb-dot');
+      var pctEl = sb.querySelector('.sb-p');
+      var target = parseInt(fill.getAttribute('data-w'), 10);
+      if(fill && dot && pctEl) animateBar(fill, dot, pctEl, target, 80 + i * 110);
+    });
+  }
+
+  var skillsEl = document.getElementById('skills');
+  if(skillsEl){
+    /* Primary: IntersectionObserver fires the moment skills enters viewport */
+    var barIO = new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){ animateBars(); barIO.disconnect(); }
+    }, {threshold: 0, rootMargin: '0px 0px -60px 0px'});
+    barIO.observe(skillsEl);
+    /* Fallback: scroll event */
+    window.addEventListener('scroll', function checkBars(){
+      var r = skillsEl.getBoundingClientRect();
+      if(r.top < window.innerHeight && r.bottom > 0){
+        animateBars();
+        window.removeEventListener('scroll', checkBars);
+      }
+    }, {passive:true});
+    /* Safety net: if already visible at load */
+    var r0 = skillsEl.getBoundingClientRect();
+    if(r0.top < window.innerHeight && r0.bottom > 0) animateBars();
+  }
+
+  /* HERO STAT COUNTERS — géré plus bas par animateCount() */
+
+  /* ── 3D TILT ── */
+  document.querySelectorAll('.tilt,.exp-item,.edu-c,.soft-c,.pj,.vi').forEach(function(card){
+    card.style.transformStyle = 'preserve-3d';
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width  - 0.5;
+      var y = (e.clientY - r.top)  / r.height - 0.5;
+      var intensity = card.classList.contains('pj') ? 5 : 7;
+      card.style.transform = 'perspective(900px) rotateY('+(x*intensity)+'deg) rotateX('+(-y*(intensity*.85))+'deg) translateZ(8px)';
+      card.style.transition = 'transform .08s ease';
+    });
+    card.addEventListener('mouseleave', function(){
+      card.style.transform = 'perspective(900px) rotateY(0) rotateX(0) translateZ(0)';
+      card.style.transition = 'transform .7s cubic-bezier(.23,1,.32,1)';
+    });
+  });
+
+  /* ── MAGNETIC BUTTONS ── */
+  document.querySelectorAll('.btn-gold,.btn-out,.nav-cta,.mh-cta').forEach(function(btn){
+    btn.addEventListener('mousemove', function(e){
+      var r = btn.getBoundingClientRect();
+      var x = (e.clientX - r.left - r.width/2)  * .35;
+      var y = (e.clientY - r.top  - r.height/2) * .35;
+      btn.style.transform = 'translate('+x+'px,'+y+'px)';
+      btn.style.transition = 'transform .15s ease';
+    });
+    btn.addEventListener('mouseleave', function(){
+      btn.style.transform = 'translate(0,0)';
+      btn.style.transition = 'transform .5s cubic-bezier(.23,1,.32,1)';
+    });
+  });
+
+  /* ── PARALLAX SECTION EYEBROW NUMBERS ── */
+  window.addEventListener('scroll', function(){
+    document.querySelectorAll('.se-num').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      var vy = (window.innerHeight/2 - r.top) * 0.08;
+      el.style.transform = 'translateY('+vy+'px)';
+    });
+  }, {passive:true});
+
+  /* ── MODAL SCREENSHOT ── */
+  var modal = document.getElementById('screenshot-modal');
+  var modalImg = document.getElementById('modal-img');
+  var modalCaption = document.getElementById('modal-caption');
+
+  window.openModal = function(src, caption){
+    modalImg.src = src;
+    modalCaption.textContent = caption || '';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  document.getElementById('modal-close-btn').addEventListener('click', function(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+  modal.addEventListener('click', function(e){
+    if(e.target === modal){ modal.classList.remove('open'); document.body.style.overflow = ''; }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ modal.classList.remove('open'); document.body.style.overflow = ''; }
+  });
+
+  /* VALUE CARDS NUMBER GLOW */
+  document.querySelectorAll('.vi').forEach(function(vi){
+    vi.addEventListener('mouseenter', function(){ vi.querySelector('.vi-num').style.color = 'rgba(154,122,50,.25)'; });
+    vi.addEventListener('mouseleave', function(){ vi.querySelector('.vi-num').style.color = ''; });
+  });
+
+  /* ── FOOTER YEAR ── */
+  var fyEl = document.getElementById('footer-year');
+  if(fyEl) fyEl.textContent = new Date().getFullYear();
+
+  /* ── READING TIME ── */
+  var bodyText = document.body.innerText || '';
+  var words = bodyText.trim().split(/\s+/).length;
+  var mins = Math.max(2, Math.round(words / 220));
+  var rtMin = document.getElementById('rt-min');
+  if(rtMin) rtMin.textContent = mins;
+  var rtBar = document.getElementById('reading-time-bar');
+  window.addEventListener('scroll', function(){
+    var scrolled = window.scrollY;
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    if(rtBar && total > 0) rtBar.style.width = Math.min(100, (scrolled/total)*100) + '%';
+  });
+
+  /* ── DARK MODE TOGGLE ── */
+  var dmBtn = document.getElementById('dm-toggle');
+  var savedTheme = localStorage.getItem('lb-theme');
+  if(savedTheme === 'dark'){ document.body.classList.add('dark-mode'); dmBtn.textContent = '☀️'; }
+  dmBtn.addEventListener('click', function(){
+    var isDark = document.body.classList.toggle('dark-mode');
+    dmBtn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('lb-theme', isDark ? 'dark' : 'light');
+  });
+
+  /* ── BURGER MENU ── */
+  var burger = document.getElementById('nav-burger');
+  var mobileNav = document.getElementById('nav-mobile');
+  var nmClose = document.getElementById('nm-close');
+  function openMobileNav(){ mobileNav.classList.add('open'); burger.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeMobileNav(){ mobileNav.classList.remove('open'); burger.classList.remove('open'); document.body.style.overflow=''; }
+  burger.addEventListener('click', function(){ mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav(); });
+  nmClose.addEventListener('click', closeMobileNav);
+  document.querySelectorAll('.nm-link,.nm-cv').forEach(function(a){ a.addEventListener('click', closeMobileNav); });
+
+  /* ── NAV ACTIVE SECTION ── */
+  var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  var sections = [];
+  navLinks.forEach(function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el) sections.push({el:el,a:a}); });
+  function updateActiveNav(){
+    var scrollY = window.scrollY + 120;
+    var current = sections[0];
+    sections.forEach(function(s){ if(s.el.offsetTop <= scrollY) current = s; });
+    navLinks.forEach(function(a){ a.classList.remove('active'); });
+    if(current) current.a.classList.add('active');
+  }
+  window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
+
+  /* ── HERO COUNTER ANIMATION ── */
+  function animateCount(el, target, dur){
+    el.textContent = '0';
+    var t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      // easeOutExpo pour un départ rapide et une arrivée snap
+      var ease = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+      el.textContent = Math.round(ease * target);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target; // valeur exacte garantie
+    }
+    requestAnimationFrame(step);
+  }
+  // Déclenchement dès 200ms (hero toujours visible au chargement)
+  setTimeout(function(){
+    var ageEl = document.getElementById('cnt-age');
+    var altEl = document.getElementById('cnt-alt');
+    if(ageEl) animateCount(ageEl, 22, 1600);
+    if(altEl) animateCount(altEl, 4,  1200);
+  }, 200);
+
+  /* ── EMAILJS FORM ── */
+  // 🔧 REMPLACE ces 3 valeurs par les tiennes sur emailjs.com (compte gratuit)
+  var EMAILJS_PUBLIC_KEY  = 'VOTRE_PUBLIC_KEY';   // Account > API Keys
+  var EMAILJS_SERVICE_ID  = 'VOTRE_SERVICE_ID';   // Email Services
+  var EMAILJS_TEMPLATE_ID = 'VOTRE_TEMPLATE_ID';  // Email Templates
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  var cfForm = document.getElementById('contact-form');
+  var cfBtn  = document.getElementById('cf-btn');
+  var cfOk   = document.getElementById('cf-ok');
+  var cfErr  = document.getElementById('cf-err');
+  if(cfForm){
+    cfForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      cfBtn.disabled = true;
+      cfBtn.textContent = 'Envoi en cours…';
+      cfOk.style.display = cfErr.style.display = 'none';
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, cfForm)
+        .then(function(){
+          cfOk.classList.add('ok'); cfOk.style.display = 'block';
+          cfForm.reset();
+          cfBtn.disabled = false;
+          cfBtn.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M14 2L1 8l5 2 2 5 6-13z"/></svg> Envoyer le message';
+        }, function(){
+          cfErr.classList.add('err'); cfErr.style.display = 'block';
+          cfBtn.disabled = false;
+          cfBtn.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M14 2L1 8l5 2 2 5 6-13z"/></svg> Envoyer le message';
+        });
+    });
+  }
+
+  /* ── SLIDER FOOTBALL ── */
+  (function(){
+    var track   = document.getElementById('fsl-track');
+    var dots    = document.querySelectorAll('.fsl-dot');
+    var slides  = document.querySelectorAll('.fsl-slide');
+    var prevBtn = document.getElementById('fsl-prev');
+    var nextBtn = document.getElementById('fsl-next');
+    if(!track) return;
+
+    // Fond flouté pour photos portrait (contain-img)
+    document.querySelectorAll('.fsl-slide img.contain-img').forEach(function(img){
+      var bg = document.createElement('div');
+      bg.className = 'fsl-slide-blur-bg';
+      bg.style.backgroundImage = 'url(' + img.src + ')';
+      img.parentNode.insertBefore(bg, img);
+    });
+
+    // Barre de progression
+    var prog = document.createElement('div');
+    prog.className = 'fsl-progress';
+    document.querySelector('.foot-slider').appendChild(prog);
+
+    var total    = slides.length;
+    var cur      = 0;
+    var AUTO     = 4000; // 4s par slide
+    var timer    = null;
+    var progTimer = null;
+
+    function goTo(i, dir){
+      slides[cur].classList.remove('active');
+      cur = (i + total) % total;
+      track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+      dots.forEach(function(d,j){ d.classList.toggle('active', j===cur); });
+      slides[cur].classList.add('active');
+      // Reset barre
+      prog.style.transition = 'none';
+      prog.style.width = '0%';
+      setTimeout(function(){
+        prog.style.transition = 'width ' + AUTO + 'ms linear';
+        prog.style.width = '100%';
+      }, 30);
+    }
+
+    function startAuto(){
+      clearInterval(timer);
+      timer = setInterval(function(){ goTo(cur + 1); }, AUTO);
+    }
+
+    // Pause au hover
+    var wrap = document.querySelector('.foot-slider-wrap');
+    wrap.addEventListener('mouseenter', function(){ clearInterval(timer); prog.style.transition = 'none'; });
+    wrap.addEventListener('mouseleave', function(){ startAuto(); });
+
+    // Swipe tactile
+    var touchX = 0;
+    track.addEventListener('touchstart', function(e){ touchX = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - touchX;
+      if(Math.abs(dx) > 40){ goTo(dx < 0 ? cur+1 : cur-1); startAuto(); }
+    }, {passive:true});
+
+    prevBtn.addEventListener('click', function(e){ e.stopPropagation(); goTo(cur-1); startAuto(); });
+    nextBtn.addEventListener('click', function(e){ e.stopPropagation(); goTo(cur+1); startAuto(); });
+    dots.forEach(function(d){ d.addEventListener('click', function(e){ e.stopPropagation(); goTo(parseInt(d.getAttribute('data-i'),10)); startAuto(); }); });
+
+    // Init
+    slides[0].classList.add('active');
+    startAuto();
+    setTimeout(function(){
+      prog.style.transition = 'width ' + AUTO + 'ms linear';
+      prog.style.width = '100%';
+    }, 50);
+  })();
+
+  /* ── CAROUSEL PLT ── */
+  var cModal = document.getElementById('carousel-modal');
+  var pltSlides = document.getElementById('plt-slides');
+  var pltDots = document.querySelectorAll('.plt-dot');
+  var carouselCaptions = ['PawLuxe Track — Accueil','PawLuxe Track — Missions','PawLuxe Track — GPS Live','PawLuxe Track — Santé','PawLuxe Track — Abonnement Premium','PawLuxe Track — Shop 3D'];
+  var cIdx = 0;
+
+  function goToSlide(i){
+    cIdx = (i + 6) % 6;
+    pltSlides.style.transform = 'translateX(-' + (cIdx * 100) + '%)';
+    pltDots.forEach(function(d,j){ d.classList.toggle('active', j===cIdx); });
+    document.getElementById('carousel-caption').textContent = carouselCaptions[cIdx];
+  }
+
+  window.openCarousel = function(startIdx){
+    cIdx = startIdx || 0;
+    goToSlide(cIdx);
+    cModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  document.getElementById('plt-prev').addEventListener('click', function(e){ e.stopPropagation(); goToSlide(cIdx - 1); });
+  document.getElementById('plt-next').addEventListener('click', function(e){ e.stopPropagation(); goToSlide(cIdx + 1); });
+  pltDots.forEach(function(d){ d.addEventListener('click', function(e){ e.stopPropagation(); goToSlide(parseInt(d.getAttribute('data-i'),10)); }); });
+
+  document.getElementById('carousel-close-btn').addEventListener('click', function(){ cModal.classList.remove('open'); document.body.style.overflow = ''; });
+  cModal.addEventListener('click', function(e){ if(e.target===cModal){ cModal.classList.remove('open'); document.body.style.overflow=''; } });
+  document.addEventListener('keydown', function(e){
+    if(!cModal.classList.contains('open')) return;
+    if(e.key==='ArrowLeft') goToSlide(cIdx-1);
+    else if(e.key==='ArrowRight') goToSlide(cIdx+1);
+    else if(e.key==='Escape'){ cModal.classList.remove('open'); document.body.style.overflow=''; }
+  });
+
+});
+</script>
+</body>
+</html>
