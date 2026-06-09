@@ -856,16 +856,17 @@ nav.s .nav-links a.active { color: var(--gold2); }
 <nav id="nav">
   <a href="#hero" class="nav-logo">Lucas<span>.</span>Beau</a>
   <ul class="nav-links">
-    <li><a href="#about">Profil</a></li>
-    <li><a href="#exp">Expérience</a></li>
-    <li><a href="#skills">Compétences</a></li>
-    <li><a href="#formation">Formation</a></li>
-    <li><a href="#univers">Qui je suis</a></li>
-    <li><a href="#recommandation">Recommandation</a></li>
-    <li><a href="#projets">Projets</a></li>
+    <li><a href="#about" data-i18n="nav_about">Profil</a></li>
+    <li><a href="#exp" data-i18n="nav_exp">Expérience</a></li>
+    <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
+    <li><a href="#formation" data-i18n="nav_formation">Formation</a></li>
+    <li><a href="#univers" data-i18n="nav_univers">Qui je suis</a></li>
+    <li><a href="#recommandation" data-i18n="nav_reco">Recommandation</a></li>
+    <li><a href="#projets" data-i18n="nav_projects">Projets</a></li>
   </ul>
   <a href="cv-lucas-beau.pdf" download class="nav-cta" style="margin-right:.8rem;background:transparent;border:1px solid var(--gold2);color:var(--gold2);">↓ CV</a>
-  <a href="#contact" class="nav-cta">Contact</a>
+  <a href="#contact" class="nav-cta" data-i18n="nav_contact">Contact</a>
+  <button id="lang-btn" onclick="toggleLang()" style="background:transparent;border:1px solid rgba(154,122,50,.4);color:var(--gold2);font-size:.68rem;font-weight:700;letter-spacing:.1em;padding:.35rem .75rem;cursor:pointer;margin-right:.6rem;transition:all .25s;" onmouseover="this.style.background='rgba(154,122,50,.12)'" onmouseout="this.style.background='transparent'">EN</button>
   <button class="nav-burger" id="nav-burger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -879,31 +880,31 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div>
       <div class="h-eyebrow">
         <div class="h-eyebrow-line"></div>
-        <span class="h-eyebrow-text">Alternance KIA Cavallari · Jusqu'à Août 2026</span>
+        <span class="h-eyebrow-text" data-i18n="hero_eyebrow">Alternance KIA Cavallari · Jusqu'à Août 2026</span>
         <span class="rt-chip" id="rt-chip" style="margin-left:1.2rem;">⏱ <span id="rt-min">3</span> min de lecture</span>
       </div>
 
       <h1 class="h-name">LUCAS<br><em>Beau</em></h1>
 
-      <p class="h-role">Commercial <span>&amp;</span> Futur Manager — Nice, Côte d'Azur</p>
+      <p class="h-role" data-i18n-html="hero_role">Commercial <span>&amp;</span> Futur Manager — Nice, Côte d'Azur</p>
 
       <p class="h-desc">
-        22 ans. Étudiant en <strong>3ᵉ année de BUT Techniques de Commercialisation</strong>, parcours <strong>BDMRC</strong> à l'IUT de Nice. <strong>4 ans d'alternance</strong> au compteur — passé par <strong>Renault groupe</strong> puis <strong>KIA Cavallari</strong>, actuellement alternant commercial chez KIA jusqu'en août 2026.
+        <span data-i18n-html="hero_desc">22 ans. Étudiant en <strong>3ᵉ année de BUT Techniques de Commercialisation</strong>, parcours <strong>BDMRC</strong> à l'IUT de Nice. <strong>4 ans d'alternance</strong> au compteur — passé par <strong>Renault groupe</strong> puis <strong>KIA Cavallari</strong>, actuellement alternant commercial chez KIA jusqu'en août 2026.</span>
       </p>
 
       <div class="h-actions">
-        <a href="#contact" class="btn-gold">Me contacter</a>
-        <a href="#exp" class="btn-out">Mon parcours</a>
+        <a href="#contact" class="btn-gold" data-i18n="btn_contact">Me contacter</a>
+        <a href="#exp" class="btn-out" data-i18n="btn_parcours">Mon parcours</a>
       </div>
 
       <div class="h-stats">
         <div>
           <div class="stat-n"><span id="cnt-age">22</span><sup>ans</sup></div>
-          <div class="stat-l">Âge</div>
+          <div class="stat-l" data-i18n="stat_age">Âge</div>
         </div>
         <div>
           <div class="stat-n"><span id="cnt-alt">4</span><sup>ans</sup></div>
-          <div class="stat-l">Alternance</div>
+          <div class="stat-l" data-i18n="stat_alt">Alternance</div>
         </div>
         <div>
           <div class="stat-n">BUT<sup>TC</sup></div>
@@ -933,7 +934,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
 
   </div>
   <div class="scroll-cue">
-    <span class="sc-text">Défiler</span>
+    <span class="sc-text" data-i18n="scroll_cue">Défiler</span>
     <div class="sc-bar"></div>
   </div>
 </section>
@@ -946,9 +947,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num">01</span>
       <div class="se-line"></div>
-      <span class="se-tag">Qui suis-je</span>
+      <span class="se-tag" data-i18n="about_tag">Qui suis-je</span>
     </div>
-    <h2 class="sec-title rv">Un profil commercial<br><em>qui se démarque</em></h2>
+    <h2 class="sec-title rv" data-i18n-html="about_title">Un profil commercial<br><em>qui se démarque</em></h2>
 
     <div class="about-grid">
 
@@ -967,18 +968,18 @@ nav.s .nav-links a.active { color: var(--gold2); }
 
       <div class="rv d1">
         <div class="about-text">
-          <p>Bonjour, je suis <strong>Lucas Beau, 22 ans</strong>, étudiant en 3ᵉ année de BUT Techniques de Commercialisation, parcours <strong>BDMRC — Business Development, Marketing, Relation Client</strong> à l'IUT de Nice.</p>
-          <p><strong>4 ans d'alternance</strong> en continu m'ont forgé une vision commerciale que peu d'étudiants ont à 22 ans. Chez <strong>Renault groupe à Nice</strong> (2022-2024) d'abord, en location ; puis chez <strong>KIA Cavallari à Nice</strong> (2024-2026), en vente automobile. Deux univers, deux cultures d'entreprise, une seule constante : le goût du résultat et du contact humain.</p>
-          <p>Le <strong>football</strong>, c'est <strong>18 ans de ma vie</strong>. Trophées, entraînements, nuits de match au Vélodrome — ce sport m'a construit. Il m'a appris ce que aucune salle de cours ne peut enseigner : la résilience, l'esprit d'équipe, le dépassement de soi et la mentalité du compétiteur. Ce sont exactement ces valeurs que j'apporte chaque jour dans mon travail. Mon objectif est clair — <strong>intégrer un Master</strong> pour bâtir une carrière ambitieuse et solide.</p>
+          <p data-i18n-html="about_p1">Bonjour, je suis <strong>Lucas Beau, 22 ans</strong>, étudiant en 3ᵉ année de BUT Techniques de Commercialisation, parcours <strong>BDMRC — Business Development, Marketing, Relation Client</strong> à l'IUT de Nice.</p>
+          <p data-i18n-html="about_p2"><strong>4 ans d'alternance</strong> en continu m'ont forgé une vision commerciale que peu d'étudiants ont à 22 ans. Chez <strong>Renault groupe à Nice</strong> (2022-2024) d'abord, en location ; puis chez <strong>KIA Cavallari à Nice</strong> (2024-2026), en vente automobile. Deux univers, deux cultures d'entreprise, une seule constante : le goût du résultat et du contact humain.</p>
+          <p data-i18n-html="about_p3">Le <strong>football</strong>, c'est <strong>18 ans de ma vie</strong>. Trophées, entraînements, nuits de match au Vélodrome — ce sport m'a construit. Il m'a appris ce que aucune salle de cours ne peut enseigner : la résilience, l'esprit d'équipe, le dépassement de soi et la mentalité du compétiteur. Ce sont exactement ces valeurs que j'apporte chaque jour dans mon travail. Mon objectif est clair — <strong>intégrer un Master</strong> pour bâtir une carrière ambitieuse et solide.</p>
         </div>
 
         <div class="about-infos">
-          <div class="ai"><div class="ai-k">Âge</div><div class="ai-v">22 ans</div></div>
-          <div class="ai"><div class="ai-k">Localisation</div><div class="ai-v">Nice (06)</div></div>
-          <div class="ai"><div class="ai-k">Formation</div><div class="ai-v">BUT TC BDMRC</div></div>
-          <div class="ai"><div class="ai-k">Alternances</div><div class="ai-v">Renault groupe · KIA</div></div>
+          <div class="ai"><div class="ai-k" data-i18n="info_age">Âge</div><div class="ai-v">22 ans</div></div>
+          <div class="ai"><div class="ai-k" data-i18n="info_loc">Localisation</div><div class="ai-v">Nice (06)</div></div>
+          <div class="ai"><div class="ai-k" data-i18n="info_formation">Formation</div><div class="ai-v">BUT TC BDMRC</div></div>
+          <div class="ai"><div class="ai-k" data-i18n="info_alt">Alternances</div><div class="ai-v">Renault groupe · KIA</div></div>
           <div class="ai"><div class="ai-k">Email</div><div class="ai-v">lucasbeau42@gmail.com</div></div>
-          <div class="ai"><div class="ai-k">Fin d'alternance</div><div class="ai-v">Août 2026</div></div>
+          <div class="ai"><div class="ai-k" data-i18n="info_end">Fin d'alternance</div><div class="ai-v">Août 2026</div></div>
         </div>
 
         <div class="about-tags">
@@ -996,7 +997,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <!-- SLIDER FOOTBALL -->
     <div class="foot-slider-wrap rv" style="margin-top:4rem;">
       <div class="foot-slider-header">
-        <span class="foot-gallery-label">⚽ 18 ans de passion</span>
+        <span class="foot-gallery-label" data-i18n="foot_label">⚽ 18 ans de passion</span>
         <div class="fsl-dots" id="fsl-dots">
           <button class="fsl-dot active" data-i="0"></button>
           <button class="fsl-dot" data-i="1"></button>
@@ -1039,30 +1040,30 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num">02</span>
       <div class="se-line"></div>
-      <span class="se-tag">Mes atouts</span>
+      <span class="se-tag" data-i18n="val_tag">Mes atouts</span>
     </div>
-    <h2 class="sec-title rv">Ce qui me rend <em>différent</em></h2>
-    <p class="sec-sub rv">Quatre qualités forgées par deux ans de terrain commercial intensif.</p>
+    <h2 class="sec-title rv" data-i18n-html="val_title">Ce qui me rend <em>différent</em></h2>
+    <p class="sec-sub rv" data-i18n="val_sub">Quatre qualités forgées par deux ans de terrain commercial intensif.</p>
 
     <div class="val-grid">
       <div class="vi rv d1">
         <div class="vi-num">01</div>
-        <div class="vi-t">Orienté résultats</div>
-        <div class="vi-d">Je ne me contente jamais du minimum. Chaque objectif est une cible à atteindre et à dépasser. Mon alternance m'a appris que les chiffres se construisent sur le terrain.</div>
+        <div class="vi-t" data-i18n="val1_t">Orienté résultats</div>
+        <div class="vi-d" data-i18n="val1_d">Je ne me contente jamais du minimum. Chaque objectif est une cible à atteindre et à dépasser. Mon alternance m'a appris que les chiffres se construisent sur le terrain.</div>
       </div>
       <div class="vi rv d2">
         <div class="vi-num">02</div>
-        <div class="vi-t">Relationnel exceptionnel</div>
-        <div class="vi-d">Accueillir, écouter, comprendre et convaincre. De la location chez Renault à la vente automobile chez KIA, deux ans de contact client quotidien intensif.</div>
+        <div class="vi-t" data-i18n="val2_t">Relationnel exceptionnel</div>
+        <div class="vi-d" data-i18n="val2_d">Accueillir, écouter, comprendre et convaincre. De la location chez Renault à la vente automobile chez KIA, deux ans de contact client quotidien intensif.</div>
       </div>
       <div class="vi rv d3">
         <div class="vi-num">03</div>
-        <div class="vi-t">Adaptabilité totale</div>
-        <div class="vi-d">Alterner cours intensifs et exigences professionnelles forge une capacité d'adaptation exceptionnelle. Je suis à l'aise dans n'importe quel environnement commercial.</div>
+        <div class="vi-t" data-i18n="val3_t">Adaptabilité totale</div>
+        <div class="vi-d" data-i18n="val3_d">Alterner cours intensifs et exigences professionnelles forge une capacité d'adaptation exceptionnelle. Je suis à l'aise dans n'importe quel environnement commercial.</div>
       </div>
       <div class="vi rv d4">
         <div class="vi-num">04</div>
-        <div class="vi-t">Esprit d'initiative</div>
+        <div class="vi-t" data-i18n="val4_t">Esprit d'initiative</div>
         <div class="vi-d">J'ai développé un configurateur de véhicule interactif pour améliorer l'expérience client chez KIA, sans qu'on me le demande. L'initiative fait partie de mon ADN.</div>
       </div>
     </div>
@@ -1077,10 +1078,10 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num" style="color:rgba(255,255,255,.1);">03</span>
       <div class="se-line" style="background:rgba(255,255,255,.08);"></div>
-      <span class="se-tag" style="color:var(--gold2);">Au-delà du CV</span>
+      <span class="se-tag" style="color:var(--gold2);" data-i18n="univ_tag">Au-delà du CV</span>
     </div>
-    <h2 class="sec-title rv" style="color:#EDEAE2;">Qui je <em>suis</em></h2>
-    <p class="sec-sub rv" style="color:rgba(200,200,216,.45);">Un profil commercial, une vision, une personnalité.</p>
+    <h2 class="sec-title rv" style="color:#EDEAE2;" data-i18n-html="univ_title">Qui je <em>suis</em></h2>
+    <p class="sec-sub rv" style="color:rgba(200,200,216,.45);" data-i18n="univ_sub">Un profil commercial, une vision, une personnalité.</p>
 
     <div class="univ-layout rv">
 
@@ -1202,10 +1203,10 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num">03</span>
       <div class="se-line"></div>
-      <span class="se-tag">Expériences</span>
+      <span class="se-tag" data-i18n="exp_tag">Expériences</span>
     </div>
-    <h2 class="sec-title rv">Mon parcours <em>terrain</em></h2>
-    <p class="sec-sub rv">Des expériences complémentaires couvrant location, vente et relation client.</p>
+    <h2 class="sec-title rv" data-i18n-html="exp_title">Mon parcours <em>terrain</em></h2>
+    <p class="sec-sub rv" data-i18n="exp_sub">Des expériences complémentaires couvrant location, vente et relation client.</p>
 
     <div class="exp-list rv">
 
@@ -1216,7 +1217,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
           <div class="ei-monogram">
             <img src="logo-kia.png" alt="KIA">
           </div>
-          <div class="ei-type">Alternance</div>
+          <div class="ei-type" data-i18n="ei_alt">Alternance</div>
         </div>
         <div class="ei-right">
           <div class="ei-company">KIA Cavallari · Nice, Alpes-Maritimes</div>
@@ -1243,7 +1244,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
           <div class="ei-monogram">
             <img src="logo-renault.png" alt="Renault">
           </div>
-          <div class="ei-type">Alternance</div>
+          <div class="ei-type" data-i18n="ei_alt">Alternance</div>
         </div>
         <div class="ei-right">
           <div class="ei-company">Renault groupe · Nice</div>
@@ -1270,7 +1271,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
           <div class="ei-monogram">
             <img src="logo-le24.png" alt="Le 24">
           </div>
-          <div class="ei-type">Saisonnier</div>
+          <div class="ei-type" data-i18n="ei_sais">Saisonnier</div>
         </div>
         <div class="ei-right">
           <div class="ei-company">Le 24 · Cannes</div>
@@ -1294,7 +1295,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
           <div class="ei-monogram">
             <img src="logo-aqualand.jpg" alt="Aqualand">
           </div>
-          <div class="ei-type">Saisonnier</div>
+          <div class="ei-type" data-i18n="ei_sais">Saisonnier</div>
         </div>
         <div class="ei-right">
           <div class="ei-company">Aqualand · Fréjus</div>
@@ -1323,28 +1324,28 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num">04</span>
       <div class="se-line"></div>
-      <span class="se-tag">Compétences</span>
+      <span class="se-tag" data-i18n="sk_tag">Compétences</span>
     </div>
-    <h2 class="sec-title rv">Ce que je <em>maîtrise</em></h2>
+    <h2 class="sec-title rv" data-i18n-html="sk_title">Ce que je <em>maîtrise</em></h2>
 
     <div class="sk-layout">
       <div class="rv">
         <div class="sg">
-          <div class="sg-title">Commerce &amp; Vente</div>
+          <div class="sg-title" data-i18n="sg_commerce">Commerce &amp; Vente</div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Négociation &amp; closing</span><span class="sb-p">87 %</span></div><div class="sb-track"><div class="sb-fill" data-w="87"></div><div class="sb-dot" data-w="87"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Présentation produit</span><span class="sb-p">90 %</span></div><div class="sb-track"><div class="sb-fill" data-w="90"></div><div class="sb-dot" data-w="90"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Prospection &amp; relance</span><span class="sb-p">82 %</span></div><div class="sb-track"><div class="sb-fill" data-w="82"></div><div class="sb-dot" data-w="82"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Gestion de portefeuille</span><span class="sb-p">78 %</span></div><div class="sb-track"><div class="sb-fill" data-w="78"></div><div class="sb-dot" data-w="78"></div></div></div>
         </div>
         <div class="sg">
-          <div class="sg-title">Relation Client</div>
+          <div class="sg-title" data-i18n="sg_rc">Relation Client</div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Accueil &amp; conseil</span><span class="sb-p">94 %</span></div><div class="sb-track"><div class="sb-fill" data-w="94"></div><div class="sb-dot" data-w="94"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Communication écrite &amp; orale</span><span class="sb-p">88 %</span></div><div class="sb-track"><div class="sb-fill" data-w="88"></div><div class="sb-dot" data-w="88"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Fidélisation client</span><span class="sb-p">83 %</span></div><div class="sb-track"><div class="sb-fill" data-w="83"></div><div class="sb-dot" data-w="83"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Gestion des objections</span><span class="sb-p">85 %</span></div><div class="sb-track"><div class="sb-fill" data-w="85"></div><div class="sb-dot" data-w="85"></div></div></div>
         </div>
         <div class="sg">
-          <div class="sg-title">Marketing &amp; BDMRC</div>
+          <div class="sg-title" data-i18n="sg_mkt">Marketing &amp; BDMRC</div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Stratégie marketing digital</span><span class="sb-p">76 %</span></div><div class="sb-track"><div class="sb-fill" data-w="76"></div><div class="sb-dot" data-w="76"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Analyse de marché</span><span class="sb-p">80 %</span></div><div class="sb-track"><div class="sb-fill" data-w="80"></div><div class="sb-dot" data-w="80"></div></div></div>
           <div class="sb"><div class="sb-head"><span class="sb-n">Pack Office &amp; CRM</span><span class="sb-p">84 %</span></div><div class="sb-track"><div class="sb-fill" data-w="84"></div><div class="sb-dot" data-w="84"></div></div></div>
@@ -1353,7 +1354,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
 
       <div class="rv d2">
         <div class="sg">
-          <div class="sg-title">Qualités personnelles</div>
+          <div class="sg-title" data-i18n="sg_soft">Qualités personnelles</div>
           <div class="soft-grid">
             <div class="soft-c tilt"><span class="sc-num">01</span><div class="sc-t">Sens du relationnel</div><div class="sc-d">Écoute active et sens du contact forgés au quotidien face aux clients.</div></div>
             <div class="soft-c tilt"><span class="sc-num">02</span><div class="sc-t">Esprit d'équipe</div><div class="sc-d">Le football m'a appris la valeur du collectif et de l'engagement commun.</div></div>
@@ -1365,9 +1366,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
         </div>
 
         <div class="sg">
-          <div class="sg-title">Langues</div>
+          <div class="sg-title" data-i18n="sg_lang">Langues</div>
           <div class="lang-grid">
-            <div class="lc"><span class="lc-flag">Français</span><div class="lc-name">Français</div><div class="lc-lvl">Langue maternelle</div></div>
+            <div class="lc"><span class="lc-flag">Français</span><div class="lc-name">Français</div><div class="lc-lvl" data-i18n="lang_fr_lvl">Langue maternelle</div></div>
             <div class="lc"><span class="lc-flag">Anglais</span><div class="lc-name">Anglais</div><div class="lc-lvl">Niveau B2</div></div>
             <div class="lc"><span class="lc-flag">Espagnol</span><div class="lc-name">Espagnol</div><div class="lc-lvl">Niveau B1</div></div>
           </div>
@@ -1385,13 +1386,13 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num">05</span>
       <div class="se-line"></div>
-      <span class="se-tag">Formation</span>
+      <span class="se-tag" data-i18n="form_tag">Formation</span>
     </div>
-    <h2 class="sec-title rv">Parcours <em>académique</em></h2>
+    <h2 class="sec-title rv" data-i18n-html="form_title">Parcours <em>académique</em></h2>
 
     <div class="edu-grid">
       <div class="edu-c ef1 rv d1 tilt">
-        <div class="edu-status es-a">En candidature</div>
+        <div class="edu-status es-a" data-i18n="edu_cand">En candidature</div>
         <div class="edu-yr">2025 — 2027</div>
         <div class="edu-deg">Master — Commerce &amp; Management</div>
         <div class="edu-school">Programmes visés · Région PACA</div>
@@ -1399,7 +1400,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="edu-chips"><span class="ech">Management</span><span class="ech">Patrimoine</span><span class="ech">Entrepreneuriat</span><span class="ech">Communication</span></div>
       </div>
       <div class="edu-c ef2 rv d2 tilt">
-        <div class="edu-status es-c">En cours</div>
+        <div class="edu-status es-c" data-i18n="edu_ongoing">En cours</div>
         <img src="logo-iut.png" alt="IUT Nice Côte d'Azur" style="height:40px;width:auto;object-fit:contain;margin-bottom:.8rem;display:block;">
         <div class="edu-yr">2022 — 2026</div>
         <div class="edu-deg">BUT Techniques de Commercialisation</div>
@@ -1408,7 +1409,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="edu-chips"><span class="ech">BDMRC</span><span class="ech">Alternance</span><span class="ech">Marketing</span><span class="ech">Vente</span><span class="ech">IUT Nice</span></div>
       </div>
       <div class="edu-c ef4 rv d3 tilt">
-        <div class="edu-status es-d">Obtenu</div>
+        <div class="edu-status es-d" data-i18n="edu_done">Obtenu</div>
         <div class="edu-yr">2021 — 2022</div>
         <div class="edu-deg">Licence 1 Économie et Gestion</div>
         <div class="edu-school">Université Aix-Marseille · Marseille</div>
@@ -1416,7 +1417,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="edu-chips"><span class="ech">Économie</span><span class="ech">Gestion</span><span class="ech">Analyse</span></div>
       </div>
       <div class="edu-c ef3 rv d4 tilt">
-        <div class="edu-status es-d">Obtenu</div>
+        <div class="edu-status es-d" data-i18n="edu_done">Obtenu</div>
         <div class="edu-yr">2021</div>
         <div class="edu-deg">Baccalauréat Général</div>
         <div class="edu-school">Lycée Thomas Edison · Lorgues (83)</div>
@@ -1438,8 +1439,8 @@ nav.s .nav-links a.active { color: var(--gold2); }
       </div>
       <div class="mh-right">
         <div class="mh-yr">2026</div>
-        <div class="mh-yrl">Rentrée visée</div>
-        <a href="#contact" class="mh-cta">Me recruter</a>
+        <div class="mh-yrl" data-i18n="mh_yrl">Rentrée visée</div>
+        <a href="#contact" class="mh-cta" data-i18n="mh_cta">Me recruter</a>
       </div>
     </div>
   </div>
@@ -1453,9 +1454,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num" style="color:rgba(255,255,255,.1);">06</span>
       <div class="se-line" style="background:rgba(255,255,255,.08);"></div>
-      <span class="se-tag" style="color:var(--gold2);">Recommandation</span>
+      <span class="se-tag" style="color:var(--gold2);" data-i18n="reco_tag">Recommandation</span>
     </div>
-    <h2 class="sec-title rv" style="color:#EDEAE2;">Ce qu'on dit de <em>moi</em></h2>
+    <h2 class="sec-title rv" style="color:#EDEAE2;" data-i18n-html="reco_title">Ce qu'on dit de <em>moi</em></h2>
 
     <div class="rv" style="margin-top:5rem;">
       <div style="max-width:860px;margin:0 auto;position:relative;">
@@ -1494,7 +1495,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
           </div>
           <div style="margin-left:auto;">
             <a href="lettre-reco-md.pdf" target="_blank" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(154,122,50,.25);padding:.6rem 1.2rem;transition:all .3s;" onmouseover="this.style.borderColor='rgba(196,162,74,.5)';this.style.color='#C4A24A'" onmouseout="this.style.borderColor='rgba(154,122,50,.25)';this.style.color='#9A7A32'">
-              Voir la lettre complète
+              <span data-i18n="reco_link">Voir la lettre complète</span>
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg>
             </a>
           </div>
@@ -1512,10 +1513,10 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num">06</span>
       <div class="se-line"></div>
-      <span class="se-tag">Réalisations</span>
+      <span class="se-tag" data-i18n="pj_tag">Réalisations</span>
     </div>
-    <h2 class="sec-title rv">Mes <em>projets</em></h2>
-    <p class="sec-sub rv">Des réalisations concrètes qui illustrent ma capacité d'initiative et de rigueur.</p>
+    <h2 class="sec-title rv" data-i18n-html="pj_title">Mes <em>projets</em></h2>
+    <p class="sec-sub rv" data-i18n="pj_sub">Des réalisations concrètes qui illustrent ma capacité d'initiative et de rigueur.</p>
 
     <!-- Bannière recherche alternance -->
     <div style="margin-top:4rem;padding:2rem 2.5rem;background:var(--dark);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
@@ -1523,7 +1524,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div style="font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.5rem;">Objectif 2026</div>
         <div style="font-family:var(--display);font-size:1.5rem;font-weight:300;color:#EDEAE2;letter-spacing:-.02em;">En recherche d'alternance pour un <em style="font-style:italic;color:var(--gold2);">Master</em> — Rentrée 2026</div>
       </div>
-      <a href="#contact" style="display:inline-flex;align-items:center;padding:.9rem 2rem;background:var(--gold);color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s;" onmouseover="this.style.background='#C4A24A'" onmouseout="this.style.background='#9A7A32'">Me contacter</a>
+      <a href="#contact" data-i18n="btn_contact2" style="display:inline-flex;align-items:center;padding:.9rem 2rem;background:var(--gold);color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s;" onmouseover="this.style.background='#C4A24A'" onmouseout="this.style.background='#9A7A32'">Me contacter</a>
     </div>
 
     <div class="proj-grid" style="margin-top:1.5rem;">
@@ -1544,7 +1545,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
           </span>
           <button class="pj-screenshot-btn" style="margin-top:0;" onclick="openModal('olympus-screenshot.jpg','Dashboard Olympus — Agents IA en temps réel')">
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="2" width="10" height="8" rx="1"/><circle cx="4" cy="5.5" r="1"/><path d="M1 9l3-3 2 2 2-2.5 3 3.5"/></svg>
-            Voir en grand
+            <span data-i18n="pj_zoom">Voir en grand</span>
           </button>
         </div>
       </div>
@@ -1564,7 +1565,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-tags"><span class="pjtag">React Native</span><span class="pjtag">Expo</span><span class="pjtag">Mobile</span><span class="pjtag">UX/UI</span><span class="pjtag">TypeScript</span></div>
         <button class="pj-screenshot-btn" style="margin-top:1.4rem;" onclick="openCarousel()">
           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="2" width="10" height="8" rx="1"/><circle cx="4" cy="5.5" r="1"/><path d="M1 9l3-3 2 2 2-2.5 3 3.5"/></svg>
-          Voir les screenshots (5 écrans)
+          <span data-i18n="pj_screens">Voir les screenshots (5 écrans)</span>
         </button>
       </div>
       <div class="pj rv d1">
@@ -1601,16 +1602,16 @@ nav.s .nav-links a.active { color: var(--gold2); }
     <div class="s-eyebrow rv">
       <span class="se-num">07</span>
       <div class="se-line"></div>
-      <span class="se-tag">Contact</span>
+      <span class="se-tag" data-i18n="ct_tag">Contact</span>
     </div>
 
     <div class="ct-layout">
       <div class="rv">
-        <h2 class="sec-title">Travaillons<br><em>ensemble</em></h2>
-        <p class="ct-desc">Vous recrutez pour un Master en alternance à partir de la rentrée 2026 ? Lucas Beau, BUT TC BDMRC — Renault groupe et KIA Cavallari · Nice. Actuellement en alternance chez KIA jusqu'en août 2026.</p>
+        <h2 class="sec-title" data-i18n-html="ct_title">Travaillons<br><em>ensemble</em></h2>
+        <p class="ct-desc" data-i18n-html="ct_desc">Vous recrutez pour un Master en alternance à partir de la rentrée 2026 ? Lucas Beau, BUT TC BDMRC — Renault groupe et KIA Cavallari · Nice. Actuellement en alternance chez KIA jusqu'en août 2026.</p>
         <div class="avail">
           <div class="av-dot"></div>
-          <span class="av-text">En alternance KIA · Disponible Août 2026</span>
+          <span class="av-text" data-i18n="ct_avail">En alternance KIA · Disponible Août 2026</span>
         </div>
         <div class="ct-btns">
           <a href="mailto:lucasbeau42@gmail.com" class="btn-gold">Me contacter</a>
@@ -1619,48 +1620,48 @@ nav.s .nav-links a.active { color: var(--gold2); }
       </div>
 
       <div class="rv d1" style="margin-top:0;">
-        <div class="ct-head" style="color:rgba(200,200,216,.5);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;">Envoyer un message</div>
+        <div class="ct-head" data-i18n="ct_form_head" style="color:rgba(200,200,216,.5);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;">Envoyer un message</div>
         <form class="ct-form" id="contact-form">
           <div class="ct-form-row">
             <div class="ct-field">
-              <label for="cf-name">Nom / Entreprise</label>
-              <input type="text" id="cf-name" name="from_name" placeholder="Jean Dupont — Groupe ABC" required>
+              <label for="cf-name" data-i18n="cf_name_lbl">Nom / Entreprise</label>
+              <input type="text" id="cf-name" name="from_name" data-i18n-placeholder="cf_name_ph" placeholder="Jean Dupont — Groupe ABC" required>
             </div>
             <div class="ct-field">
-              <label for="cf-email">Email</label>
+              <label for="cf-email" data-i18n="cf_email_lbl">Email</label>
               <input type="email" id="cf-email" name="from_email" placeholder="contact@entreprise.fr" required>
             </div>
           </div>
           <div class="ct-field">
-            <label for="cf-subject">Objet</label>
-            <input type="text" id="cf-subject" name="subject" placeholder="Proposition d'alternance Master 2026" required>
+            <label for="cf-subject" data-i18n="cf_subj_lbl">Objet</label>
+            <input type="text" id="cf-subject" name="subject" data-i18n-placeholder="cf_subj_ph" placeholder="Proposition d'alternance Master 2026" required>
           </div>
           <div class="ct-field">
-            <label for="cf-msg">Message</label>
-            <textarea id="cf-msg" name="message" placeholder="Bonjour Lucas, je vous contacte au sujet…" required></textarea>
+            <label for="cf-msg" data-i18n="cf_msg_lbl">Message</label>
+            <textarea id="cf-msg" name="message" data-i18n-placeholder="cf_msg_ph" placeholder="Bonjour Lucas, je vous contacte au sujet…" required></textarea>
           </div>
           <button type="submit" class="ct-submit" id="cf-btn">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M14 2L1 8l5 2 2 5 6-13z"/></svg>
-            Envoyer le message
+            <span data-i18n="cf_send">Envoyer le message</span>
           </button>
-          <div class="ct-msg" id="cf-ok">✓ Message envoyé ! Je vous réponds dans les 24h.</div>
-          <div class="ct-msg" id="cf-err">✗ Une erreur s'est produite. Écrivez-moi directement à lucasbeau42@gmail.com</div>
+          <div class="ct-msg" id="cf-ok" data-i18n="cf_ok">✓ Message envoyé ! Je vous réponds dans les 24h.</div>
+          <div class="ct-msg" id="cf-err" data-i18n="cf_err">✗ Une erreur s'est produite. Écrivez-moi directement à lucasbeau42@gmail.com</div>
         </form>
       </div>
 
       <div class="ct-card rv d2">
-        <div class="ct-head">Coordonnées</div>
+        <div class="ct-head" data-i18n="ct_coords">Coordonnées</div>
         <div class="ct-row">
           <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
           <div><div class="ct-lbl">Email</div><div class="ct-val"><a href="mailto:lucasbeau42@gmail.com">lucasbeau42@gmail.com</a></div></div>
         </div>
         <div class="ct-row">
           <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
-          <div><div class="ct-lbl">Téléphone</div><div class="ct-val"><a href="tel:+33667863803">06 67 86 38 03</a></div></div>
+          <div><div class="ct-lbl" data-i18n="ct_phone">Téléphone</div><div class="ct-val"><a href="tel:+33667863803">06 67 86 38 03</a></div></div>
         </div>
         <div class="ct-row">
           <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg></div>
-          <div><div class="ct-lbl">Localisation</div><div class="ct-val">Nice, Alpes-Maritimes (06)</div></div>
+          <div><div class="ct-lbl" data-i18n="ct_loc">Localisation</div><div class="ct-val">Nice, Alpes-Maritimes (06)</div></div>
         </div>
         <div class="ct-row">
           <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6.5v-7H9v7zm-1.25-8.3c-.8 0-1.45-.65-1.45-1.45S6.95 5.8 7.75 5.8s1.45.65 1.45 1.45-.65 1.45-1.45 1.45zM18 17h-2.5v-3.4c0-.85-.3-1.4-1.05-1.4-.55 0-.9.4-1.05.75-.05.15-.06.35-.06.55V17H10.8s.03-7 0-7h2.5v.98c.35-.52.87-1.28 2.1-1.28 1.5 0 2.6 1 2.6 3.1V17z"/></svg></div>
@@ -1672,7 +1673,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         </div>
         <div class="ct-row">
           <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/></svg></div>
-          <div><div class="ct-lbl">Dernière alternance</div><div class="ct-val">KIA Cavallari · Assistant Commercial</div></div>
+          <div><div class="ct-lbl" data-i18n="ct_last_alt">Dernière alternance</div><div class="ct-val">KIA Cavallari · Assistant Commercial</div></div>
         </div>
       </div>
     </div>
@@ -1682,7 +1683,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
 <footer>
   <div class="fl">Lucas<span>.</span>Beau</div>
   <div class="fm">BUT TC BDMRC · Renault groupe · KIA Cavallari · Nice · <span id="footer-year">2026</span></div>
-  <div class="fr">Portfolio professionnel</div>
+  <div class="fr" data-i18n="footer_r">Portfolio professionnel</div>
 </footer>
 
 <script>
@@ -2160,6 +2161,155 @@ window.addEventListener('load', function() {
     else if(e.key==='Escape'){ cModal.classList.remove('open'); document.body.style.overflow=''; }
   });
 
+});
+</script>
+
+<!-- ════ i18n TRANSLATIONS ════ -->
+<script>
+const i18n = {
+  fr: {
+    nav_about:'Profil', nav_exp:'Expérience', nav_skills:'Compétences',
+    nav_formation:'Formation', nav_univers:'Qui je suis', nav_reco:'Recommandation',
+    nav_projects:'Projets', nav_contact:'Contact',
+    hero_eyebrow:"Alternance KIA Cavallari · Jusqu'à Août 2026",
+    hero_role:'Commercial <span>&amp;</span> Futur Manager — Nice, Côte d\'Azur',
+    hero_desc:"22 ans. Étudiant en <strong>3ᵉ année de BUT Techniques de Commercialisation</strong>, parcours <strong>BDMRC</strong> à l'IUT de Nice. <strong>4 ans d'alternance</strong> au compteur — passé par <strong>Renault groupe</strong> puis <strong>KIA Cavallari</strong>, actuellement alternant commercial chez KIA jusqu'en août 2026.",
+    btn_contact:'Me contacter', btn_parcours:'Mon parcours', btn_contact2:'Me contacter',
+    stat_age:'Âge', stat_alt:'Alternance', scroll_cue:'Défiler',
+    about_tag:'Qui suis-je',
+    about_title:'Un profil commercial<br><em>qui se démarque</em>',
+    about_p1:"Bonjour, je suis <strong>Lucas Beau, 22 ans</strong>, étudiant en 3ᵉ année de BUT Techniques de Commercialisation, parcours <strong>BDMRC — Business Development, Marketing, Relation Client</strong> à l'IUT de Nice.",
+    about_p2:"<strong>4 ans d'alternance</strong> en continu m'ont forgé une vision commerciale que peu d'étudiants ont à 22 ans. Chez <strong>Renault groupe à Nice</strong> (2022-2024) d'abord, en location ; puis chez <strong>KIA Cavallari à Nice</strong> (2024-2026), en vente automobile. Deux univers, deux cultures d'entreprise, une seule constante : le goût du résultat et du contact humain.",
+    about_p3:"Le <strong>football</strong>, c'est <strong>18 ans de ma vie</strong>. Trophées, entraînements, nuits de match au Vélodrome — ce sport m'a construit. Il m'a appris ce que aucune salle de cours ne peut enseigner : la résilience, l'esprit d'équipe, le dépassement de soi et la mentalité du compétiteur. Ce sont exactement ces valeurs que j'apporte chaque jour dans mon travail. Mon objectif est clair — <strong>intégrer un Master</strong> pour bâtir une carrière ambitieuse et solide.",
+    info_age:'Âge', info_loc:'Localisation', info_formation:'Formation',
+    info_alt:'Alternances', info_end:"Fin d'alternance",
+    foot_label:'⚽ 18 ans de passion',
+    val_tag:'Mes atouts', val_title:'Ce qui me rend <em>différent</em>',
+    val_sub:'Quatre qualités forgées par deux ans de terrain commercial intensif.',
+    val1_t:'Orienté résultats', val1_d:"Je ne me contente jamais du minimum. Chaque objectif est une cible à atteindre et à dépasser. Mon alternance m'a appris que les chiffres se construisent sur le terrain.",
+    val2_t:'Relationnel exceptionnel', val2_d:"Accueillir, écouter, comprendre et convaincre. De la location chez Renault à la vente automobile chez KIA, deux ans de contact client quotidien intensif.",
+    val3_t:'Adaptabilité totale', val3_d:"Alterner cours intensifs et exigences professionnelles forge une capacité d'adaptation exceptionnelle. Je suis à l'aise dans n'importe quel environnement commercial.",
+    val4_t:"Esprit d'initiative",
+    exp_tag:'Expériences', exp_title:'Mon parcours <em>terrain</em>',
+    exp_sub:'Des expériences complémentaires couvrant location, vente et relation client.',
+    ei_alt:'Alternance', ei_sais:'Saisonnier',
+    sk_tag:'Compétences', sk_title:'Ce que je <em>maîtrise</em>',
+    sg_commerce:'Commerce &amp; Vente', sg_rc:'Relation Client',
+    sg_mkt:'Marketing &amp; BDMRC', sg_soft:'Qualités personnelles', sg_lang:'Langues',
+    lang_fr_lvl:'Langue maternelle',
+    form_tag:'Formation', form_title:'Parcours <em>académique</em>',
+    edu_cand:'En candidature', edu_ongoing:'En cours', edu_done:'Obtenu',
+    mh_yrl:'Rentrée visée', mh_cta:'Me recruter',
+    reco_tag:'Recommandation', reco_title:"Ce qu'on dit de <em>moi</em>",
+    reco_link:'Voir la lettre complète',
+    pj_tag:'Réalisations', pj_title:'Mes <em>projets</em>',
+    pj_sub:"Des réalisations concrètes qui illustrent ma capacité d'initiative et de rigueur.",
+    pj_zoom:'Voir en grand', pj_screens:'Voir les screenshots (5 écrans)',
+    ct_tag:'Contact', ct_title:'Travaillons<br><em>ensemble</em>',
+    ct_desc:"Vous recrutez pour un Master en alternance à partir de la rentrée 2026 ? Lucas Beau, BUT TC BDMRC — Renault groupe et KIA Cavallari · Nice. Actuellement en alternance chez KIA jusqu'en août 2026.",
+    ct_avail:'En alternance KIA · Disponible Août 2026',
+    ct_form_head:'Envoyer un message',
+    cf_name_lbl:'Nom / Entreprise', cf_email_lbl:'Email',
+    cf_subj_lbl:'Objet', cf_msg_lbl:'Message',
+    cf_name_ph:'Jean Dupont — Groupe ABC',
+    cf_subj_ph:"Proposition d'alternance Master 2026",
+    cf_msg_ph:'Bonjour Lucas, je vous contacte au sujet…',
+    cf_send:'Envoyer le message',
+    cf_ok:'✓ Message envoyé ! Je vous réponds dans les 24h.',
+    cf_err:'✗ Une erreur s\'est produite. Écrivez-moi directement à lucasbeau42@gmail.com',
+    ct_coords:'Coordonnées', ct_phone:'Téléphone', ct_loc:'Localisation',
+    ct_last_alt:'Dernière alternance',
+    univ_tag:'Au-delà du CV', univ_title:'Qui je <em>suis</em>',
+    univ_sub:'Un profil commercial, une vision, une personnalité.',
+    footer_r:'Portfolio professionnel',
+  },
+  en: {
+    nav_about:'Profile', nav_exp:'Experience', nav_skills:'Skills',
+    nav_formation:'Education', nav_univers:'About me', nav_reco:'Recommendation',
+    nav_projects:'Projects', nav_contact:'Contact',
+    hero_eyebrow:'Work-Study at KIA Cavallari · Until August 2026',
+    hero_role:'Sales & Future Manager — Nice, French Riviera',
+    hero_desc:'22 years old. 3rd-year student in <strong>Business & Sales Technology (BUT TC)</strong>, <strong>BDMRC track</strong> at IUT de Nice. <strong>4 years of work-study</strong> experience — first at <strong>Renault groupe</strong>, then <strong>KIA Cavallari</strong>, currently a Sales Apprentice at KIA until August 2026.',
+    btn_contact:'Get in touch', btn_parcours:'My journey', btn_contact2:'Get in touch',
+    stat_age:'Age', stat_alt:'Work-study', scroll_cue:'Scroll',
+    about_tag:'Who I am',
+    about_title:'A commercial profile<br><em>that stands out</em>',
+    about_p1:'Hello, I\'m <strong>Lucas Beau, 22</strong>, a 3rd-year Business & Sales Technology student, <strong>BDMRC track — Business Development, Marketing, Client Relations</strong> at IUT de Nice.',
+    about_p2:'<strong>4 consecutive years of work-study</strong> have given me a commercial mindset that few students have at 22. First at <strong>Renault groupe in Nice</strong> (2022–2024) in vehicle rental; then at <strong>KIA Cavallari in Nice</strong> (2024–2026) in car sales. Two different worlds, one constant: a passion for results and human connection.',
+    about_p3:'<strong>Football</strong> has been a part of my life for <strong>18 years</strong>. Trophies, training sessions, match nights at the Vélodrome — this sport shaped who I am. It taught me what no classroom ever could: resilience, teamwork, self-surpassing, and a competitor\'s mindset. These are exactly the values I bring to work every day. My goal is clear — <strong>join a Master\'s programme</strong> and build an ambitious, solid career.',
+    info_age:'Age', info_loc:'Location', info_formation:'Education',
+    info_alt:'Work-studies', info_end:'End of work-study',
+    foot_label:'⚽ 18 years of passion',
+    val_tag:'My strengths', val_title:'What makes me <em>different</em>',
+    val_sub:'Four qualities forged through two years of intensive sales experience.',
+    val1_t:'Results-driven', val1_d:'I never settle for the minimum. Every target is something to hit and exceed. My work-study taught me that numbers are built on the ground.',
+    val2_t:'Exceptional people skills', val2_d:'Welcome, listen, understand, and convince. From vehicle rental at Renault to car sales at KIA — two years of intense daily client interaction.',
+    val3_t:'Total adaptability', val3_d:'Balancing intensive coursework with professional demands builds exceptional adaptability. I\'m comfortable in any sales environment.',
+    val4_t:'Initiative mindset',
+    exp_tag:'Experience', exp_title:'My <em>field</em> journey',
+    exp_sub:'Complementary experiences covering rental, sales and client relations.',
+    ei_alt:'Work-Study', ei_sais:'Seasonal',
+    sk_tag:'Skills', sk_title:'What I <em>master</em>',
+    sg_commerce:'Sales & Commerce', sg_rc:'Client Relations',
+    sg_mkt:'Marketing & BDMRC', sg_soft:'Personal qualities', sg_lang:'Languages',
+    lang_fr_lvl:'Native language',
+    form_tag:'Education', form_title:'Academic <em>background</em>',
+    edu_cand:'Applying', edu_ongoing:'In progress', edu_done:'Completed',
+    mh_yrl:'Target intake', mh_cta:'Hire me',
+    reco_tag:'Recommendation', reco_title:'What people say <em>about me</em>',
+    reco_link:'Read the full letter',
+    pj_tag:'Achievements', pj_title:'My <em>projects</em>',
+    pj_sub:'Concrete achievements that demonstrate my initiative and attention to detail.',
+    pj_zoom:'View full screen', pj_screens:'View screenshots (5 screens)',
+    ct_tag:'Contact', ct_title:'Let\'s work<br><em>together</em>',
+    ct_desc:"Recruiting for a Master's work-study programme starting September 2026? Lucas Beau, BUT TC BDMRC — Renault groupe & KIA Cavallari · Nice. Currently on work-study at KIA until August 2026.",
+    ct_avail:'On work-study at KIA · Available August 2026',
+    ct_form_head:'Send a message',
+    cf_name_lbl:'Name / Company', cf_email_lbl:'Email',
+    cf_subj_lbl:'Subject', cf_msg_lbl:'Message',
+    cf_name_ph:'John Smith — ABC Group',
+    cf_subj_ph:"Master's work-study opportunity 2026",
+    cf_msg_ph:'Hello Lucas, I am contacting you about…',
+    cf_send:'Send message',
+    cf_ok:'✓ Message sent! I\'ll reply within 24 hours.',
+    cf_err:'✗ An error occurred. Email me directly at lucasbeau42@gmail.com',
+    ct_coords:'Contact info', ct_phone:'Phone', ct_loc:'Location',
+    ct_last_alt:'Latest work-study',
+    univ_tag:'Beyond the CV', univ_title:'Who I <em>am</em>',
+    univ_sub:'A sales profile, a vision, a personality.',
+    footer_r:'Professional portfolio',
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'fr';
+
+function applyLang(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (i18n[lang][k] !== undefined) el.textContent = i18n[lang][k];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const k = el.dataset.i18nHtml;
+    if (i18n[lang][k] !== undefined) el.innerHTML = i18n[lang][k];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const k = el.dataset.i18nPlaceholder;
+    if (i18n[lang][k] !== undefined) el.placeholder = i18n[lang][k];
+  });
+  const btn = document.getElementById('lang-btn');
+  if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+  currentLang = lang;
+}
+
+function toggleLang() {
+  applyLang(currentLang === 'fr' ? 'en' : 'fr');
+}
+
+// Apply on load
+document.addEventListener('DOMContentLoaded', function() {
+  if (currentLang === 'en') applyLang('en');
 });
 </script>
 </body>
