@@ -805,15 +805,15 @@ nav.s .nav-links a.active { color: var(--gold2); }
 <!-- MENU MOBILE -->
 <div class="nav-mobile" id="nav-mobile">
   <button class="nm-close" id="nm-close">&#x2715;</button>
-  <a href="#about" class="nm-link">Profil</a>
-  <a href="#exp" class="nm-link">Expérience</a>
-  <a href="#skills" class="nm-link">Compétences</a>
-  <a href="#formation" class="nm-link">Formation</a>
-  <a href="#univers" class="nm-link">Qui je suis</a>
-  <a href="#recommandation" class="nm-link">Recommandation</a>
-  <a href="#projets" class="nm-link">Projets</a>
-  <a href="#contact" class="nm-link">Contact</a>
-  <a href="cv-lucas-beau.pdf" download class="nm-cv">↓ Télécharger le CV</a>
+  <a href="#about" class="nm-link" data-i18n="nav_about">Profil</a>
+  <a href="#exp" class="nm-link" data-i18n="nav_exp">Expérience</a>
+  <a href="#skills" class="nm-link" data-i18n="nav_skills">Compétences</a>
+  <a href="#formation" class="nm-link" data-i18n="nav_formation">Formation</a>
+  <a href="#univers" class="nm-link" data-i18n="nav_univers">Qui je suis</a>
+  <a href="#recommandation" class="nm-link" data-i18n="nav_reco">Recommandation</a>
+  <a href="#projets" class="nm-link" data-i18n="nav_projects">Projets</a>
+  <a href="#contact" class="nm-link" data-i18n="nav_contact">Contact</a>
+  <a href="cv-lucas-beau.pdf" download class="nm-cv" data-i18n="nm_cv">↓ Télécharger le CV</a>
 </div>
 
 <!-- MODAL SCREENSHOT (simple) -->
@@ -2133,14 +2133,15 @@ window.addEventListener('load', function() {
   var cModal = document.getElementById('carousel-modal');
   var pltSlides = document.getElementById('plt-slides');
   var pltDots = document.querySelectorAll('.plt-dot');
-  var carouselCaptions = ['PawLuxe Track — Accueil','PawLuxe Track — Missions','PawLuxe Track — GPS Live','PawLuxe Track — Santé','PawLuxe Track — Abonnement Premium','PawLuxe Track — Shop 3D'];
+  /* carouselCaptions are now resolved dynamically via i18n in goToSlide */
   var cIdx = 0;
 
   function goToSlide(i){
     cIdx = (i + 6) % 6;
     pltSlides.style.transform = 'translateX(-' + (cIdx * 100) + '%)';
     pltDots.forEach(function(d,j){ d.classList.toggle('active', j===cIdx); });
-    document.getElementById('carousel-caption').textContent = carouselCaptions[cIdx];
+    var caps = (i18n[currentLang] && i18n[currentLang].carousel_captions ? i18n[currentLang].carousel_captions : i18n.fr.carousel_captions).split('|');
+    document.getElementById('carousel-caption').textContent = caps[cIdx];
   }
 
   window.openCarousel = function(startIdx){
@@ -2334,6 +2335,8 @@ const i18n = {
     ptag_prosp2:'Prospection', ptag_nego:'Négociation',
     edu1_school:'Programmes visés · Région PACA',
     edu2_school:'Parcours BDMRC · IUT de Nice · Côte d\'Azur Université',
+    nm_cv:'↓ Télécharger le CV',
+    carousel_captions:'PawLuxe Track — Accueil|PawLuxe Track — Missions|PawLuxe Track — GPS Live|PawLuxe Track — Santé|PawLuxe Track — Abonnement Premium|PawLuxe Track — Shop 3D',
   },
   en: {
     nav_about:'Profile', nav_exp:'Experience', nav_skills:'Skills',
@@ -2341,12 +2344,12 @@ const i18n = {
     nav_projects:'Projects', nav_contact:'Contact',
     hero_eyebrow:'Work-Study at KIA Cavallari · Until August 2026',
     hero_role:'Sales & Future Manager — Nice, French Riviera',
-    hero_desc:'22 years old. 3rd-year student in <strong>Business & Sales Technology (BUT TC)</strong>, <strong>BDMRC track</strong> at IUT de Nice. <strong>4 years of work-study</strong> experience — first at <strong>Renault groupe</strong>, then <strong>KIA Cavallari</strong>, currently a Sales Apprentice at KIA until August 2026.',
+    hero_desc:'22 years old. 3rd-year <strong>BUT TC</strong> student, <strong>BDMRC track</strong> at IUT de Nice. <strong>4 years of work-study</strong> — first at <strong>Renault groupe</strong>, now at <strong>KIA Cavallari</strong> as Sales Apprentice until August 2026.',
     btn_contact:'Get in touch', btn_parcours:'My journey', btn_contact2:'Get in touch',
     stat_age:'Age', stat_alt:'Work-study', scroll_cue:'Scroll',
     about_tag:'Who I am',
     about_title:'A commercial profile<br><em>that stands out</em>',
-    about_p1:'Hello, I\'m <strong>Lucas Beau, 22</strong>, a 3rd-year Business & Sales Technology student, <strong>BDMRC track — Business Development, Marketing, Client Relations</strong> at IUT de Nice.',
+    about_p1:'Hello, I\'m <strong>Lucas Beau, 22</strong>, a 3rd-year <strong>BUT TC</strong> student, <strong>BDMRC track — Business Development, Marketing, Client Relations</strong> at IUT de Nice.',
     about_p2:'<strong>4 consecutive years of work-study</strong> have given me a commercial mindset that few students have at 22. First at <strong>Renault groupe in Nice</strong> (2022–2024) in vehicle rental; then at <strong>KIA Cavallari in Nice</strong> (2024–2026) in car sales. Two different worlds, one constant: a passion for results and human connection.',
     about_p3:'<strong>Football</strong> has been a part of my life for <strong>18 years</strong>. Trophies, training sessions, match nights at the Vélodrome — this sport shaped who I am. It taught me what no classroom ever could: resilience, teamwork, self-surpassing, and a competitor\'s mindset. These are exactly the values I bring to work every day. My goal is clear — <strong>join a Master\'s programme</strong> and build an ambitious, solid career.',
     info_age:'Age', info_loc:'Location', info_formation:'Education',
@@ -2500,6 +2503,8 @@ const i18n = {
     ptag_prosp2:'Prospecting', ptag_nego:'Negotiation',
     edu1_school:'Target programmes · PACA region',
     edu2_school:'BDMRC track · IUT de Nice · Côte d\'Azur University',
+    nm_cv:'↓ Download CV',
+    carousel_captions:'PawLuxe Track — Home|PawLuxe Track — Missions|PawLuxe Track — Live GPS|PawLuxe Track — Health|PawLuxe Track — Premium|PawLuxe Track — 3D Shop',
   }
 };
 
