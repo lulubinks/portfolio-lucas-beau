@@ -792,6 +792,31 @@ nav.s .nav-links a.active { color: var(--gold2); }
   .passion-grid { grid-template-columns: 1fr 1fr; }
   .foot-gallery-grid { grid-template-columns: repeat(2,1fr); }
 }
+
+/* ── MULTIPAGE LAYOUT ── */
+.page-view { display: none; }
+.page-view.active { display: block; }
+
+/* Page transition */
+.page-view {
+  animation: none;
+}
+.page-view.active {
+  animation: pageIn .35s cubic-bezier(.4,0,.2,1);
+}
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Nav active link (page-based) */
+.nav-links a.active {
+  color: var(--gold2);
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+
 </style>
 </head>
 <body>
@@ -805,14 +830,13 @@ nav.s .nav-links a.active { color: var(--gold2); }
 <!-- MENU MOBILE -->
 <div class="nav-mobile" id="nav-mobile">
   <button class="nm-close" id="nm-close">&#x2715;</button>
-  <a href="#about" class="nm-link" data-i18n="nav_about">Profil</a>
-  <a href="#exp" class="nm-link" data-i18n="nav_exp">Expérience</a>
-  <a href="#skills" class="nm-link" data-i18n="nav_skills">Compétences</a>
-  <a href="#formation" class="nm-link" data-i18n="nav_formation">Formation</a>
-  <a href="#univers" class="nm-link" data-i18n="nav_univers">Qui je suis</a>
-  <a href="#recommandation" class="nm-link" data-i18n="nav_reco">Recommandation</a>
-  <a href="#projets" class="nm-link" data-i18n="nav_projects">Projets</a>
-  <a href="#contact" class="nm-link" data-i18n="nav_contact">Contact</a>
+  <a href="#" onclick="showPage('page-about');closeMobileNav();return false;" class="nm-link" data-page="page-about" data-i18n="nav_about">À propos</a>
+  <a href="#" onclick="showPage('page-exp');closeMobileNav();return false;" class="nm-link" data-page="page-exp" data-i18n="nav_exp">Expérience</a>
+  <a href="#" onclick="showPage('page-skills');closeMobileNav();return false;" class="nm-link" data-page="page-skills" data-i18n="nav_skills">Compétences</a>
+  <a href="#" onclick="showPage('page-formation');closeMobileNav();return false;" class="nm-link" data-page="page-formation" data-i18n="nav_formation">Formation</a>
+  <a href="#" onclick="showPage('page-recommandation');closeMobileNav();return false;" class="nm-link" data-page="page-recommandation" data-i18n="nav_reco">Recommandation</a>
+  <a href="#" onclick="showPage('page-projets');closeMobileNav();return false;" class="nm-link" data-page="page-projets" data-i18n="nav_projects">Projets</a>
+  <a href="#" onclick="showPage('page-contact');closeMobileNav();return false;" class="nm-link" data-page="page-contact" data-i18n="nav_contact">Contact</a>
   <a href="cv-lucas-beau.pdf" download class="nm-cv" data-i18n="nm_cv">↓ Télécharger le CV</a>
 </div>
 
@@ -857,22 +881,26 @@ nav.s .nav-links a.active { color: var(--gold2); }
 
 <!-- ════ NAV ════ -->
 <nav id="nav">
-  <a href="#hero" class="nav-logo">Lucas<span>.</span>Beau</a>
+  <a href="#" onclick="showPage('page-home');return false;" class="nav-logo">Lucas<span>.</span>Beau</a>
   <ul class="nav-links">
-    <li><a href="#exp" data-i18n="nav_exp">Expérience</a></li>
-    <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
-    <li><a href="#formation" data-i18n="nav_formation">Formation</a></li>
-    <li><a href="#univers" data-i18n="nav_univers">Qui je suis</a></li>
-    <li><a href="#recommandation" data-i18n="nav_reco">Recommandation</a></li>
-    <li><a href="#projets" data-i18n="nav_projects">Projets</a></li>
+    <li><a href="#" onclick="showPage('page-about');return false;" data-page="page-about" data-i18n="nav_about">À propos</a></li>
+    <li><a href="#" onclick="showPage('page-exp');return false;" data-page="page-exp" data-i18n="nav_exp">Expérience</a></li>
+    <li><a href="#" onclick="showPage('page-skills');return false;" data-page="page-skills" data-i18n="nav_skills">Compétences</a></li>
+    <li><a href="#" onclick="showPage('page-formation');return false;" data-page="page-formation" data-i18n="nav_formation">Formation</a></li>
+    <li><a href="#" onclick="showPage('page-recommandation');return false;" data-page="page-recommandation" data-i18n="nav_reco">Recommandation</a></li>
+    <li><a href="#" onclick="showPage('page-projets');return false;" data-page="page-projets" data-i18n="nav_projects">Projets</a></li>
     <li><button id="lang-btn" onclick="toggleLang()">EN</button></li>
   </ul>
   <a href="cv-lucas-beau.pdf" download class="nav-cta" style="margin-right:.8rem;background:transparent;border:1px solid var(--gold2);color:var(--gold2);">↓ CV</a>
-  <a href="#contact" class="nav-cta" data-i18n="nav_contact">Contact</a>
+  <a href="#" onclick="showPage('page-contact');return false;" class="nav-cta" data-i18n="nav_contact">Contact</a>
   <button class="nav-burger" id="nav-burger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+
+<!-- ═══════ MULTIPAGE WRAPPERS ═══════ -->
+<div class="page-view active" id="page-home">
 
 <!-- ════ HERO ════ -->
 <section id="hero">
@@ -895,8 +923,8 @@ nav.s .nav-links a.active { color: var(--gold2); }
       </p>
 
       <div class="h-actions">
-        <a href="#contact" class="btn-gold" data-i18n="btn_contact">Me contacter</a>
-        <a href="#exp" class="btn-out" data-i18n="btn_parcours">Mon parcours</a>
+        <a href="#" onclick="showPage('page-contact');return false;" class="btn-gold" data-i18n="btn_contact">Me contacter</a>
+        <a href="#" onclick="showPage('page-exp');return false;" class="btn-out" data-i18n="btn_parcours">Mon parcours</a>
       </div>
 
       <div class="h-stats">
@@ -941,7 +969,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
   </div>
 </section>
 
-<div class="divider"></div>
+</div><!-- /page-home -->
+
+<div class="page-view" id="page-about">
 
 <!-- ════ ABOUT ════ -->
 <section id="about" class="s-pad">
@@ -1197,7 +1227,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
   </div>
 </section>
 
-<div class="divider"></div>
+</div><!-- /page-about -->
+
+<div class="page-view" id="page-exp">
 
 <!-- ════ EXPERIENCE ════ -->
 <section id="exp" class="s-pad">
@@ -1318,7 +1350,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
   </div>
 </section>
 
-<div class="divider"></div>
+</div><!-- /page-exp -->
+
+<div class="page-view" id="page-skills">
 
 <!-- ════ SKILLS ════ -->
 <section id="skills" class="s-pad">
@@ -1380,7 +1414,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
   </div>
 </section>
 
-<div class="divider"></div>
+</div><!-- /page-skills -->
+
+<div class="page-view" id="page-formation">
 
 <!-- ════ FORMATION ════ -->
 <section id="formation" class="s-pad">
@@ -1442,13 +1478,15 @@ nav.s .nav-links a.active { color: var(--gold2); }
       <div class="mh-right">
         <div class="mh-yr">2026</div>
         <div class="mh-yrl" data-i18n="mh_yrl">Rentrée IPAG</div>
-        <a href="#contact" class="mh-cta" data-i18n="mh_cta">Me recruter</a>
+        <a href="#" onclick="showPage('page-contact');return false;" class="mh-cta" data-i18n="mh_cta">Me recruter</a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+</div><!-- /page-formation -->
+
+<div class="page-view" id="page-recommandation">
 
 <!-- ════ RECOMMANDATION ════ -->
 <section id="recommandation" class="s-pad" style="background:var(--dark2);">
@@ -1507,7 +1545,9 @@ nav.s .nav-links a.active { color: var(--gold2); }
   </div>
 </section>
 
-<div class="divider"></div>
+</div><!-- /page-recommandation -->
+
+<div class="page-view" id="page-projets">
 
 <!-- ════ PROJECTS ════ -->
 <section id="projets" class="s-pad">
@@ -1526,7 +1566,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div style="font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.5rem;" data-i18n="pj_goal_label">Statut 2026</div>
         <div style="font-family:var(--display);font-size:1.5rem;font-weight:300;color:#EDEAE2;letter-spacing:-.02em;" data-i18n-html="pj_goal_text">Admis à l'<em style="font-style:italic;color:var(--gold2);">IPAG Business School</em> · En recherche d'alternance — Sept. 2026</div>
       </div>
-      <a href="#contact" data-i18n="btn_contact2" style="display:inline-flex;align-items:center;padding:.9rem 2rem;background:var(--gold);color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s;" onmouseover="this.style.background='#C4A24A'" onmouseout="this.style.background='#9A7A32'">Me contacter</a>
+      <a href="#" onclick="showPage('page-contact');return false;" data-i18n="btn_contact2" style="display:inline-flex;align-items:center;padding:.9rem 2rem;background:var(--gold);color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s;" onmouseover="this.style.background='#C4A24A'" onmouseout="this.style.background='#9A7A32'">Me contacter</a>
     </div>
 
     <div class="proj-grid" style="margin-top:1.5rem;">
@@ -1576,7 +1616,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-t" data-i18n="pj4_t">Plan de relance d'un portefeuille clients</div>
         <div class="pj-d" data-i18n="pj4_d">Identification des clients inactifs depuis plus de 6 mois dans le CRM, rédaction de scripts de relance téléphonique ciblés, planification des rendez-vous et suivi des résultats via tableau de bord.</div>
         <div class="pj-tags"><span class="pjtag">CRM</span><span class="pjtag" data-i18n="ptag_relance">Relance</span><span class="pjtag" data-i18n="ptag_fidel">Fidélisation</span><span class="pjtag">Reporting</span></div>
-        <a href="#contact" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
+        <a href="#" onclick="showPage('page-contact');return false;" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
       </div>
       <div class="pj rv d2">
         <div class="pj-num">05</div>
@@ -1584,7 +1624,7 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-t" data-i18n="pj5_t">Campagne de prospection BtoB</div>
         <div class="pj-d" data-i18n="pj5_d">Identification et démarchage d'une cible d'entreprises locales pour la location longue durée (LLD). Mise en place d'un fichier de prospection, d'un argumentaire adapté et suivi des relances jusqu'à la signature.</div>
         <div class="pj-tags"><span class="pjtag" data-i18n="ptag_prosp2">Prospection</span><span class="pjtag">BtoB</span><span class="pjtag">LLD</span><span class="pjtag" data-i18n="ptag_nego">Négociation</span></div>
-        <a href="#contact" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
+        <a href="#" onclick="showPage('page-contact');return false;" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
       </div>
       <div class="pj rv d3">
         <div class="pj-num">06</div>
@@ -1592,11 +1632,15 @@ nav.s .nav-links a.active { color: var(--gold2); }
         <div class="pj-t" data-i18n="pj6_t">Book commercial gamme KIA</div>
         <div class="pj-d" data-i18n="pj6_d">Création d'un support de vente synthétisant la gamme KIA : fiches produits, argumentaires, comparatifs concurrents et grilles de financement. Utilisé en rendez-vous client pour structurer le discours commercial.</div>
         <div class="pj-tags"><span class="pjtag" data-i18n="ptag_support">Support commercial</span><span class="pjtag" data-i18n="ptag_redac">Rédaction</span><span class="pjtag" data-i18n="ptag_argu">Argumentation</span></div>
-        <a href="#contact" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
+        <a href="#" onclick="showPage('page-contact');return false;" class="pj-link"><span data-i18n="pj_more">En savoir plus</span> <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9L9 1M9 1H3M9 1V7"/></svg></a>
       </div>
     </div>
   </div>
 </section>
+
+</div><!-- /page-projets -->
+
+<div class="page-view" id="page-contact">
 
 <!-- ════ CONTACT ════ -->
 <section id="contact" class="s-pad">
@@ -1681,6 +1725,8 @@ nav.s .nav-links a.active { color: var(--gold2); }
     </div>
   </div>
 </section>
+
+</div><!-- /page-contact -->
 
 <footer>
   <div class="fl">Lucas<span>.</span>Beau</div>
@@ -1789,6 +1835,75 @@ nav.s .nav-links a.active { color: var(--gold2); }
 
 
 /* ════ INIT ════ */
+
+/* ═══════════════════════════════════════════
+   MULTIPAGE ROUTER
+═══════════════════════════════════════════ */
+var _currentPage = 'page-home';
+var _mobileNavClose = null; // filled after DOM ready
+
+function showPage(pageId) {
+  // Hide all pages
+  document.querySelectorAll('.page-view').forEach(function(p) {
+    p.classList.remove('active');
+  });
+
+  // Show target
+  var page = document.getElementById(pageId);
+  if (!page) return;
+  page.classList.add('active');
+  window.scrollTo(0, 0);
+  _currentPage = pageId;
+
+  // Update nav active state
+  document.querySelectorAll('[data-page]').forEach(function(a) {
+    a.classList.toggle('active', a.getAttribute('data-page') === pageId);
+  });
+
+  // Update URL hash
+  history.pushState(null, '', '#' + pageId);
+
+  // Trigger reveal animations for elements now visible
+  setTimeout(function() {
+    page.querySelectorAll('.rv:not(.on)').forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100) {
+        el.classList.add('on');
+        var title = el.querySelector('.sec-title');
+        if (title) setTimeout(function(){ title.classList.add('line-on'); }, 300);
+      }
+    });
+    page.querySelectorAll('.sec-title:not(.line-on)').forEach(function(t) {
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100) t.classList.add('line-on');
+    });
+    // Skill bars: trigger on first visit to skills page
+    if (pageId === 'page-skills') {
+      if (typeof animateBarsGlobal === 'function') animateBarsGlobal();
+    }
+  }, 60);
+
+  // Update scroll progress
+  var progEl = document.getElementById('scroll-prog');
+  if (progEl) progEl.style.width = '0%';
+}
+
+// Handle browser back/forward
+window.addEventListener('popstate', function() {
+  var hash = location.hash.replace('#', '') || 'page-home';
+  if (document.getElementById(hash)) {
+    showPage(hash);
+  }
+});
+
+// On load: check hash for direct page link
+(function() {
+  var hash = location.hash.replace('#', '');
+  if (hash && document.getElementById(hash) && hash.startsWith('page-')) {
+    showPage(hash);
+  }
+})();
+
 window.addEventListener('load', function() {
 
   /* NAV + PROGRESS */
@@ -1800,14 +1915,7 @@ window.addEventListener('load', function() {
     progEl.style.width = prog + '%';
   }, {passive:true});
 
-  /* ANCHOR SCROLL */
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      var id = a.getAttribute('href').slice(1);
-      var target = document.getElementById(id);
-      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
-    });
-  });
+  /* ANCHOR SCROLL disabled — multipage routing via showPage() */
 
   /* REVEAL + SECTION TITLE LINE */
   var revealObs = new IntersectionObserver(function(entries){
@@ -1859,6 +1967,7 @@ window.addEventListener('load', function() {
     });
   }
 
+  window.animateBarsGlobal = animateBars;
   var skillsEl = document.getElementById('skills');
   if(skillsEl){
     /* Primary: IntersectionObserver fires the moment skills enters viewport */
@@ -1983,23 +2092,13 @@ window.addEventListener('load', function() {
   var nmClose = document.getElementById('nm-close');
   function openMobileNav(){ mobileNav.classList.add('open'); burger.classList.add('open'); document.body.style.overflow='hidden'; }
   function closeMobileNav(){ mobileNav.classList.remove('open'); burger.classList.remove('open'); document.body.style.overflow=''; }
+  window.closeMobileNav = closeMobileNav;
   burger.addEventListener('click', function(){ mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav(); });
   nmClose.addEventListener('click', closeMobileNav);
   document.querySelectorAll('.nm-link,.nm-cv').forEach(function(a){ a.addEventListener('click', closeMobileNav); });
 
-  /* ── NAV ACTIVE SECTION ── */
-  var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-  var sections = [];
-  navLinks.forEach(function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el) sections.push({el:el,a:a}); });
-  function updateActiveNav(){
-    var scrollY = window.scrollY + 120;
-    var current = sections[0];
-    sections.forEach(function(s){ if(s.el.offsetTop <= scrollY) current = s; });
-    navLinks.forEach(function(a){ a.classList.remove('active'); });
-    if(current) current.a.classList.add('active');
-  }
-  window.addEventListener('scroll', updateActiveNav);
-  updateActiveNav();
+  /* ── NAV ACTIVE SECTION ── handled by showPage() in multipage mode ── */
+  /* Scroll-based active nav disabled for multipage layout */
 
   /* ── HERO COUNTER ANIMATION ── */
   function animateCount(el, target, dur){
@@ -2171,7 +2270,7 @@ window.addEventListener('load', function() {
 <script>
 const i18n = {
   fr: {
-    nav_about:'Profil', nav_exp:'Expérience', nav_skills:'Compétences',
+    nav_about:'À propos', nav_exp:'Expérience', nav_skills:'Compétences',
     nav_formation:'Formation', nav_univers:'Qui je suis', nav_reco:'Recommandation',
     nav_projects:'Projets', nav_contact:'Contact',
     hero_eyebrow:"Admis IPAG Business School · Alternance disponible Sept. 2026",
@@ -2339,7 +2438,7 @@ const i18n = {
     carousel_captions:'PawLuxe Track — Accueil|PawLuxe Track — Missions|PawLuxe Track — GPS Live|PawLuxe Track — Santé|PawLuxe Track — Abonnement Premium|PawLuxe Track — Shop 3D',
   },
   en: {
-    nav_about:'Profile', nav_exp:'Experience', nav_skills:'Skills',
+    nav_about:'About', nav_exp:'Experience', nav_skills:'Skills',
     nav_formation:'Education', nav_univers:'About me', nav_reco:'Recommendation',
     nav_projects:'Projects', nav_contact:'Contact',
     hero_eyebrow:'Admitted to IPAG Business School · Work-Study available Sept. 2026',
